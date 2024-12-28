@@ -1,0 +1,209 @@
+{% extends 'base.html' %}
+
+{% set styles = "/static/css/championship_styles.css" %}
+{% block title %}United States Championship{% endblock %}
+{% block extra_head %}
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+<link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Permanent+Marker&display=swap"
+    rel="stylesheet">
+{% endblock %}
+{% block content %}
+<div class="championship-title">
+    <img src="/static/images/championship/united-states-championship/united-states-championship-design.png"
+        style="width:400px">
+    <span>UNITED STATES CHAMPIONSHIP</span>
+</div>
+<div class="championship-hero-footer">
+    <div>
+        <p class="championship-holder">Championship Holder</p>
+        <p class="championship-holder-name">João Milão</p>
+    </div>
+    <div>
+        <p class="championship-holder">Time Held</p>
+        <p class="championship-holder-name">??? days</p>
+    </div>
+</div>
+<div class="championship-tables">
+    <div>
+        <table class="grid-table">
+            <thead>
+                <tr>
+                    <th>Rank</th>
+                    <th>Champion Name</th>
+                    <th>Times Earned</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Bruno</td>
+                    <td>9x</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>David</td>
+                    <td>9x</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Rui Daniel</td>
+                    <td>6x</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div>
+        <table class="grid-table">
+            <thead>
+                <tr>
+                    <th>Rank</th>
+                    <th>Champion Name</th>
+                    <th>Top Reigns</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Ivani Ca</td>
+                    <td>427 days</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Diogo Ramos</td>
+                    <td>340 days</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Israel Oliveira</td>
+                    <td>331 days</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div>
+        <table class="grid-table">
+            <thead>
+                <tr>
+                    <th>Rank</th>
+                    <th>Champion Name</th>
+                    <th>Combined Days</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Ivani Ca</td>
+                    <td>629 days</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>James Hamilton</td>
+                    <td>529 days</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Gonçalo</td>
+                    <td>510 days</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="stats-table">
+    <table class="grid-table">
+        <thead>
+            <tr>
+                <th colspan="2">RANDOM INFORMATION & STATS</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>FOUNDED</td>
+                <td>???</td>
+            </tr>
+            <tr>
+                <td>INAUGURAL MATCH</td>
+                <td>Carlos vs. Vera</td>
+            </tr>
+            <tr>
+                <td>INAUGURAL CHAMPION</td>
+                <td>Carlos</td>
+            </tr>
+            <tr>
+                <td>FIRST PPV APPEARANCE</td>
+                <td>???</td>
+            </tr>
+            <tr>
+                <td>FIRST PPV DEFENSE</td>
+                <td>???</td>
+            </tr>
+            <tr>
+                <td>BRANDS DEFENDED ON</td>
+                <td>RAW, SmackDown!, PPV</td>
+            </tr>
+            <tr>
+                <td>FEMALE CHAMPIONS</td>
+                <td>Vera, Verinha, Inês Lima, Ana Catarina
+                </td>
+            <tr>
+                <td colspan="2" style="text-align: center;">
+                    <a href="/title/united-states-championship/history">United
+                        States Championship History</a>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center;">
+                    <a href="/title/united-states-championship/history/reigns.html">Reigns</a>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center;">
+                    <a href="/title/united-states-championship/history/combined_days.html">Combined
+                        Days</a>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center;">
+                    <a href="/title/united-states-championship/history/belt_records.html">Belt
+                        Records</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table class="grid-table">
+        <thead>
+            <tr>
+                <th>OTHER DESIGNATIONS</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>United States Championship (2008-2018)</td>
+            </tr>
+            <tr>
+                <td>MWF United States Championship (2018)</td>
+            </tr>
+            <tr>
+                <td>United States Championship (2019-Present)</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="championship-display-footer belts">
+    <div>
+        <img src="/static/images/championship/united-states-championship/united-states-championship-2008-2023.png"
+            style="margin-top: 25px;">
+        <p class="old-belts" style="margin-top: 30px;">United States Championship (2008-2018)</p>
+    </div>
+    <div>
+        <img src="/static/images/championship/united-states-championship/mwf-united-states-championship-2018.png">
+        <p class="old-belts">MWF United States Championship (2018)</p>
+    </div>
+</div>
+{% endblock %}

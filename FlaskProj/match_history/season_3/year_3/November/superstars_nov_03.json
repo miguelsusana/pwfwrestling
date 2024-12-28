@@ -1,0 +1,22 @@
+[
+    {
+        "match_type": "Single",
+        "contestants": "Miguel vs David",
+        "result": "Miguel wins."
+    },
+    {
+        "match_type": "Normal Tag",
+        "contestants": "Jo\u00e3o Pedro & Pedro Teixeira vs Diogo & Ricardo Machado",
+        "result": "Diogo & Ricardo Machado win."
+    },
+    {
+        "match_type": "Single",
+        "contestants": "Julia vs Mariana",
+        "result": "Mariana wins."
+    },
+    {
+        "match_type": "Normal Tag",
+        "contestants": "David & Catarina Oliveira & Luis Silva & Raquel",
+        "result": "Luis Silva & Raquel win."
+    }
+]

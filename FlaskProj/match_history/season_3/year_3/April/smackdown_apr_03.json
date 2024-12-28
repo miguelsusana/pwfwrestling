@@ -1,0 +1,22 @@
+[
+    {
+        "match_type": "Single",
+        "contestants": "Catarina Oliveira vs In\u00eas Leal",
+        "result": "Catarina Oliveira wins."
+    },
+    {
+        "match_type": "Single",
+        "contestants": "Ana Rita vs Jo\u00e3o Pedro",
+        "result": "Ana Rita wins."
+    },
+    {
+        "match_type": "Triple Threat",
+        "contestants": "Ricardo Machado vs Luis Silva vs Manuel Pedro",
+        "result": "Manuel Pedro wins."
+    },
+    {
+        "match_type": "MAIN EVENT - Single",
+        "contestants": "Pedro Miguel vs Ricardo Soares",
+        "result": "Pedro Miguel wins."
+    }
+]

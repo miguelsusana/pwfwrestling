@@ -1,0 +1,22 @@
+[
+    {
+        "match_type": "Single",
+        "contestants": "Miguel vs Pedro Teixeira",
+        "result": "Miguel wins."
+    },
+    {
+        "match_type": "Triple Threat",
+        "contestants": "Raquel vs In\u00eas Lima vs Julia",
+        "result": "In\u00eas Lima wins."
+    },
+    {
+        "match_type": "Normal Tag",
+        "contestants": "Bruno & Diogo vs Gon\u00e7alo & Luis Lowden",
+        "result": "Gon\u00e7alo & Luis Lowden win."
+    },
+    {
+        "match_type": "MAIN EVENT - Single",
+        "contestants": "David vs Ant\u00f3nio",
+        "result": "David wins."
+    }
+]

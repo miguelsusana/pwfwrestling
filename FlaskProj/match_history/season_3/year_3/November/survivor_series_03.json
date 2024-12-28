@@ -1,0 +1,27 @@
+[
+    {
+        "match_type": "Single - Intercontinental Championship",
+        "contestants": "Pedro Miguel vs Ana Rita",
+        "result": "Pedro Miguel retains."
+    },
+    {
+        "match_type": "Single - Divas Championship",
+        "contestants": "Catarina Oliveira vs Mariana",
+        "result": "Mariana wins. (NEW CHAMPION)"
+    },
+    {
+        "match_type": "Triple Threat - United States Championship",
+        "contestants": "Bruno vs Miguel vs Gon\u00e7alo",
+        "result": "Bruno retains."
+    },
+    {
+        "match_type": "Normal Tag - World Tag Team Championship",
+        "contestants": "Luis Lowden & Ant\u00f3nio vs Diogo & Filipe",
+        "result": "Luis Lowden & Ant\u00f3nio retain."
+    },
+    {
+        "match_type": "MAIN EVENT - Buried Alive Match",
+        "contestants": "Luis Silva vs David",
+        "result": "Luis Silva wins."
+    }
+]

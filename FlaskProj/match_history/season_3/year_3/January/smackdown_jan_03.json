@@ -1,0 +1,22 @@
+[
+    {
+        "match_type": "Battle Royal - Divas Championship",
+        "contestants": "Catarina Oliveira vs In\u00eas Leal vs Mariana vs Maria",
+        "result": "Catarina Oliveira retains."
+    },
+    {
+        "match_type": "Single - Intercontinental Championship",
+        "contestants": "Pedro Miguel vs Jo\u00e3o Pedro",
+        "result": "Pedro Miguel wins. (NEW CHAMPION)"
+    },
+    {
+        "match_type": "Normal Tag - WWE Tag Team Championship",
+        "contestants": "Ricardo Soares & Ricardo Machado vs Andr\u00e9 & Manuel Pedro",
+        "result": "Andr\u00e9 & Manuel Pedro win. (NEW CHAMPIONS)"
+    },
+    {
+        "match_type": "MAIN EVENT - Triple Threat - World Heavyweight Championship",
+        "contestants": "Andr\u00e9 vs Luis Silva vs Ricardo Machado",
+        "result": "Luis Silva wins. (NEW CHAMPION)"
+    }
+]

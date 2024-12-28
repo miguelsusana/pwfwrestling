@@ -1,0 +1,93 @@
+[
+    {
+        "ID": 1,
+        "Champion Name": "Jos\u00e9 Diogo",
+        "By Defeating": "Alexandre",
+        "Match": "Jos\u00e9 Diogo vs Alexandre",
+        "Reign": null
+    },
+    {
+        "ID": 2,
+        "Champion Name": "F\u00e1bio",
+        "By Defeating": "Jos\u00e9 Diogo",
+        "Match": "F\u00e1bio vs Jos\u00e9 Diogo vs Alexandre",
+        "Reign": null
+    },
+    {
+        "ID": 3,
+        "Champion Name": "XXXXXXXXXX",
+        "By Defeating": "XXXXXXXXXX",
+        "Match": "XXXXXXXXXX",
+        "Reign": null
+    },
+    {
+        "ID": 4,
+        "Champion Name": "C\u00e9sar",
+        "By Defeating": "Andr\u00e9",
+        "Match": "C\u00e9sar vs Jos\u00e9 Jo\u00e3o vs Pedro Miguel vs Bruno vs Andr\u00e9 vs Rui Leal",
+        "Reign": null
+    },
+    {
+        "ID": 5,
+        "Champion Name": "Pedro Miguel",
+        "By Defeating": "C\u00e9sar",
+        "Match": "Pedro Miguel vs C\u00e9sar vs Bruno vs Andr\u00e9 (Miguel)",
+        "Reign": null
+    },
+    {
+        "ID": 6,
+        "Champion Name": "C\u00e9sar",
+        "By Defeating": "Bruno",
+        "Match": "C\u00e9sar vs Pedro Miguel vs Bruno",
+        "Reign": null
+    },
+    {
+        "ID": 7,
+        "Champion Name": "XXXXXXXXXX",
+        "By Defeating": "XXXXXXXXXX",
+        "Match": "XXXXXXXXXX",
+        "Reign": null
+    },
+    {
+        "ID": 8,
+        "Champion Name": "Jos\u00e9 Jo\u00e3o",
+        "By Defeating": "C\u00e9sar",
+        "Match": "Jos\u00e9 Jo\u00e3o vs C\u00e9sar",
+        "Reign": "292 days"
+    },
+    {
+        "ID": 9,
+        "Champion Name": "Pedro Miguel",
+        "By Defeating": "Jos\u00e9 Jo\u00e3o",
+        "Match": "Pedro Miguel vs Jos\u00e9 Jo\u00e3o",
+        "Reign": "PPVMAY3 27-05"
+    },
+    {
+        "ID": 10,
+        "Champion Name": "David",
+        "By Defeating": "Pedro Miguel",
+        "Match": "David vs Pedro Miguel",
+        "Reign": null
+    },
+    {
+        "ID": 11,
+        "Champion Name": "Jos\u00e9 Jo\u00e3o",
+        "By Defeating": "David",
+        "Match": "Jos\u00e9 Jo\u00e3o vs David",
+        "Reign": null
+    },
+    {
+        "ID": 12,
+        "Champion Name": "XXXXXXXXXX",
+        "By Defeating": "XXXXXXXXXX",
+        "Match": "XXXXXXXXXX",
+        "Reign": null
+    },
+    {
+        "ID": 13,
+        "Champion Name": "Fernando Rafael",
+        "By Defeating": "Rui Leal",
+        "Match": "Fernando Rafael vs Rui Leal vs Rafael",
+        "Reign": null
+    }
+]

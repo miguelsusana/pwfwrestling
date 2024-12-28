@@ -1,0 +1,22 @@
+[
+    {
+        "match_type": "Single",
+        "contestants": "Pedro Teixeira vs Diogo",
+        "result": "Pedro Teixeira wins."
+    },
+    {
+        "match_type": "Single",
+        "contestants": "Raquel vs Catarina Silva",
+        "result": "Catarina Silva wins."
+    },
+    {
+        "match_type": "Normal Tag",
+        "contestants": "Bruno & Gon\u00e7alo vs David & Filipe",
+        "result": "David & Filipe wins."
+    },
+    {
+        "match_type": "MAIN EVENT - Single",
+        "contestants": "Luis Lowden vs Ant\u00f3nio",
+        "result": "Luis Lowden wins."
+    }
+]

@@ -1,0 +1,22 @@
+[
+    {
+        "match_type": "Normal Tag",
+        "contestants": "Gon\u00e7alo & Luis Lowden vs Pedro Teixeira & Jo\u00e3o Pedro",
+        "result": "Gon\u00e7alo & Luis Lowden win."
+    },
+    {
+        "match_type": "Single",
+        "contestants": "Ana Rita vs Pedro Miguel",
+        "result": "Ana Rita wins."
+    },
+    {
+        "match_type": "Single",
+        "contestants": "Ant\u00f3nio vs Manuel Pedro",
+        "result": "Manuel Pedro wins."
+    },
+    {
+        "match_type": "Single",
+        "contestants": "Bruno vs Luis Silva",
+        "result": "Luis Silva wins."
+    }
+]

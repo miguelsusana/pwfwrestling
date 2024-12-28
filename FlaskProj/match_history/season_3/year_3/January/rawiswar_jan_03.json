@@ -1,0 +1,22 @@
+[
+    {
+        "match_type": "Triple Threat - Cruiserweight Championship",
+        "contestants": "Rui Leal vs Fernando Rafael vs Rafael",
+        "result": "Fernando Rafael wins. (NEW CHAMPION)"
+    },
+    {
+        "match_type": "Beauty Contests",
+        "contestants": "Guida vs Bianca vs Juliana Gon\u00e7alves vs Vera",
+        "result": "Bianca wins."
+    },
+    {
+        "match_type": "Steel Cage Single - European Championship",
+        "contestants": "Emanuel vs Jos\u00e9 Jo\u00e3o",
+        "result": "Jos\u00e9 Jo\u00e3o wins. (NEW CHAMPION)"
+    },
+    {
+        "match_type": "MAIN EVENT - Battle Royal - WWF Championship",
+        "contestants": "Pedro vs Jonathan vs C\u00e9sar vs Lucas",
+        "result": "Lucas wins. (NEW CHAMPION)"
+    }
+]

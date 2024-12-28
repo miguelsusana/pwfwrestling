@@ -1,0 +1,142 @@
+[
+    {
+        "ID": 1,
+        "Champion Name": "Liliana",
+        "By Defeating": "Rafael",
+        "Match": "Liliana vs Rafael",
+        "Reign": "ECWJAN1 S1"
+    },
+    {
+        "ID": 2,
+        "Champion Name": "Pedro",
+        "By Defeating": "Liliana",
+        "Match": "Pedro vs Liliana",
+        "Reign": null
+    },
+    {
+        "ID": 3,
+        "Champion Name": "Rafael",
+        "By Defeating": "Guida",
+        "Match": "Rafael vs Pedro vs Guida",
+        "Reign": null
+    },
+    {
+        "ID": 4,
+        "Champion Name": "Vera",
+        "By Defeating": "Liliana",
+        "Match": "Vera vs Liliana vs Rafael vs Pedro",
+        "Reign": null
+    },
+    {
+        "ID": 5,
+        "Champion Name": "Carlos",
+        "By Defeating": "Vera",
+        "Match": "Carlos vs Vera w/ Guida",
+        "Reign": null
+    },
+    {
+        "ID": 6,
+        "Champion Name": "Pedro",
+        "By Defeating": "Rafael",
+        "Match": "Pedro vs Rafael vs Carlos",
+        "Reign": null
+    },
+    {
+        "ID": 7,
+        "Champion Name": "Claudia",
+        "By Defeating": "Guida",
+        "Match": "Claudia vs Pedro vs Guida",
+        "Reign": null
+    },
+    {
+        "ID": 8,
+        "Champion Name": "Pedro",
+        "By Defeating": "Claudia",
+        "Match": "Pedro w/ Guida vs Claudia",
+        "Reign": null
+    },
+    {
+        "ID": 9,
+        "Champion Name": "Rafael",
+        "By Defeating": "Guida",
+        "Match": "Rafael vs Guida & Pedro ",
+        "Reign": null
+    },
+    {
+        "ID": 10,
+        "Champion Name": "Vera",
+        "By Defeating": "Rafael",
+        "Match": "Vera vs Rafael vs Sara Vedor",
+        "Reign": "SEASON 2"
+    },
+    {
+        "ID": 11,
+        "Champion Name": "Rafael",
+        "By Defeating": "Pedro",
+        "Match": "Rafael vs Vera vs Pedro",
+        "Reign": "87 days"
+    },
+    {
+        "ID": 12,
+        "Champion Name": "Vera",
+        "By Defeating": "Rafael",
+        "Match": "Vera vs Rafael (Mike Silva)",
+        "Reign": "42 days"
+    },
+    {
+        "ID": 13,
+        "Champion Name": "Rafael",
+        "By Defeating": "Vera",
+        "Match": "Rafael vs Vera ",
+        "Reign": "686 days"
+    },
+    {
+        "ID": 14,
+        "Champion Name": "Filipe Leesee",
+        "By Defeating": "Rafael",
+        "Match": "Filipe Leesee vs Rafael",
+        "Reign": "15-04, 4 s2"
+    },
+    {
+        "ID": 15,
+        "Champion Name": "Rafael",
+        "By Defeating": "Bruno",
+        "Match": "Rafael vs Bruno vs Filipe Leesee",
+        "Reign": null
+    },
+    {
+        "ID": 16,
+        "Champion Name": "David",
+        "By Defeating": "Rafael",
+        "Match": "David vs Rafael",
+        "Reign": null
+    },
+    {
+        "ID": 17,
+        "Champion Name": "Jos\u00e9 Jo\u00e3o",
+        "By Defeating": "David",
+        "Match": "Jos\u00e9 Jo\u00e3o vs David",
+        "Reign": null
+    },
+    {
+        "ID": 18,
+        "Champion Name": "Rafael",
+        "By Defeating": "Jos\u00e9 Jo\u00e3o",
+        "Match": "Rafael vs Jos\u00e9 Jo\u00e3o",
+        "Reign": null
+    },
+    {
+        "ID": 19,
+        "Champion Name": "XXXXXXXXXX",
+        "By Defeating": "XXXXXXXXXX",
+        "Match": "XXXXXXXXXXXXXXX",
+        "Reign": null
+    },
+    {
+        "ID": 20,
+        "Champion Name": "Bruno Andr\u00e9",
+        "By Defeating": "\u2026",
+        "Match": "AWARDED",
+        "Reign": null
+    }
+]

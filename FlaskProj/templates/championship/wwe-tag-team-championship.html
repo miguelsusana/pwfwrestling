@@ -1,0 +1,197 @@
+{% extends 'base.html' %}
+
+{% set styles = "/static/css/championship_styles.css" %}
+{% block title %}WWE Tag Team Championship{% endblock %}
+{% block extra_head %}
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+<link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Permanent+Marker&display=swap"
+    rel="stylesheet">
+{% endblock %}
+{% block content %}
+<div class="championship-title">
+    <img src="/static/images/championship/wwe-tag-team-championship_2024/wwe_tag_team_championship_design.png"
+        style="width:400px">
+    <span>WWE TAG TEAM CHAMPIONSHIP</span>
+</div>
+<div class="championship-hero-footer">
+    <div>
+        <p class="championship-holder">Championship Holder</p>
+        <p class="championship-holder-name">André Gomes & Lobo Ibérico</p>
+    </div>
+    <div>
+        <p class="championship-holder">Time Held</p>
+        <p class="championship-holder-name">??? days</p>
+    </div>
+</div>
+<div class="championship-tables">
+    <div>
+        <table class="grid-table">
+            <thead>
+                <tr>
+                    <th>Rank</th>
+                    <th>Champion Name</th>
+                    <th>Times Earned</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Vera</td>
+                    <td>11x</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Maria</td>
+                    <td>7x</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Carlota</td>
+                    <td>6x</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div>
+        <table class="grid-table">
+            <thead>
+                <tr>
+                    <th>Rank</th>
+                    <th>Champion Name</th>
+                    <th>Top Reigns</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Lara Alexandra</td>
+                    <td>549 days</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Cláudia Bradstone</td>
+                    <td>456 days</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Maria Macedo</td>
+                    <td>308 days</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div>
+        <table class="grid-table">
+            <thead>
+                <tr>
+                    <th>Rank</th>
+                    <th>Champion Name</th>
+                    <th>Combined Days</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Maria</td>
+                    <td>812 days</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Lara Alexandra</td>
+                    <td>765 days</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Cláudia Bradstone</td>
+                    <td>690 days</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="stats-table">
+    <table class="grid-table">
+        <thead>
+            <tr>
+                <th colspan="2">RANDOM INFORMATION & STATS</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>FOUNDED</td>
+                <td>Royal Rumble 7 - Season 3</td>
+            </tr>
+            <tr>
+                <td>INAUGURAL MATCH</td>
+                <td>Vera vs. Guida vs. Inês Lima vs. Catarina Silva vs. Bianca vs. Maria</td>
+            </tr>
+            <tr>
+                <td>INAUGURAL CHAMPION</td>
+                <td>Maria</td>
+            </tr>
+            <tr>
+                <td>FIRST PPV APPEARANCE</td>
+                <td>Royal Rumble 7 - Season 3</td>
+            </tr>
+            <tr>
+                <td>FIRST PPV DEFENSE</td>
+                <td>Maria (c) vs. Inês Lima</td>
+            </tr>
+            <tr>
+                <td>BRANDS DEFENDED ON</td>
+                <td>RAW, SmackDown!, PPV</td>
+            </tr>
+            <td colspan="2" style="text-align: center;">
+                <a href="/title/wwe-tag-team-championship/history">WWE Tag Team
+                    Championship History</a>
+            </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center;">
+                    <a href="/title/wwe-tag-team-championship/history/reigns.html">Reigns</a>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center;">
+                    <a href="/title/wwe-tag-team-championship/history/combined_days.html">Combined
+                        Days</a>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center;">
+                    <a href="/title/wwe-tag-team-championship/history/belt_records.html">Belt
+                        Records</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table class="grid-table">
+        <thead>
+            <tr>
+                <th>OTHER DESIGNATIONS</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>SmackDown Tag Team Championship (2016-2023)</td>
+            </tr>
+            <tr>
+                <td>Undisputed Tag Team Championship (2023-2024) - Alongside RAW Tag Team Championship</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="championship-display-footer belts">
+    <div>
+        <img src="/static/images/championship/wwe-tag-team-championship_2024/smackdown-tag-team-championship-2016-2024.png"
+            style="margin-top: 25px;">
+        <p class="old-belts" style="margin-top: 30px;">SmackDown Tag Team Championship (2016-2024)</p>
+    </div>
+</div>
+{% endblock %}

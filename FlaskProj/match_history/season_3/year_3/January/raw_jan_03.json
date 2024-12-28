@@ -1,0 +1,22 @@
+[
+    {
+        "match_type": "Triple Threat - Women's Championship",
+        "contestants": "Raquel vs Julia vs Catarina Silva",
+        "result": "Raquel wins. (NEW  CHAMPION)"
+    },
+    {
+        "match_type": "Fatal-4-Way - United States Championship",
+        "contestants": "Bruno vs Gon\u00e7alo vs Diogo vs Pedro Teixeira",
+        "result": "Bruno wins. (NEW CHAMPION)"
+    },
+    {
+        "match_type": "Tornado Tag- World Tag Team Championship",
+        "contestants": "Diogo & Filipe vs Ant\u00f3nio & Pedro Teixeira",
+        "result": "Ant\u00f3nio & Pedro Teixeira win. (NEW CHAMPIONS)"
+    },
+    {
+        "match_type": "MAIN EVENT - Triple Threat - WWE Championship",
+        "contestants": "Bruno vs Ant\u00f3nio vs Luis Lowden",
+        "result": "Luis Lowden wins. (NEW CHAMPION)"
+    }
+]

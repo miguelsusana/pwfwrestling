@@ -1,0 +1,163 @@
+body {
+    background-image: url("/static/images/rosters-page.jpg");
+}
+
+/*CHAMPIONSHIP HEADER TITLE*/
+.championship-title {
+    color: rgb(255, 255, 255);
+    font-family: "Montserrat";
+    font-weight: bold;
+    font-size: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/*CHAMPIONSHIP FOOTER & EVERYTHING INVOLVED*/
+.championship-hero-footer {
+    padding: 2rem;
+    position: relative;
+    background-color: #000000cd;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.championship-holder {
+    color: white;
+    font-family: Verdana;
+    font-size: 15px;
+}
+
+.championship-holder-name {
+    color: white;
+    font-size: 45px;
+    font-family: 'Permanent Marker'
+}
+
+/*CHAMPIONSHIP RECORDS TABLES*/
+.championship-tables {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 45px;
+    font-family: 'Montserrat'
+}
+
+.championship-tables th {
+    font-weight: bold;
+    background-color: crimson;
+}
+
+.championship-tables td:first-child {
+    font-weight: bold;
+}
+
+
+/*RANDOM STATS & INFORMATION TABLES*/
+.stats-table {
+    margin-top: 5%;
+    font-family: 'Montserrat';
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.stats-table th {
+    background-color: coral;
+    font-weight: bold;
+}
+
+.stats-table td:first-child {
+    font-weight: bold;
+}
+
+.stats-table td:nth-child(2):hover {
+    background-color: coral;
+}
+
+/*CHAMPIONSHIP BELT DISPLAY FOOTER*/
+.championship-display-footer {
+    padding: 2rem;
+    position: relative;
+    background-color: #000000cd;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.belts img {
+    width: 300px;
+    height: auto;
+}
+
+.old-belts {
+    font-family: 'Montserrat';
+    font-weight: bold;
+    color: white;
+    text-align: center;
+}
+
+/*CHAMPIONSHIP HISTORY TABLE*/
+.championship-history-table {
+    max-width: 1300px;
+    border-collapse: collapse;
+    background-color: gray;
+    transform: translateX(10%);
+    margin-top: 20px;
+}
+
+.championship-history-table th,
+.championship-history-table td {
+    border: 5px solid #000000;
+    padding: 8px;
+    text-align: left;
+}
+
+.championship-history-table th:nth-child(4),
+.championship-history-table td:nth-child(4) {
+    width: 900px;
+}
+
+.championship-history-table th:nth-child(2),
+.championship-history-table th:nth-child(3),
+.championship-history-table td:nth-child(2),
+.championship-history-table td:nth-child(3),
+.championship-history-table td:nth-child(5),
+.championship-history-table th:nth-child(3) {
+    width: 200px;
+}
+
+.championship-history-table {
+    font-weight: bold;
+    text-align: center;
+    font-family: 'Arial';
+}
+
+.championship-history-header th {
+    background-color: coral;
+    text-align: center;
+    font-family: Verdana;
+}
+
+
+/*GENERIC TABLE SET UP*/
+.grid-table {
+    width: 100%;
+    max-width: 600px;
+    border-collapse: collapse;
+    background-color: gray;
+    transform: translateX(10%);
+    margin-top: 20px;
+}
+
+.grid-table th,
+.grid-table td {
+    border: 5px solid #000000;
+    padding: 8px;
+    text-align: left;
+}
+
+.grid-table th {
+    font-weight: bold;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}

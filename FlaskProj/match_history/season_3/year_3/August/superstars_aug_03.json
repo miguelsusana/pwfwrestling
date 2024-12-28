@@ -1,0 +1,22 @@
+[
+    {
+        "match_type": "Special Referee",
+        "contestants": "Ana Rita vs David (Mike Silva)",
+        "result": "David wins."
+    },
+    {
+        "match_type": "Single",
+        "contestants": "Luis Lowden vs Luis Silva",
+        "result": "Luis Silva wins."
+    },
+    {
+        "match_type": "Single",
+        "contestants": "Mike Silva vs Diogo",
+        "result": "Mike Silva wins."
+    },
+    {
+        "match_type": "Normal Tag",
+        "contestants": "Manuel Pedro & In\u00eas Lima vs Pedro Teixeira & Catarina Oliveira",
+        "result": "Manuel Pedro & In\u00eas Lima win."
+    }
+]

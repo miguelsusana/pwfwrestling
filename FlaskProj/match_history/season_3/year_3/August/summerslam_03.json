@@ -1,0 +1,27 @@
+[
+    {
+        "match_type": "Single - Women's Championship",
+        "contestants": "Raquel vs In\u00eas Lima",
+        "result": "In\u00eas Lima wins. (NEW CHAMPION)"
+    },
+    {
+        "match_type": "Bra & Panties",
+        "contestants": "In\u00eas Leal & J\u00e9ssica Rodrigues vs Catarina Silva & Ana Rita",
+        "result": "Catarina Silva & Ana Rita win."
+    },
+    {
+        "match_type": "Normal Tag - World Tag Team Championship",
+        "contestants": "Ant\u00f3nio & Pedro Teixeira vs Diogo & Filipe",
+        "result": "Ant\u00f3nio & Pedro Teixeira win. (NEW CHAMPIONS)"
+    },
+    {
+        "match_type": "Fatal-4-Way - Intercontinental Championship",
+        "contestants": "Ricardo Soares vs Ricardo Machado vs Jo\u00e3o Pedro vs Pedro Miguel",
+        "result": "Pedro Miguel wins. (NEW CHAMPION)"
+    },
+    {
+        "match_type": "MAIN EVENT - Triple Threat - WWE Championship",
+        "contestants": "David vs Ant\u00f3nio vs Luis Lowden",
+        "result": "David retains."
+    }
+]

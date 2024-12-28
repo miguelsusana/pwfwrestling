@@ -1,0 +1,130 @@
+body {
+    background-color: rgb(0, 0, 0);
+    background-image: url("/roster/rosters-page.jpg");
+    background-size: cover;
+}
+
+.grid-table {
+    width: 100%;
+    max-width: 600px;
+    border-collapse: collapse;
+    background-color: rgb(194, 194, 194);
+    transform: translateX(10%);
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.fixed-width {
+    width: 300px;
+}
+
+.grid-table th,
+.grid-table td {
+    border: 5px solid #000000;
+    padding: 8px;
+    text-align: left;
+}
+
+.grid-table th {
+    font-weight: bold;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.all-tables {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+
+/* ROSTER TABLE HEADERS*/
+.sd-header {
+    background-color: rgb(64, 64, 252);
+}
+
+.raw-header {
+    background-color: red;
+}
+
+.nxt-header {
+    background-color: rgb(255, 204, 0);
+}
+
+/*ROSTER TABLE HOVERS*/
+.smackdown {
+    background-color: rgb(194, 194, 194);
+}
+
+.smackdown:hover {
+    background-color: rgb(75, 136, 228);
+}
+
+.raw:hover {
+    background-color: rgb(227, 120, 120);
+}
+
+.nxt:hover {
+    background-color: rgb(207, 170, 109);
+}
+
+/*ROSTER TABLE CHAMPIONS*/
+.smackdown.champ {
+    color: blue;
+}
+
+.raw.champ {
+    color: red;
+}
+
+.nxt.champ {
+    color: rgb(157, 126, 0);
+}
+
+/*SMACKDOWN ROSTER CHAMPIONSHIP TABLE*/
+.sd-roster-titles tr td:first-child {
+    font-weight: bold;
+    background-color: rgb(47, 86, 153);
+    font-family: 'Cascadia Code Light';
+}
+
+.sd-roster-titles tr td:nth-child(2):hover {
+    background-color: rgb(75, 136, 228);
+}
+
+.sd-roster-titles tr td:nth-child(2) {
+    background-color: rgb(146, 178, 255);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/*RAW ROSTER CHAMPIONSHIP TABLE*/
+.raw-roster-titles tr td:first-child {
+    font-weight: bold;
+    background-color: rgb(153, 47, 47);
+    font-family: 'Cascadia Code Light';
+}
+
+.raw-roster-titles tr td:nth-child(2):hover {
+    background-color: rgb(228, 75, 75);
+}
+
+.raw-roster-titles tr td:nth-child(2) {
+    background-color: rgb(255, 146, 146);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/*NXT ROSTER CHAMPIONSHIP TABLE*/
+.nxt-roster-titles tr td:first-child {
+    font-weight: bold;
+    background-color: rgb(218, 179, 39);
+    font-family: 'Cascadia Code Light';
+}
+
+.nxt-roster-titles tr td:nth-child(2):hover {
+    background-color: rgb(221, 196, 58);
+}
+
+.nxt-roster-titles tr td:nth-child(2) {
+    background-color: rgb(255, 228, 146);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}

@@ -1,0 +1,22 @@
+[
+    {
+        "match_type": "Single",
+        "contestants": "In\u00eas Leal vs Mariana",
+        "result": "Mariana wins."
+    },
+    {
+        "match_type": "Handicap 1v3",
+        "contestants": "Pedro Miguel vs Manuel Pedro, Andr\u00e9 & Luis Silva",
+        "result": "Manuel Pedro, Andr\u00e9 & Luis Silva win."
+    },
+    {
+        "match_type": "Single",
+        "contestants": "Rita vs Catarina Oliveira",
+        "result": "Catarina Oliveira wins."
+    },
+    {
+        "match_type": "MAIN EVENT - Single",
+        "contestants": "Ana Rita vs Jo\u00e3o Pedro",
+        "result": "Jo\u00e3o Pedro wins."
+    }
+]

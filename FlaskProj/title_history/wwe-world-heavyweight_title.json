@@ -1,0 +1,30 @@
+[
+    {
+        "ID": 1,
+        "Champion Name": "Andy Hendrix",
+        "By Defeating": "Leo Rossi",
+        "Match": "Andy Hendrix vs Leo Rossi",
+        "Reign": "61 days"
+    },
+    {
+        "ID": 2,
+        "Champion Name": "Kevin",
+        "By Defeating": "Andy Hendrix",
+        "Match": "Kevin vs Andy Hendrix",
+        "Reign": "152 days"
+    },
+    {
+        "ID": 3,
+        "Champion Name": "Nelson Pereira",
+        "By Defeating": "Kevin",
+        "Match": "Nelson Pereira w/ The Reckoning vs Kevin",
+        "Reign": "123 days"
+    },
+    {
+        "ID": 4,
+        "Champion Name": "Leo Rossi",
+        "By Defeating": "Nelson Pereira",
+        "Match": "Leo Rossi vs Nelson Pereira",
+        "Reign": "SUMMER 2"
+    }
+]

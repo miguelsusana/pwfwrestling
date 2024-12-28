@@ -1,0 +1,58 @@
+[
+    {
+        "ID": 1,
+        "Champion Name": "Miguel Carvalho",
+        "By Defeating": "Bertolucci",
+        "Match": "Miguel Carvalho vs Oliver vs Jorge Soares vs Bertolucci",
+        "Reign": "138 days"
+    },
+    {
+        "ID": 2,
+        "Champion Name": "Daniel Facine",
+        "By Defeating": "Miguel Carvalho",
+        "Match": "Daniel Facine vs Miguel Carvalho vs Eduardo Sousa",
+        "Reign": "90 days"
+    },
+    {
+        "ID": 3,
+        "Champion Name": "Jo\u00e3o Lopes",
+        "By Defeating": "Daniel Facine",
+        "Match": "Jo\u00e3o Lopes vs Daniel Facine",
+        "Reign": "61 days"
+    },
+    {
+        "ID": 4,
+        "Champion Name": "Diogo Oliveira",
+        "By Defeating": "Jo\u00e3o Lopes",
+        "Match": "Diogo Oliveira vs Jo\u00e3o Lopes",
+        "Reign": "62 days"
+    },
+    {
+        "ID": 5,
+        "Champion Name": "Jo\u00e3o Lopes",
+        "By Defeating": "Diogo Oliveira",
+        "Match": "Jo\u00e3o Lopes vs Diogo Oliveira",
+        "Reign": "15 days"
+    },
+    {
+        "ID": 6,
+        "Champion Name": "Diogo Oliveira",
+        "By Defeating": "Jo\u00e3o Lopes",
+        "Match": "Diogo Oliveira vs Jo\u00e3o Lopes",
+        "Reign": "14 days"
+    },
+    {
+        "ID": 7,
+        "Champion Name": "Jo\u00e3o Lopes",
+        "By Defeating": "Diogo Oliveira",
+        "Match": "Jo\u00e3o Lopes w/ Pedro Marques vs Diogo Oliveira",
+        "Reign": "188 days"
+    },
+    {
+        "ID": 8,
+        "Champion Name": "Gustavo Jardim",
+        "By Defeating": "Jo\u00e3o Lopes",
+        "Match": "Gustavo Jardim vs Jo\u00e3o Lopes vs Diogo Oliveira",
+        "Reign": "WM 5"
+    }
+]

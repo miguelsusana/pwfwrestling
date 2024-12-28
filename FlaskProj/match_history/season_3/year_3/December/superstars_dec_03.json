@@ -1,0 +1,22 @@
+[
+    {
+        "match_type": "Normal Tag",
+        "contestants": "Ricardo Soares & Sara Gon\u00e7alves vs Pedro Miguel & In\u00eas Lima",
+        "result": "Pedro Miguel & In\u00eas Lima win."
+    },
+    {
+        "match_type": "Single",
+        "contestants": "David vs Ant\u00f3nio",
+        "result": "David wins."
+    },
+    {
+        "match_type": "Single",
+        "contestants": "Mike Silva vs Diogo",
+        "result": "Mike Silva wins."
+    },
+    {
+        "match_type": "6-Man Tag",
+        "contestants": "Bruno, Gon\u00e7alo & Pedro Teixeira vs Ricardo Machado, Filipe & Jo\u00e3o Pedro",
+        "result": "Ricardo Machado, Filipe & Jo\u00e3o Pedro win."
+    }
+]

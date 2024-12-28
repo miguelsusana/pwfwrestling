@@ -1,0 +1,100 @@
+[
+    {
+        "ID": 1,
+        "Champion Name": "Diana Neto & Sofia",
+        "Match": "Diana Neto & Sofia vs Sara Gon\u00e7alves & In\u00eas Gon\u00e7alves",
+        "Reign": "242 days",
+        "Rank": 1
+    },
+    {
+        "ID": 2,
+        "Champion Name": "Silvana Branco & Tixa",
+        "Match": "Silvana Branco & Tixa vs Diana Neto & Sofia",
+        "Reign": "215 days",
+        "Rank": 2
+    },
+    {
+        "ID": 3,
+        "Champion Name": "Absolicious",
+        "Match": "Guida & Alexandra Correia vs Silvana Branco & Tixa vs Raquel & Marta vs Paula Castro & Lina",
+        "Reign": "427 days",
+        "Rank": 3
+    },
+    {
+        "ID": 4,
+        "Champion Name": "Vera & Isabel",
+        "Match": "Vera & Isabel vs Guida & Alexandra Correia",
+        "Reign": "205 days",
+        "Rank": 4
+    },
+    {
+        "ID": 5,
+        "Champion Name": "As Fanecas",
+        "Match": "Cl\u00e1udia Bradstone & Lara Alexandra vs Vera & Isabel",
+        "Reign": "425 days",
+        "Rank": 5
+    },
+    {
+        "ID": 6,
+        "Champion Name": "Vera & Isabel",
+        "Match": "Vera & Isabel vs Cl\u00e1udia Bradstone & Lara Alexandra",
+        "Reign": "58 days",
+        "Rank": 6
+    },
+    {
+        "ID": 7,
+        "Champion Name": "In\u00eas Leal & Rita Azevedo",
+        "Match": "In\u00eas Leal & Rita Azevedo vs Vera & Isabel",
+        "Reign": "153 days",
+        "Rank": 7
+    },
+    {
+        "ID": 8,
+        "Champion Name": "Raquel & Marta",
+        "Match": "Raquel & Marta vs In\u00eas Leal & Rita Azevedo",
+        "Reign": "155 days",
+        "Rank": 8
+    },
+    {
+        "ID": 9,
+        "Champion Name": "Vera & T\u00e2nia",
+        "Match": "Vera & T\u00e2nia vs Raquel & Marta",
+        "Reign": "31 days",
+        "Rank": 9
+    },
+    {
+        "ID": 10,
+        "Champion Name": "Raquel & Marta",
+        "Match": "Raquel & Marta vs Vera & T\u00e2nia",
+        "Reign": "60 days",
+        "Rank": 10
+    },
+    {
+        "ID": 11,
+        "Champion Name": "Gon\u00e7alves Twins",
+        "Match": "Sara Gon\u00e7alves & In\u00eas Gon\u00e7alves vs Raquel & Marta",
+        "Reign": "30 days",
+        "Rank": 11
+    },
+    {
+        "ID": 12,
+        "Champion Name": "Raquel & Marta",
+        "Match": "Raquel & Marta vs Sara Gon\u00e7alves & In\u00eas Gon\u00e7alves",
+        "Reign": "31 days",
+        "Rank": 12
+    },
+    {
+        "ID": 13,
+        "Champion Name": "Julia & Daniela",
+        "Match": "Julia & Daniela vs Raquel & Marta",
+        "Reign": "252 days",
+        "Rank": 13
+    },
+    {
+        "ID": 14,
+        "Champion Name": "Raquel & Marta",
+        "Match": "Raquel & Marta vs Julia & Daniela",
+        "Reign": "RAW1 FEB3 S6",
+        "Rank": 14
+    }
+]

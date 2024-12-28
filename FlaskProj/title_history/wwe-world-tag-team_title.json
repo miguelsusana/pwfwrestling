@@ -1,0 +1,800 @@
+[
+    {
+        "ID": 1,
+        "Champion Name": "Vera & Vitor",
+        "By Defeating": "Claudia & Daniela",
+        "Match": "Vera & Vitor vs Claudia & Daniela",
+        "Reign": "SD JAN 1 S1"
+    },
+    {
+        "ID": 2,
+        "Champion Name": "Mike Silva & Ana Catarina",
+        "By Defeating": "Vera & Vitor",
+        "Match": "Mike Silva & Ana Catarina vs Vera & Vitor",
+        "Reign": null
+    },
+    {
+        "ID": 3,
+        "Champion Name": "Rafael & Pedro",
+        "By Defeating": "Vera & Vitor",
+        "Match": "Rafael & Pedro vs Vera & Vitor vs Mike Silva & Ana Catarina",
+        "Reign": null
+    },
+    {
+        "ID": 4,
+        "Champion Name": "Joca & Jo\u00e3o Carlos",
+        "By Defeating": "Rafael & Pedro",
+        "Match": "Joca & Jo\u00e3o Carlos vs Rafael & Pedro",
+        "Reign": null
+    },
+    {
+        "ID": 5,
+        "Champion Name": "Jonathan & Rui Leal",
+        "By Defeating": "Joca & Jo\u00e3o Carlos",
+        "Match": "Jonathan & Rui Leal vs Joca & Jo\u00e3o Carlos",
+        "Reign": null
+    },
+    {
+        "ID": 6,
+        "Champion Name": "David & Mike Silva",
+        "By Defeating": "Jonathan & Rui Leal",
+        "Match": "David & Mike Silva vs Jonathan & Rui Leal",
+        "Reign": null
+    },
+    {
+        "ID": 7,
+        "Champion Name": "C\u00e9sar & Bruno",
+        "By Defeating": "David & Mike Silva",
+        "Match": "C\u00e9sar & Bruno vs David & Mike Silva",
+        "Reign": null
+    },
+    {
+        "ID": 8,
+        "Champion Name": "XXXXXXXX",
+        "By Defeating": "XXXXXXXXXXXXXXXXXXX",
+        "Match": "XXXXXXXXXXXXXXXXXX",
+        "Reign": null
+    },
+    {
+        "ID": 9,
+        "Champion Name": "Emanuel & Bruno",
+        "By Defeating": "C\u00e9sar & Rafael",
+        "Match": "Emanuel & Bruno vs C\u00e9sar & Rafael",
+        "Reign": null
+    },
+    {
+        "ID": 10,
+        "Champion Name": "Jonathan & Rui Leal",
+        "By Defeating": "Emanuel & Bruno",
+        "Match": "Jonathan & Rui Leal vs Emanuel & Bruno vs David & Mike Silva",
+        "Reign": null
+    },
+    {
+        "ID": 11,
+        "Champion Name": "XXXXXXXX",
+        "By Defeating": "XXXXXXXXXXXXXXXXXXX",
+        "Match": "XXXXXXXXXXXXXXXXXX",
+        "Reign": null
+    },
+    {
+        "ID": 11,
+        "Champion Name": "David & Mike Silva",
+        "By Defeating": "Emanuel & Bruno",
+        "Match": "David & Mike Silva vs Emanuel & Bruno",
+        "Reign": "117 days"
+    },
+    {
+        "ID": 12,
+        "Champion Name": "Emanuel & Bruno",
+        "By Defeating": "David & Mike Silva",
+        "Match": "Emanuel & Bruno vs David & Miguel",
+        "Reign": "276 days"
+    },
+    {
+        "ID": 13,
+        "Champion Name": "Sara Gon\u00e7alves & In\u00eas Gon\u00e7alves",
+        "By Defeating": "Emanuel & Bruno",
+        "Match": "Sara Gon\u00e7alves & In\u00eas Gon\u00e7alves vs Bruno & Emanuel",
+        "Reign": "31 days"
+    },
+    {
+        "ID": 14,
+        "Champion Name": "Bruno & Emanuel",
+        "By Defeating": "Gon\u00e7alves Twins",
+        "Match": "Bruno & Emanuel vs In\u00eas Gon\u00e7alves & Sara Gon\u00e7alves vs Joca & Jo\u00e3o Carlos",
+        "Reign": "60 days"
+    },
+    {
+        "ID": 15,
+        "Champion Name": "Joca & Jo\u00e3o Carlos",
+        "By Defeating": "Emanuel & Bruno",
+        "Match": "Joca & Jo\u00e3o Carlos vs Bruno & Emanuel",
+        "Reign": "258 days"
+    },
+    {
+        "ID": 16,
+        "Champion Name": "Bruno & Emanuel",
+        "By Defeating": "Joca & Jo\u00e3o Carlos",
+        "Match": "Bruno & Emanuel vs In\u00eas Gon\u00e7alves & Sara Gon\u00e7alves vs Joca & Jo\u00e3o Carlos",
+        "Reign": "21 days"
+    },
+    {
+        "ID": 17,
+        "Champion Name": "XXXXXXXX",
+        "By Defeating": "XXXXXXXXXXXXXXXXXXX",
+        "Match": "XXXXXXXXXXXXXXXXXX",
+        "Reign": null
+    },
+    {
+        "ID": 18,
+        "Champion Name": "David & Mike Silva",
+        "By Defeating": "Joca & Jo\u00e3o Carlos",
+        "Match": "David & Mike Silva vs Joca & Jo\u00e3o Carlos",
+        "Reign": "531+"
+    },
+    {
+        "ID": 19,
+        "Champion Name": "Hugo & Rui Leal",
+        "By Defeating": "David & Mike Silva",
+        "Match": "Hugo & Rui Leal vs David & Mike Silva",
+        "Reign": null
+    },
+    {
+        "ID": 20,
+        "Champion Name": "Manuel & Bruno",
+        "By Defeating": "Hugo & Rui Leal",
+        "Match": "Manuel & Bruno vs Hugo & Rui Leal",
+        "Reign": null
+    },
+    {
+        "ID": 21,
+        "Champion Name": "Hugo & Rui Leal",
+        "By Defeating": "Manuel & Bruno",
+        "Match": "Hugo & Rui Leal vs Manuel & Bruno",
+        "Reign": null
+    },
+    {
+        "ID": 22,
+        "Champion Name": "Manuel & Bruno",
+        "By Defeating": "Hugo & Rui Leal",
+        "Match": "Manuel & Bruno vs Hugo & Rui Leal",
+        "Reign": null
+    },
+    {
+        "ID": 23,
+        "Champion Name": "F\u00e1bio Arantes & Filipe Leesee",
+        "By Defeating": "Manuel & Bruno",
+        "Match": "F\u00e1bio Arantes & Filipe Leesee vs Manuel & Bruno",
+        "Reign": null
+    },
+    {
+        "ID": 24,
+        "Champion Name": "Manuel & Bruno",
+        "By Defeating": "Fabio Arantes & Filipe Leesee",
+        "Match": "Manuel & Bruno vs F\u00e1bio Arantes & Filipe Leesee",
+        "Reign": null
+    },
+    {
+        "ID": 25,
+        "Champion Name": "David & Mike Silva",
+        "By Defeating": "Manuel & Bruno",
+        "Match": "David & Mike Silva vs Manuel & Bruno",
+        "Reign": null
+    },
+    {
+        "ID": 26,
+        "Champion Name": "Hugo & Rui Leal",
+        "By Defeating": "David & Mike Silva",
+        "Match": "Hugo & Rui Leal vs David & Mike Silva",
+        "Reign": null
+    },
+    {
+        "ID": 27,
+        "Champion Name": "Jos\u00e9 Jo\u00e3o & Pedro Miguel",
+        "By Defeating": "Hugo & Rui Leal",
+        "Match": "Jos\u00e9 Jo\u00e3o & Pedro Miguel vs Hugo & Rui Leal",
+        "Reign": null
+    },
+    {
+        "ID": 28,
+        "Champion Name": "Manuel & Bruno",
+        "By Defeating": "Jos\u00e9 Jo\u00e3o & Pedro Miguel",
+        "Match": "Manuel & Bruno vs Jos\u00e9 Jo\u00e3o & Pedro Miguel",
+        "Reign": null
+    },
+    {
+        "ID": 29,
+        "Champion Name": "Jos\u00e9 Jo\u00e3o & Pedro Miguel",
+        "By Defeating": "Manuel & Bruno",
+        "Match": "Jos\u00e9 Jo\u00e3o & Pedro Miguel vs Manuel & Bruno",
+        "Reign": null
+    },
+    {
+        "ID": 30,
+        "Champion Name": "David & Mike Silva",
+        "By Defeating": "Jos\u00e9 Jo\u00e3o & Pedro Miguel",
+        "Match": "David & Mike Silva vs Jos\u00e9 Jo\u00e3o & Pedro Miguel",
+        "Reign": null
+    },
+    {
+        "ID": 31,
+        "Champion Name": "Jos\u00e9 Jo\u00e3o & Pedro Miguel",
+        "By Defeating": "David & Mike Silva",
+        "Match": "Jos\u00e9 Jo\u00e3o & Pedro Miguel vs David & Mike Silva",
+        "Reign": null
+    },
+    {
+        "ID": 32,
+        "Champion Name": "David & Mike Silva",
+        "By Defeating": "Jos\u00e9 Jo\u00e3o & Pedro Miguel",
+        "Match": "David & Mike Silva vs Jos\u00e9 Jo\u00e3o & Pedro Miguel",
+        "Reign": null
+    },
+    {
+        "ID": 33,
+        "Champion Name": "Jos\u00e9 Jo\u00e3o & Pedro Miguel",
+        "By Defeating": "David & Mike Silva",
+        "Match": "Jos\u00e9 Jo\u00e3o & Pedro Miguel vs David & Mike Silva",
+        "Reign": null
+    },
+    {
+        "ID": 34,
+        "Champion Name": "David & Mike Silva",
+        "By Defeating": "Jos\u00e9 Jo\u00e3o & Pedro Miguel",
+        "Match": "David & Mike Silva vs Jos\u00e9 Jo\u00e3o & Pedro Miguel",
+        "Reign": null
+    },
+    {
+        "ID": 35,
+        "Champion Name": "XXXXXXXX",
+        "By Defeating": "XXXXXXXXXXXXXXXXXXX",
+        "Match": "XXXXXXXXXXXXXXXXXX",
+        "Reign": null
+    },
+    {
+        "ID": 36,
+        "Champion Name": "Pedro & Manuel",
+        "By Defeating": "Rui Leal & Lucas",
+        "Match": "Pedro & Manuel vs Rui Leal & Lucas",
+        "Reign": null
+    },
+    {
+        "ID": 37,
+        "Champion Name": "Jonathan & C\u00e9sar",
+        "By Defeating": "Pedro & Manuel",
+        "Match": "Jonathan & C\u00e9sar vs Pedro & Manuel",
+        "Reign": null
+    },
+    {
+        "ID": 38,
+        "Champion Name": "XXXXXXXX",
+        "By Defeating": "XXXXXXXXXXXXXXXXXXX",
+        "Match": "XXXXXXXXXXXXXXXXXX",
+        "Reign": null
+    },
+    {
+        "ID": 39,
+        "Champion Name": "Diogo & Filipe",
+        "By Defeating": "Ricardo Soares & Ricardo Machado",
+        "Match": "Diogo & Filipe vs Ricardo Soares & Ricardo Machado",
+        "Reign": "SEASON 3"
+    },
+    {
+        "ID": 40,
+        "Champion Name": "XXXXXXXX",
+        "By Defeating": "XXXXXXXXXXXXXXXXXXX",
+        "Match": "XXXXXXXXXXXXXXXXXX",
+        "Reign": null
+    },
+    {
+        "ID": 41,
+        "Champion Name": "Andr\u00e9 & Manuel Pedro",
+        "By Defeating": "Ricardo Soares & Ricardo Machado",
+        "Match": "Andr\u00e9 & Manuel Pedro vs Ricardo Soares & Ricardo Machado",
+        "Reign": null
+    },
+    {
+        "ID": 42,
+        "Champion Name": "Ricardo Soares & Luis Silva",
+        "By Defeating": "Andr\u00e9 & Manuel Pedro",
+        "Match": "Ricardo Soares & Luis Silva vs Andr\u00e9 & Manuel Pedro",
+        "Reign": "220 days"
+    },
+    {
+        "ID": 43,
+        "Champion Name": "Diogo & Filipe",
+        "By Defeating": "Ricardo Soares & Luis Silva",
+        "Match": "Diogo & Filipe vs Ricardo Soares & Luis Silva",
+        "Reign": "SD SEP 4"
+    },
+    {
+        "ID": 44,
+        "Champion Name": "Manuel Pedro & Jos\u00e9 Bernardo",
+        "By Defeating": "Diogo & Filipe",
+        "Match": "Manuel Pedro & Jos\u00e9 Bernardo vs Diogo & Filipe",
+        "Reign": "213 days"
+    },
+    {
+        "ID": 45,
+        "Champion Name": "Ricardo Machado & Diogo",
+        "By Defeating": "Manuel Pedro & Jos\u00e9 Bernardo",
+        "Match": "Ricardo Machado & Diogo vs Manuel Pedro & Jos\u00e9 Bernardo",
+        "Reign": null
+    },
+    {
+        "ID": 46,
+        "Champion Name": "Ant\u00f3nio & Pedro Teixeira",
+        "By Defeating": "Ricardo Machado & Diogo",
+        "Match": "Ant\u00f3nio & Pedro Teixeira vs Ricardo Machado & Diogo",
+        "Reign": null
+    },
+    {
+        "ID": 47,
+        "Champion Name": "C\u00e9sar & Jonathan",
+        "By Defeating": "Ant\u00f3nio & Pedro Teixeira",
+        "Match": "C\u00e9sar & Jonathan vs Ant\u00f3nio & Pedro Teixeira",
+        "Reign": "67 days"
+    },
+    {
+        "ID": 48,
+        "Champion Name": "Diogo & Filipe",
+        "By Defeating": "C\u00e9sar & Jonathan",
+        "Match": "Diogo & Filipe vs C\u00e9sar & Jonathan",
+        "Reign": null
+    },
+    {
+        "ID": 49,
+        "Champion Name": "Jorge Campos & Nuno Meireles",
+        "By Defeating": "Diogo & Filipe",
+        "Match": "Jorge Campos & Nuno Meireles vs Diogo & Filipe",
+        "Reign": null
+    },
+    {
+        "ID": 50,
+        "Champion Name": "Rui Almeida & Miguel Oliveira",
+        "By Defeating": "Jorge Campos & Nuno Meireles",
+        "Match": "Rui Almeida & Miguel Oliveira vs Jorge Campos & Nuno Meireles",
+        "Reign": null
+    },
+    {
+        "ID": 51,
+        "Champion Name": "Bruno & Pedro Teixeira",
+        "By Defeating": "Rui Almeida & Miguel Oliveira",
+        "Match": "Bruno & Pedro Teixeira vs Rui Almeida & Miguel Oliveira vs Xavier & Rui Peixoto",
+        "Reign": null
+    },
+    {
+        "ID": 52,
+        "Champion Name": "Rui Peixoto & Xavier",
+        "By Defeating": "Bruno & Pedro Teixeira",
+        "Match": "Rui Peixoto & Xavier vs Bruno & Pedro Teixeira",
+        "Reign": null
+    },
+    {
+        "ID": 53,
+        "Champion Name": "Bruno & Pedro Teixeira",
+        "By Defeating": "Rui Peixoto & Xavier",
+        "Match": "Bruno & Pedro Teixeira vs Rui Peixoto & Xavier",
+        "Reign": null
+    },
+    {
+        "ID": 54,
+        "Champion Name": "Rui Peixoto & Xavier",
+        "By Defeating": "Bruno & Pedro Teixeira",
+        "Match": "Rui Peixoto & Xavier vs Bruno & Pedro Teixeira",
+        "Reign": null
+    },
+    {
+        "ID": 55,
+        "Champion Name": "Bruno & Pedro Teixeira",
+        "By Defeating": "Rui Peixoto & Xavier",
+        "Match": "Bruno & Pedro Teixeira vs Rui Peixoto & Xavier",
+        "Reign": null
+    },
+    {
+        "ID": 56,
+        "Champion Name": "F\u00e1bio Arantes & Filipe Leesee",
+        "By Defeating": "Bruno & Pedro Teixeira",
+        "Match": "F\u00e1bio Arantes & Filipe Leesee vs Bruno & Pedro Teixeira",
+        "Reign": null
+    },
+    {
+        "ID": 57,
+        "Champion Name": "Bruno & Pedro Teixeira",
+        "By Defeating": "F\u00e1bio Arantes & Filipe Leesee",
+        "Match": "Bruno & Pedro Teixeira vs F\u00e1bio Arantes & Filipe Leesee ",
+        "Reign": null
+    },
+    {
+        "ID": 58,
+        "Champion Name": "F\u00e1bio Arantes & Filipe Leesee",
+        "By Defeating": "Bruno & Pedro Teixeira",
+        "Match": "F\u00e1bio Arantes & Filipe Leesee vs Bruno & Pedro Teixeira",
+        "Reign": null
+    },
+    {
+        "ID": 59,
+        "Champion Name": "Rui Almeida & Miguel Oliveira",
+        "By Defeating": "F\u00e1bio Arantes & Filipe Leesee",
+        "Match": "Rui Almeida & Miguel Oliveira vs F\u00e1bio Arantes & Filipe Leesee",
+        "Reign": null
+    },
+    {
+        "ID": 60,
+        "Champion Name": "F\u00e1bio Arantes & Filipe Leesee",
+        "By Defeating": "Rui Almeida & Miguel Oliveira",
+        "Match": "F\u00e1bio Arantes & Filipe Leesee vs Rui Almeida & Miguel Oliveira",
+        "Reign": null
+    },
+    {
+        "ID": 61,
+        "Champion Name": "Gon\u00e7alo Teixeira & Zekita",
+        "By Defeating": "F\u00e1bio Arantes & Filipe Leesee",
+        "Match": "Gon\u00e7alo Teixeira & Zekita vs F\u00e1bio Arantes & Filipe Leesee",
+        "Reign": null
+    },
+    {
+        "ID": 62,
+        "Champion Name": "Diogo Matos & Andr\u00e9 Coutinho",
+        "By Defeating": "Gon\u00e7alo Teixeira & Zekita",
+        "Match": "Diogo Matos & Andr\u00e9 Coutinho vs Gon\u00e7alo Teixeira & Zekita",
+        "Reign": null
+    },
+    {
+        "ID": 63,
+        "Champion Name": "Diogo & Filipe",
+        "By Defeating": "Diogo Matos & Andr\u00e9 Coutinho",
+        "Match": "Diogo & Filipe vs Diogo Matos & Andr\u00e9 Coutinho",
+        "Reign": null
+    },
+    {
+        "ID": 64,
+        "Champion Name": "Gon\u00e7alo Teixeira & Zekita",
+        "By Defeating": "Diogo & Filipe",
+        "Match": "Gon\u00e7alo Teixeira & Zekita vs Diogo & Filipe",
+        "Reign": null
+    },
+    {
+        "ID": 65,
+        "Champion Name": "Diogo & Filipe",
+        "By Defeating": "Gon\u00e7alo Teixeira & Zekita",
+        "Match": "Diogo & Filipe vs Gon\u00e7alo Teixeira & Zekita vs Diogo Matos & Andr\u00e9 Coutinho",
+        "Reign": null
+    },
+    {
+        "ID": 66,
+        "Champion Name": "Diogo Matos & Andr\u00e9 Coutinho",
+        "By Defeating": "Diogo & Filipe",
+        "Match": "Diogo Matos & Andr\u00e9 Coutinho vs Diogo & Filipe",
+        "Reign": null
+    },
+    {
+        "ID": 67,
+        "Champion Name": "Gon\u00e7alo Teixeira & Zekita",
+        "By Defeating": "Diogo Matos & Andr\u00e9 Coutinho",
+        "Match": "Gon\u00e7alo Teixeira & Zekita vs Diogo Matos & Andr\u00e9 Coutinho",
+        "Reign": null
+    },
+    {
+        "ID": 68,
+        "Champion Name": "Diogo & Filipe",
+        "By Defeating": "Gon\u00e7alo Teixeira & Zekita",
+        "Match": "Diogo & Filipe vs Gon\u00e7alo Teixeira & Zekita",
+        "Reign": null
+    },
+    {
+        "ID": 69,
+        "Champion Name": "Jorge Soares & Mike Silva",
+        "By Defeating": "Diogo & Filipe",
+        "Match": "Jorge Soares & Mike Silva vs Diogo & Filipe",
+        "Reign": null
+    },
+    {
+        "ID": 70,
+        "Champion Name": "Diogo & Filipe",
+        "By Defeating": "Jorge Soares & Mike Silva",
+        "Match": "Diogo & Filipe vs Jorge Soares & Mike Silva",
+        "Reign": "519 days"
+    },
+    {
+        "ID": 71,
+        "Champion Name": "Pedro Reis & Kevin",
+        "By Defeating": "Diogo & Filipe",
+        "Match": "Pedro Reis & Kevin vs Diogo & Filipe",
+        "Reign": null
+    },
+    {
+        "ID": 72,
+        "Champion Name": "Ricardo Melo & Jo\u00e3o Santos",
+        "By Defeating": "Pedro Reis & Kevin",
+        "Match": "Ricardo Melo & Jo\u00e3o Santos vs Pedro Reis & Kevin",
+        "Reign": null
+    },
+    {
+        "ID": 73,
+        "Champion Name": "Davez & Pedro Fonseca",
+        "By Defeating": "Ricardo Melo & Jo\u00e3o Santos",
+        "Match": "Davez & Pedro Fonseca vs Ricardo Melo & Jo\u00e3o Santos",
+        "Reign": null
+    },
+    {
+        "ID": 74,
+        "Champion Name": "Jo\u00e3o Lopes & Cristiano Martins",
+        "By Defeating": "Davez & Pedro Fonseca",
+        "Match": "Jo\u00e3o Lopes & Cristiano Martins vs Davez & Pedro Fonseca",
+        "Reign": null
+    },
+    {
+        "ID": 75,
+        "Champion Name": "Ricardo Melo & Jo\u00e3o Santos",
+        "By Defeating": "Jo\u00e3o Lopes & Cristiano Martins",
+        "Match": "Ricardo Melo & Jo\u00e3o Santos vs Jo\u00e3o Lopes & Cristiano Martins",
+        "Reign": null
+    },
+    {
+        "ID": 76,
+        "Champion Name": "Davez & Pedro Fonseca",
+        "By Defeating": "Ricardo Melo & Jo\u00e3o Santos",
+        "Match": "Davez & Pedro Fonseca vs Ricardo Melo & Jo\u00e3o Santos",
+        "Reign": null
+    },
+    {
+        "ID": 77,
+        "Champion Name": "Dani Lopes & Diogo Machado",
+        "By Defeating": "Davez & Pedro Fonseca",
+        "Match": "Dani Lopes & Pedro Fonseca vs Davez & Pedro Fonseca",
+        "Reign": null
+    },
+    {
+        "ID": 78,
+        "Champion Name": "Bruno Alves & Camila",
+        "By Defeating": "Dani Lopes & Diogo Machado",
+        "Match": "Bruno Alves & Camila vs Dani Lopes & Diogo Machado",
+        "Reign": null
+    },
+    {
+        "ID": 79,
+        "Champion Name": "Kevin & Barbosa",
+        "By Defeating": "Bruno Alves & Camila",
+        "Match": "Kevin & Barbosa vs Bruno Alves & Camila",
+        "Reign": null
+    },
+    {
+        "ID": 80,
+        "Champion Name": "Pedro Reis & Bertolucci",
+        "By Defeating": "Kevin & Barbosa",
+        "Match": "Pedro Reis & Bertolucci vs Kevin & Barbosa",
+        "Reign": null
+    },
+    {
+        "ID": 81,
+        "Champion Name": "Gon\u00e7alo Rodrigues & Jo\u00e3o Costa",
+        "By Defeating": "Pedro Reis & Bertolucci",
+        "Match": "Gon\u00e7alo Rodrigues & Jo\u00e3o Costa vs Pedro Reis & Bertolucci",
+        "Reign": "184 days"
+    },
+    {
+        "ID": 82,
+        "Champion Name": "Pedro Reis & Sim\u00e3o",
+        "By Defeating": "Gon\u00e7alo Rodrigues & Jo\u00e3o Costa",
+        "Match": "Pedro Reis & Sim\u00e3o vs Gon\u00e7alo Rodrigues & Jo\u00e3o Costa",
+        "Reign": "63 days"
+    },
+    {
+        "ID": 83,
+        "Champion Name": "Mike Silva & Jorge Soares",
+        "By Defeating": "Pedro Reis & Sim\u00e3o",
+        "Match": "Mike Silva & Jorge Soares vs Pedro Reis & Sim\u00e3o",
+        "Reign": "65 days"
+    },
+    {
+        "ID": 84,
+        "Champion Name": "XXXXXXXX",
+        "By Defeating": "XXXXXXXXXXXXXXXXXXX",
+        "Match": "XXXXXXXXXXXXXXXXXX",
+        "Reign": null
+    },
+    {
+        "ID": 85,
+        "Champion Name": "Eduardo Sousa & Bertolucci",
+        "By Defeating": "Daniel Facine & Mike Silva",
+        "Match": "Eduardo Sousa & Bertolucci vs Daniel Facine & Mike Silva",
+        "Reign": "265 days"
+    },
+    {
+        "ID": 86,
+        "Champion Name": "Jorge Soares & Daniel Facine",
+        "By Defeating": "Eduardo Sousa & Bertolucci",
+        "Match": "Jorge Soares & Daniel Facine vs Eduardo Sousa & Bertolucci",
+        "Reign": "95 days"
+    },
+    {
+        "ID": 87,
+        "Champion Name": "Jos\u00e9 Xarez & Bruno Alves",
+        "By Defeating": "Jorge Soares & Daniel Facine",
+        "Match": "Jos\u00e9 Xarez & Bruno Alves vs Jorge Soares & Daniel Facine",
+        "Reign": "335 days"
+    },
+    {
+        "ID": 88,
+        "Champion Name": "Vitor Pascoal & Jorge Soares",
+        "By Defeating": "Jos\u00e9 Xarez & Bruno Alves",
+        "Match": "Vitor Pascoal & Jorge Soares vs Jos\u00e9 Xarez & Bruno Alves",
+        "Reign": "220 days"
+    },
+    {
+        "ID": 89,
+        "Champion Name": "Barbosa & Pedro Reis",
+        "By Defeating": "Vitor Pascoal & Jorge Soares",
+        "Match": "Barbosa & Pedro Reis vs Vitor Pascoal & Jorge Soares",
+        "Reign": "45 days"
+    },
+    {
+        "ID": 90,
+        "Champion Name": "Paulo Durbeck & Jo\u00e3o Dias",
+        "By Defeating": "Barbosa & Pedro Reis",
+        "Match": "Paulo Durbeck & Jo\u00e3o Dias vs Barbosa & Pedro Reis",
+        "Reign": "199 days"
+    },
+    {
+        "ID": 91,
+        "Champion Name": "Miguel Carvalho & S\u00e9rgio Oliveira",
+        "By Defeating": "Paulo Durbeck & Jo\u00e3o Dias",
+        "Match": "Miguel Carvalho & S\u00e9rgio Oliveira vs Paulo Durbeck & Jo\u00e3o Dias",
+        "Reign": "121 days"
+    },
+    {
+        "ID": 92,
+        "Champion Name": "Bernas & Bruno F\u00e1tima",
+        "By Defeating": "Miguel Carvalho & S\u00e9rgio Oliveira",
+        "Match": "Bernas & Bruno F\u00e1tima vs Miguel Carvalho & S\u00e9rgio Oliveira",
+        "Reign": "61 days"
+    },
+    {
+        "ID": 93,
+        "Champion Name": "Paulo Durbeck & Jo\u00e3o Dias",
+        "By Defeating": "Bernas & Bruno F\u00e1tima",
+        "Match": "Paulo Durbeck & Jo\u00e3o Dias vs Bernas & Bruno F\u00e1tima",
+        "Reign": "213 days"
+    },
+    {
+        "ID": 94,
+        "Champion Name": "Bernas & Bruno F\u00e1tima",
+        "By Defeating": "Paulo Durbeck & Jo\u00e3o Dias",
+        "Match": "Bernas & Bruno F\u00e1tima vs Paulo Durbeck vs & Jo\u00e3o Dias",
+        "Reign": "92 days"
+    },
+    {
+        "ID": 95,
+        "Champion Name": "Paulo Durbeck & Jo\u00e3o Dias",
+        "By Defeating": "Bernas & Bruno F\u00e1tima",
+        "Match": "Paulo Durbeck & Jo\u00e3o Dias vs Bernas & Bruno F\u00e1tima",
+        "Reign": "336 days"
+    },
+    {
+        "ID": 96,
+        "Champion Name": "Bruno Alves & Oliver",
+        "By Defeating": "Paulo Durbeck & Jo\u00e3o Dias",
+        "Match": "Bruno Alves & Oliver vs Paulo Durbeck & Jo\u00e3o Dias",
+        "Reign": "61 days"
+    },
+    {
+        "ID": 97,
+        "Champion Name": "Paulo Durbeck & Jo\u00e3o Dias",
+        "By Defeating": "Bruno Alves & Oliver",
+        "Match": "Paulo Durbeck & Jo\u00e3o Dias vs Bruno Alves & Oliver",
+        "Reign": "92 days"
+    },
+    {
+        "ID": 98,
+        "Champion Name": "Cristiano Martins & Jo\u00e3o Lopes",
+        "By Defeating": "Paulo Durbeck & Jo\u00e3o Dias",
+        "Match": "Cristiano Martins & Jo\u00e3o Lopes vs Paulo Durbeck & Jo\u00e3o Dias",
+        "Reign": "331 days"
+    },
+    {
+        "ID": 99,
+        "Champion Name": "Bernas & Valkirius",
+        "By Defeating": "Cristiano Martins & Jo\u00e3o Lopes",
+        "Match": "Bernas & Valkirius vs Cristiano Martins & Jo\u00e3o Lopes",
+        "Reign": "30 days"
+    },
+    {
+        "ID": 100,
+        "Champion Name": "Cristiano Martins & Jo\u00e3o Lopes",
+        "By Defeating": "Bernas & Valkirius",
+        "Match": "Cristiano Martins & Jo\u00e3o Lopes vs Bernas & Valkirius",
+        "Reign": "196 days"
+    },
+    {
+        "ID": 101,
+        "Champion Name": "Paulo Durbeck & Jo\u00e3o Dias",
+        "By Defeating": "Cristiano Martins & Jo\u00e3o Lopes",
+        "Match": "Paulo Durbeck & Jo\u00e3o Dias vs Cristiano Martins & Jo\u00e3o Lopes",
+        "Reign": "198 days"
+    },
+    {
+        "ID": 102,
+        "Champion Name": "Kazhriel & Gustavo Jardim",
+        "By Defeating": "Paulo Durbeck & Jo\u00e3o Dias",
+        "Match": "Kazhriel & Gustavo Jardim vs Paulo Durbeck & Jo\u00e3o Dias",
+        "Reign": "93 days"
+    },
+    {
+        "ID": 103,
+        "Champion Name": "Rui Horta & Gali",
+        "By Defeating": "Kazhriel & Gustavo Jardim",
+        "Match": "Rui Horta & Gali vs Kazhriel & Gustavo Jardim",
+        "Reign": "172 days"
+    },
+    {
+        "ID": 104,
+        "Champion Name": "Invictus & Tuga",
+        "By Defeating": "Rui Horta & Gali",
+        "Match": "Invictus & Tuga vs Rui Horta & Gali",
+        "Reign": "31 days"
+    },
+    {
+        "ID": 105,
+        "Champion Name": "Rui Horta & Gali",
+        "By Defeating": "Invictus & Tuga",
+        "Match": "Rui Horta & Gali vs Invictus & Tuga",
+        "Reign": "31 days"
+    },
+    {
+        "ID": 106,
+        "Champion Name": "Jo\u00e3o Lopes & Tuga",
+        "By Defeating": "Rui Horta & Gali",
+        "Match": "Jo\u00e3o Lopes & Tuga vs Rui Horta & Gali",
+        "Reign": "213 days"
+    },
+    {
+        "ID": 107,
+        "Champion Name": "Kazhriel & Flake",
+        "By Defeating": "Jo\u00e3o Lopes & Tuga",
+        "Match": "Kazhriel & Gustavo Jardim vs Jo\u00e3o Lopes & Tuga",
+        "Reign": "183 days"
+    },
+    {
+        "ID": 108,
+        "Champion Name": "Mike Silva & Daniel Facine",
+        "By Defeating": "Kazhriel & Flake",
+        "Match": "Mike Silva & Daniel Facine vs Kazhriel & Flake",
+        "Reign": "485 days"
+    },
+    {
+        "ID": 109,
+        "Champion Name": "Nelson Pereira & Luis Duarte",
+        "By Defeating": "Mike Silva & Daniel Facine",
+        "Match": "Nelson Pereira & Luis Duarte vs Mike Silva & Daniel Facine",
+        "Reign": "245 days"
+    },
+    {
+        "ID": 110,
+        "Champion Name": "Ravioli & Ozzy",
+        "By Defeating": "Nelson Pereira & Luis Duarte",
+        "Match": "Ravioli & Ozzy vs Nelson Pereira & Luis Duarte",
+        "Reign": "152 days"
+    },
+    {
+        "ID": 111,
+        "Champion Name": "Jan & Pedro Soares",
+        "By Defeating": "Ravioli & Ozzy",
+        "Match": "Jan & Pedro Soares vs Ravioli & Ozzy",
+        "Reign": "122 days"
+    },
+    {
+        "ID": 112,
+        "Champion Name": "Ravioli & Ozzy",
+        "By Defeating": "Jan & Pedro Soares",
+        "Match": "Ravioli & Ozzy vs Jan & Pedro Soares vs Andr\u00e9 Gomes & Lobo Ib\u00e9rico vs Drothdarr & Flix",
+        "Reign": "61 days"
+    },
+    {
+        "ID": 113,
+        "Champion Name": "Nelson Pereira & Luis Mestre",
+        "By Defeating": "Ravioli & Ozzy",
+        "Match": "Nelson Pereira & Luis Mestre vs Ravioli & Ozzy",
+        "Reign": "NOC 2"
+    }
+]

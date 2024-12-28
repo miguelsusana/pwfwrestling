@@ -1,0 +1,190 @@
+{% extends 'base.html' %}
+
+{% set styles = "/static/css/championship_styles.css" %}
+{% block title %}Women's Tag Team Championship{% endblock %}
+{% block extra_head %}
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+<link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Permanent+Marker&display=swap"
+    rel="stylesheet">
+{% endblock %}
+{% block content %}
+<div class="championship-title">
+    <img src="/static/images/championship/womens-tag-team-championship/womens-tag-team-championship-design.png"
+        style="width:400px">
+    <span>WOMEN'S TAG TEAM CHAMPIONSHIP</span>
+</div>
+<div class="championship-hero-footer">
+    <div>
+        <p class="championship-holder">Championship Holder</p>
+        <p class="championship-holder-name">Julia & Daniela</p>
+    </div>
+    <div>
+        <p class="championship-holder">Time Held</p>
+        <p class="championship-holder-name">??? days</p>
+    </div>
+</div>
+<div class="championship-tables">
+    <div>
+        <table class="grid-table">
+            <thead>
+                <tr>
+                    <th>Rank</th>
+                    <th>Champion Name</th>
+                    <th>Times Earned</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Vera</td>
+                    <td>3x</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Raquel</td>
+                    <td>3x</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Marta</td>
+                    <td>3x</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div>
+        <table class="grid-table">
+            <thead>
+                <tr>
+                    <th>Rank</th>
+                    <th>Champion Name</th>
+                    <th>Top Reigns</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Guida & Alexandra Correia</td>
+                    <td>427 days</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Cláudia Bradstone & Lara Alexandra</td>
+                    <td>425 days</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Diana Neto & Sofia</td>
+                    <td>242 days</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div>
+        <table class="grid-table">
+            <thead>
+                <tr>
+                    <th>Rank</th>
+                    <th>Champion Name</th>
+                    <th>Combined Days</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Guida</td>
+                    <td>427 days</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Alexandra Correia</td>
+                    <td>427 days</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Cláudia Bradstone</td>
+                    <td>425 days</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="stats-table">
+    <table class="grid-table">
+        <thead>
+            <tr>
+                <th colspan="2">RANDOM INFORMATION & STATS</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>FOUNDED</td>
+                <td>Evolution</td>
+            </tr>
+            <tr>
+                <td>INAUGURAL MATCH</td>
+                <td>Gonçalves Twins vs. Diana Neto & Sofia</td>
+            </tr>
+            <tr>
+                <td>INAUGURAL CHAMPION</td>
+                <td>Diana Neto & Sofia</td>
+            </tr>
+            <tr>
+                <td>FIRST PPV APPEARANCE</td>
+                <td>Evolution</td>
+            </tr>
+            <tr>
+                <td>FIRST PPV DEFENSE</td>
+                <td>Diana Neto & Sofia (c) vs. Silvana Branco & Tixa vs. Maria & Rita vs. Maria Macedo & Nair vs.
+                    Mónica Ferreira & Nádia Ferreira vs. Rebeca Facine & Vanessa</td>
+            </tr>
+            <tr>
+                <td>BRANDS DEFENDED ON</td>
+                <td>RAW, SmackDown!, NXT, PPV</td>
+            </tr>
+            <td colspan="2" style="text-align: center;">
+                <a href="/title/womens-tag-team-championship/history">Women's
+                    Tag Team Championship History</a>
+            </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center;">
+                    <a href="/title/womens-tag-team-championship/history/reigns.html">Reigns</a>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center;">
+                    <a href="/title/womens-tag-team-championship/history/combined_days.html">Combined
+                        Days</a>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center;">
+                    <a href="/title/womens-tag-team-championship/history/belt_records.html">Belt
+                        Records</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table class="grid-table">
+        <thead>
+            <tr>
+                <th>OTHER DESIGNATIONS</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Women's Tag Team Championship (2019-Present)</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="championship-display-footer belts">
+</div>
+{% endblock %}

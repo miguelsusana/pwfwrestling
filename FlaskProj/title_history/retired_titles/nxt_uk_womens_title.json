@@ -1,0 +1,44 @@
+[
+    {
+        "ID": 1,
+        "Champion Name": "In\u00eas Portela",
+        "By Defeating": "Catarina Rainho",
+        "Match": "In\u00eas Portela vs In\u00eas Loba vs Marta Carvalho vs Catarina Rainho",
+        "Reign": "151 days"
+    },
+    {
+        "ID": 2,
+        "Champion Name": "XXXXXXXXXXXXX",
+        "By Defeating": "XXXXXXXXXXXXXX",
+        "Match": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+        "Reign": null
+    },
+    {
+        "ID": 3,
+        "Champion Name": "Flo Riley",
+        "By Defeating": "Aleah James",
+        "Match": "Flo Riley vs Aleah James vs Anastasia vs Killer Kelly",
+        "Reign": "233 days"
+    },
+    {
+        "ID": 4,
+        "Champion Name": "Aleah James",
+        "By Defeating": "Flo Riley",
+        "Match": "Aleah James vs Flo Riley",
+        "Reign": "334 days"
+    },
+    {
+        "ID": 5,
+        "Champion Name": "Killer Kelly",
+        "By Defeating": "Aleah James",
+        "Match": "Killer Kelly vs Aleah James",
+        "Reign": "457 days"
+    },
+    {
+        "ID": 6,
+        "Champion Name": "Ana Catarina",
+        "By Defeating": "Lena",
+        "Match": "Ana Catarina vs Killer Kelly vs Vera vs Lena",
+        "Reign": "<1 day"
+    }
+]

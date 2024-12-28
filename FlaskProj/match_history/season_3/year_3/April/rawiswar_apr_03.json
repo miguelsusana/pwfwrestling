@@ -1,0 +1,22 @@
+[
+    {
+        "match_type": "Normal Tag",
+        "contestants": "Guida & Pedro vs Rafael & Jo\u00e3o Gomes",
+        "result": "Rafael & Jo\u00e3o Gomes win."
+    },
+    {
+        "match_type": "Triple Threat",
+        "contestants": "Rui Leal vs Emanuel vs C\u00e9sar",
+        "result": "C\u00e9sar wins."
+    },
+    {
+        "match_type": "Beauty Contests",
+        "contestants": "Bianca vs Juliana Gon\u00e7alves vs Vera vs Guida",
+        "result": "Bianca wins."
+    },
+    {
+        "match_type": "MAIN EVENT - Single",
+        "contestants": "Lucas vs Jos\u00e9 Jo\u00e3o",
+        "result": "Lucas wins."
+    }
+]

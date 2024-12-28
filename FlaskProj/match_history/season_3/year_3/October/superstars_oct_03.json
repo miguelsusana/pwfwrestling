@@ -1,0 +1,22 @@
+[
+    {
+        "match_type": "Handicap 2v3",
+        "contestants": "Diogo, Filipe & Ricardo Machado vs Luis Lowden & Ant\u00f3nio",
+        "result": "Diogo, Filipe & Ricardo Machado win."
+    },
+    {
+        "match_type": "Normal Tag",
+        "contestants": "Raquel & Mariana vs In\u00eas Lima & Sara Gon\u00e7alves",
+        "result": "In\u00eas Lima & Sara Gon\u00e7alves win."
+    },
+    {
+        "match_type": "Fatal-4-Way",
+        "contestants": "Miguel vs David vs Ricardo Soares vs Pedro Miguel",
+        "result": "David wins."
+    },
+    {
+        "match_type": "Single",
+        "contestants": "Ana Rita vs Luis Silva",
+        "result": "Luis Silva wins."
+    }
+]

@@ -1,0 +1,22 @@
+[
+    {
+        "match_type": "Single",
+        "contestants": "In\u00eas Leal vs In\u00eas Lima",
+        "result": "In\u00eas Lima wins."
+    },
+    {
+        "match_type": "Special Referee",
+        "contestants": "Ana Rita vs Ricardo Machado (Mike Silva & Rita)",
+        "result": "Ana Rita wins."
+    },
+    {
+        "match_type": "Single",
+        "contestants": "Manuel Pedro w/ In\u00eas Leal vs Luis Silva w/ Raquel",
+        "result": "Luis Silva wins."
+    },
+    {
+        "match_type": "Single",
+        "contestants": "Mike Silva vs Diogo",
+        "result": "Mike Silva wins."
+    }
+]

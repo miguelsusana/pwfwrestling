@@ -1,0 +1,156 @@
+[
+    {
+        "ID": 1,
+        "Champion Name": "Condoriano",
+        "By Defeating": "Rui Horta",
+        "Match": "Condoriano vs Rui Horta",
+        "Reign": "289 days"
+    },
+    {
+        "ID": 2,
+        "Champion Name": "Rui Horta",
+        "By Defeating": "Condoriano",
+        "Match": "Rui Horta w/ David Pinhal vs Condoriano",
+        "Reign": "285 days"
+    },
+    {
+        "ID": 3,
+        "Champion Name": "Twista",
+        "By Defeating": "Rui Horta",
+        "Match": "Twista vs Rui Horta w/ David Pinhal",
+        "Reign": "91 days"
+    },
+    {
+        "ID": 4,
+        "Champion Name": "Nuno Cardoso",
+        "By Defeating": "Twista",
+        "Match": "Nuno Cardoso vs Twista",
+        "Reign": "215 days"
+    },
+    {
+        "ID": 5,
+        "Champion Name": "Jo\u00e3o Rey",
+        "By Defeating": "Aleph",
+        "Match": "Jo\u00e3o Rey vs Nuno Cardoso vs Aleph",
+        "Reign": "213 days"
+    },
+    {
+        "ID": 6,
+        "Champion Name": "Wolf",
+        "By Defeating": "Jo\u00e3o Rey",
+        "Match": "Wolf vs Jo\u00e3o Rey",
+        "Reign": "456 days"
+    },
+    {
+        "ID": 7,
+        "Champion Name": "Rui Murteira",
+        "By Defeating": "Wolf",
+        "Match": "Rui Murteira vs Wolf",
+        "Reign": "121 days"
+    },
+    {
+        "ID": 8,
+        "Champion Name": "Andy Hendrix",
+        "By Defeating": "Rui Murteira",
+        "Match": "Andy Hendrix vs Rui Murteira vs Leo Rossi",
+        "Reign": "90 days"
+    },
+    {
+        "ID": 9,
+        "Champion Name": "Matt Fox",
+        "By Defeating": "F\u00e1bio Lopes",
+        "Match": "Matt Fox vs Andy Hendrix vs Nelson Pereira vs F\u00e1bio Lopes",
+        "Reign": "62 days"
+    },
+    {
+        "ID": 10,
+        "Champion Name": "Andy Hendrix",
+        "By Defeating": "Matt Fox",
+        "Match": "Andy Hendrix vs Matt Fox",
+        "Reign": "70 days"
+    },
+    {
+        "ID": 11,
+        "Champion Name": "Leo Rossi",
+        "By Defeating": "Andy Hendrix",
+        "Match": "Leo Rossi vs Andy Hendrix",
+        "Reign": "135 days"
+    },
+    {
+        "ID": 12,
+        "Champion Name": "Cl\u00e1udio Lopes",
+        "By Defeating": "Shidoki",
+        "Match": "Cl\u00e1udio Lopes vs Leo Rossi vs Erick vs Shidoki",
+        "Reign": "90 days"
+    },
+    {
+        "ID": 13,
+        "Champion Name": "Jopelix",
+        "By Defeating": "Davit Kasradze",
+        "Match": "Jopelix vs Cl\u00e1udio Lopes vs Davit Kasradze vs Adir Amiel",
+        "Reign": "153 days"
+    },
+    {
+        "ID": 14,
+        "Champion Name": "Tejan",
+        "By Defeating": "Fergus",
+        "Match": "Tejan vs Jopelix vs Fergus",
+        "Reign": "62 days"
+    },
+    {
+        "ID": 15,
+        "Champion Name": "Grandorman",
+        "By Defeating": "Josh Curley",
+        "Match": "Grandorman vs Tejan vs Leonardo Silva vs Josh Curley",
+        "Reign": "304 days"
+    },
+    {
+        "ID": 16,
+        "Champion Name": "XXXXXXXXXXXX",
+        "By Defeating": "XXXXXXXXXXXXX",
+        "Match": "XXXXXXXXXXXXXXXXXXXX",
+        "Reign": null
+    },
+    {
+        "ID": 17,
+        "Champion Name": "Queldreya",
+        "By Defeating": "Bruno F\u00e1tima",
+        "Match": "Queldreya vs Reinventing vs Bruno F\u00e1tima vs Rodrigo Santos",
+        "Reign": "59 days"
+    },
+    {
+        "ID": 18,
+        "Champion Name": "Samuel Vicente",
+        "By Defeating": "Queldreya",
+        "Match": "Samuel Vicente vs Queldreya",
+        "Reign": "183 days"
+    },
+    {
+        "ID": 19,
+        "Champion Name": "Kazh",
+        "By Defeating": "Isaac Vitorino",
+        "Match": "Kazh vs Samuel Vicente vs Isaac Vitorino",
+        "Reign": "68 days"
+    },
+    {
+        "ID": 20,
+        "Champion Name": "Alexandre Rodrigues",
+        "By Defeating": "Kazh",
+        "Match": "Alexandre Rodrigues vs Kazh",
+        "Reign": "123 days"
+    },
+    {
+        "ID": 21,
+        "Champion Name": "Drew Minnear",
+        "By Defeating": "Suresh",
+        "Match": "Drew Minnear vs Alexandre Rodrigues vs Filipe Henriques vs Rahul Saxena vs Suresh",
+        "Reign": "91 days"
+    },
+    {
+        "ID": 22,
+        "Champion Name": "Fausto",
+        "By Defeating": "Michael Stu",
+        "Match": "Fausto vs Drew Minnear vs Ricky Boy vs Michael Stu",
+        "Reign": "TK JUN 2"
+    }
+]

@@ -1,0 +1,527 @@
+[
+    {
+        "ID": 1,
+        "Champion Name": "Ana Rita",
+        "By Defeating": "Bianca",
+        "Match": "Ana Rita vs Bianca (Tournament Final)",
+        "Reign": "122 days"
+    },
+    {
+        "ID": 2,
+        "Champion Name": "Raquel",
+        "By Defeating": "Ana Rita",
+        "Match": "Raquel w/ Marta vs Ana Rita",
+        "Reign": "2 days"
+    },
+    {
+        "ID": 3,
+        "Champion Name": "Sara Vedor",
+        "By Defeating": "Raquel",
+        "Match": "Sara Vedor vs Raquel",
+        "Reign": "120 days"
+    },
+    {
+        "ID": 4,
+        "Champion Name": "Bianca",
+        "By Defeating": "Raquel",
+        "Match": "Bianca vs Sara Vedor vs Raquel",
+        "Reign": "64 days"
+    },
+    {
+        "ID": 5,
+        "Champion Name": "In\u00eas Leal",
+        "By Defeating": "Bianca",
+        "Match": "In\u00eas Leal vs Bianca",
+        "Reign": "57 days"
+    },
+    {
+        "ID": 6,
+        "Champion Name": "Ana Rita",
+        "By Defeating": "In\u00eas Leal",
+        "Match": "Ana Rita vs In\u00eas Leal",
+        "Reign": "61 days"
+    },
+    {
+        "ID": 7,
+        "Champion Name": "Bianca",
+        "By Defeating": "Ana Rita",
+        "Match": "Bianca vs Ana Rita",
+        "Reign": "63 days"
+    },
+    {
+        "ID": 8,
+        "Champion Name": "Sara Vedor",
+        "By Defeating": "Bianca",
+        "Match": "Sara Vedor vs Bianca",
+        "Reign": "60 days"
+    },
+    {
+        "ID": 9,
+        "Champion Name": "Catarina Oliveira",
+        "By Defeating": "Sara Vedor",
+        "Match": "Catarina Oliveira vs Sara Vedor",
+        "Reign": "92 days"
+    },
+    {
+        "ID": 10,
+        "Champion Name": "Sara Gon\u00e7alves",
+        "By Defeating": "Catarina Oliveira",
+        "Match": "Sara Gon\u00e7alves vs Catarina Oliveira",
+        "Reign": "94 days"
+    },
+    {
+        "ID": 11,
+        "Champion Name": "Raquel",
+        "By Defeating": "Sara Gon\u00e7alves",
+        "Match": "Raquel vs Sara Gon\u00e7alves",
+        "Reign": "153 days"
+    },
+    {
+        "ID": 12,
+        "Champion Name": "Marta",
+        "By Defeating": "Raquel",
+        "Match": "Marta vs Raquel",
+        "Reign": "14 days"
+    },
+    {
+        "ID": 13,
+        "Champion Name": "Raquel",
+        "By Defeating": "Marta",
+        "Match": "Raquel vs Marta",
+        "Reign": "17 days"
+    },
+    {
+        "ID": 14,
+        "Champion Name": "Marta",
+        "By Defeating": "Raquel",
+        "Match": "Marta vs Raquel",
+        "Reign": "15 days"
+    },
+    {
+        "ID": 15,
+        "Champion Name": "Raquel",
+        "By Defeating": "Marta",
+        "Match": "Raquel vs Marta",
+        "Reign": "75 days"
+    },
+    {
+        "ID": 16,
+        "Champion Name": "Rebeca Facine",
+        "By Defeating": "Sara Gon\u00e7alves",
+        "Match": "Rebeca Facine vs Raquel vs Sara Gon\u00e7alves",
+        "Reign": "59 days"
+    },
+    {
+        "ID": 17,
+        "Champion Name": "Sara Gon\u00e7alves",
+        "By Defeating": "Raquel",
+        "Match": "Sara Gon\u00e7alves vs Rebeca Facine vs Raquel",
+        "Reign": "31 days"
+    },
+    {
+        "ID": 18,
+        "Champion Name": "In\u00eas Gon\u00e7alves",
+        "By Defeating": "Sara Gon\u00e7alves",
+        "Match": "In\u00eas Gon\u00e7alves vs Sara Gon\u00e7alves",
+        "Reign": "37 days"
+    },
+    {
+        "ID": 19,
+        "Champion Name": "Mariana",
+        "By Defeating": "In\u00eas Gon\u00e7alves",
+        "Match": "Mariana vs In\u00eas Gon\u00e7alves",
+        "Reign": "31 days"
+    },
+    {
+        "ID": 20,
+        "Champion Name": "Raquel",
+        "By Defeating": "Mariana",
+        "Match": "Raquel vs Mariana vs Sara Gon\u00e7alves vs In\u00eas Gon\u00e7alves",
+        "Reign": "83 days"
+    },
+    {
+        "ID": 21,
+        "Champion Name": "Rebeca Facine",
+        "By Defeating": "Julia",
+        "Match": "Rebeca Facine vs Raquel vs Mariana vs In\u00eas Gon\u00e7alves vs Julia",
+        "Reign": "30 days"
+    },
+    {
+        "ID": 22,
+        "Champion Name": "Julia",
+        "By Defeating": "Rebeca Facine",
+        "Match": "Julia vs Rebeca Facine",
+        "Reign": "95 days"
+    },
+    {
+        "ID": 23,
+        "Champion Name": "Ana Rita",
+        "By Defeating": "Julia",
+        "Match": "Ana Rita vs Julia vs Sara Vedor vs Sara Gon\u00e7alves",
+        "Reign": "244 days"
+    },
+    {
+        "ID": 24,
+        "Champion Name": "Julia",
+        "By Defeating": "Raquel",
+        "Match": "Julia vs Ana Rita vs Rebeca Facine vs Raquel",
+        "Reign": "59 days"
+    },
+    {
+        "ID": 25,
+        "Champion Name": "Rebeca Facine",
+        "By Defeating": "Julia",
+        "Match": "Rebeca Facine vs Julia",
+        "Reign": "47 days"
+    },
+    {
+        "ID": 26,
+        "Champion Name": "Julia",
+        "By Defeating": "Rebeca Facine",
+        "Match": "Julia vs Rebeca Facine",
+        "Reign": "14 days"
+    },
+    {
+        "ID": 27,
+        "Champion Name": "Filipa Barros",
+        "By Defeating": "Rebeca Facine",
+        "Match": "Filipa Barros vs Julia vs Rebeca Facine vs Silvana",
+        "Reign": "93 days"
+    },
+    {
+        "ID": 28,
+        "Champion Name": "Carlota",
+        "By Defeating": "Filipa Barros",
+        "Match": "Carlota vs Filipa Barros w/ Silvana",
+        "Reign": "33 days"
+    },
+    {
+        "ID": 29,
+        "Champion Name": "Filipa Barros",
+        "By Defeating": "Carlota",
+        "Match": "Filipa Barros w/ Silvana vs Carlota",
+        "Reign": "30 days"
+    },
+    {
+        "ID": 30,
+        "Champion Name": "Paula Castro",
+        "By Defeating": "Filipa Barros",
+        "Match": "Paula Castro vs Filipa Barros vs Carlota",
+        "Reign": "95 days"
+    },
+    {
+        "ID": 31,
+        "Champion Name": "Silvana",
+        "By Defeating": "Filipa Barros",
+        "Match": "Silvana vs Paula Castro vs Filipa Barros",
+        "Reign": "29 days"
+    },
+    {
+        "ID": 32,
+        "Champion Name": "Paula Castro",
+        "By Defeating": "Silvana",
+        "Match": "Paula Castro vs Silvana",
+        "Reign": "65 days"
+    },
+    {
+        "ID": 33,
+        "Champion Name": "Carlota",
+        "By Defeating": "Paula Castro",
+        "Match": "Carlota vs Paula Castro",
+        "Reign": "132 days"
+    },
+    {
+        "ID": 34,
+        "Champion Name": "Vera",
+        "By Defeating": "Carlota",
+        "Match": "Vera vs Carlota",
+        "Reign": "62 days"
+    },
+    {
+        "ID": 35,
+        "Champion Name": "Beatriz",
+        "By Defeating": "Vera",
+        "Match": "Beatriz vs Vera vs Carlota",
+        "Reign": "66 days"
+    },
+    {
+        "ID": 36,
+        "Champion Name": "Diana Neto",
+        "By Defeating": "Beatriz",
+        "Match": "Diana Neto vs Beatriz vs Carlota",
+        "Reign": "61 days"
+    },
+    {
+        "ID": 37,
+        "Champion Name": "Paula Castro",
+        "By Defeating": "Diana Neto",
+        "Match": "Paula Castro vs Diana Neto",
+        "Reign": "101 days"
+    },
+    {
+        "ID": 38,
+        "Champion Name": "Carlota",
+        "By Defeating": "Paula Castro",
+        "Match": "Carlota vs Paula Castro vs Vera",
+        "Reign": "91 days"
+    },
+    {
+        "ID": 39,
+        "Champion Name": "Rebeca Facine",
+        "By Defeating": "Carlota",
+        "Match": "Rebeca Facine vs Carlota",
+        "Reign": "< 1 day"
+    },
+    {
+        "ID": 40,
+        "Champion Name": "XXXXXXXXXX",
+        "By Defeating": "XXXXXXXXXX",
+        "Match": "XXXXXXXXXXXXXXXXXXXXXXX",
+        "Reign": null
+    },
+    {
+        "ID": 41,
+        "Champion Name": "Nair",
+        "By Defeating": "Raquel",
+        "Match": "Nair vs Raquel",
+        "Reign": "60 days"
+    },
+    {
+        "ID": 42,
+        "Champion Name": "Carlota",
+        "By Defeating": "Nair",
+        "Match": "Carlota vs Nair",
+        "Reign": "184 days"
+    },
+    {
+        "ID": 43,
+        "Champion Name": "M\u00f3nica Ferreira",
+        "By Defeating": "Diana Neto",
+        "Match": "M\u00f3nica Ferreira vs Carlota vs Diana Neto",
+        "Reign": "50 days"
+    },
+    {
+        "ID": 44,
+        "Champion Name": "Raquel",
+        "By Defeating": "M\u00f3nica Ferreira",
+        "Match": "Raquel vs M\u00f3nica Ferreira",
+        "Reign": "33 days"
+    },
+    {
+        "ID": 45,
+        "Champion Name": "Carlota",
+        "By Defeating": "Raquel",
+        "Match": "Carlota vs Raquel",
+        "Reign": "20 days"
+    },
+    {
+        "ID": 46,
+        "Champion Name": "XXXXXXXXXX",
+        "By Defeating": "XXXXXXXXXX",
+        "Match": "XXXXXXXXXXXXXXXXXXXXXXX",
+        "Reign": null
+    },
+    {
+        "ID": 47,
+        "Champion Name": "Carolina Andrade",
+        "By Defeating": "M\u00f3nica Ferreira",
+        "Match": "Carolina Andrade vs Raquel vs In\u00eas Leal vs S\u00edlvia vs Paula Castro vs M\u00f3nica Ferreira",
+        "Reign": "107 days"
+    },
+    {
+        "ID": 48,
+        "Champion Name": "M\u00f3nica Ferreira",
+        "By Defeating": "Carolina Andrade",
+        "Match": "M\u00f3nica Ferreira vs Carolina Andrade",
+        "Reign": "305 days"
+    },
+    {
+        "ID": 49,
+        "Champion Name": "Catarina Ferraz",
+        "By Defeating": "M\u00f3nica Ferreira",
+        "Match": "Catarina Ferraz vs M\u00f3nica Ferreira",
+        "Reign": "125 days"
+    },
+    {
+        "ID": 50,
+        "Champion Name": "Carlota",
+        "By Defeating": "Catarina Ferraz",
+        "Match": "Carlota vs Catarina Ferraz",
+        "Reign": "247 days"
+    },
+    {
+        "ID": 51,
+        "Champion Name": "Diana Neto",
+        "By Defeating": "Carlota",
+        "Match": "Diana Neto w/ Catarina Ferraz vs Carlota w/ Beatriz & Sofia",
+        "Reign": "93 days"
+    },
+    {
+        "ID": 52,
+        "Champion Name": "Carlota",
+        "By Defeating": "Diana Neto",
+        "Match": "Carlota vs Diana Neto vs Joana Brand\u00e3o",
+        "Reign": "246 days"
+    },
+    {
+        "ID": 53,
+        "Champion Name": "Joana Brand\u00e3o",
+        "By Defeating": "Carlota",
+        "Match": "Joana Brand\u00e3o vs Carlota",
+        "Reign": "174 days"
+    },
+    {
+        "ID": 54,
+        "Champion Name": "Carlota",
+        "By Defeating": "Joana Brand\u00e3o",
+        "Match": "Carlota vs Joana Brand\u00e3o",
+        "Reign": "15 days"
+    },
+    {
+        "ID": 55,
+        "Champion Name": "XXXXXXXXXX",
+        "By Defeating": "XXXXXXXXXX",
+        "Match": "XXXXXXXXXXXXXXXXXXXXXXX",
+        "Reign": null
+    },
+    {
+        "ID": 56,
+        "Champion Name": "Vanessa",
+        "By Defeating": "Maria Macedo",
+        "Match": "Vanessa vs Maria Macedo",
+        "Reign": "181 days"
+    },
+    {
+        "ID": 57,
+        "Champion Name": "Diana Neto",
+        "By Defeating": "Vanessa",
+        "Match": "Diana Neto vs Vanessa",
+        "Reign": "61 days"
+    },
+    {
+        "ID": 58,
+        "Champion Name": "Ivar Nyx",
+        "By Defeating": "Diana Neto",
+        "Match": "Ivar Nyx vs Diana Neto",
+        "Reign": "38 days"
+    },
+    {
+        "ID": 59,
+        "Champion Name": "Lara Alexandra",
+        "By Defeating": "Ivar Nyx",
+        "Match": "Lara Alexandra vs Ivar Nyx",
+        "Reign": "67 days"
+    },
+    {
+        "ID": 60,
+        "Champion Name": "Ivar Nyx",
+        "By Defeating": "Lara Alexandra",
+        "Match": "Ivar Nyx & Joana Hamrol vs Lara Alexandra & Luma",
+        "Reign": "74 days"
+    },
+    {
+        "ID": 61,
+        "Champion Name": "Lara Alexandra",
+        "By Defeating": "Ivar Nyx",
+        "Match": "Lara Alexandra vs Ivar Nyx vs Cl\u00e1udia Bradstone",
+        "Reign": "91 days"
+    },
+    {
+        "ID": 62,
+        "Champion Name": "Vanessa",
+        "By Defeating": "Lara Alexandra",
+        "Match": "Vanessa vs Lara Alexandra",
+        "Reign": "279 days"
+    },
+    {
+        "ID": 63,
+        "Champion Name": "Joana Hamrol",
+        "By Defeating": "Vanessa",
+        "Match": "Joana Hamrol vs Vanessa",
+        "Reign": "91 days"
+    },
+    {
+        "ID": 64,
+        "Champion Name": "Alexandra Correia",
+        "By Defeating": "Joana Hamrol",
+        "Match": "Alexandra Correia vs Joana Hamrol",
+        "Reign": "7 days"
+    },
+    {
+        "ID": 65,
+        "Champion Name": "Joana Hamrol",
+        "By Defeating": "Alexandra Correia",
+        "Match": "Joana Hamrol vs Alexandra Correia",
+        "Reign": "102 days"
+    },
+    {
+        "ID": 66,
+        "Champion Name": "Vanessa",
+        "By Defeating": "Luma",
+        "Match": "Vanessa vs Joana Hamrol vs Luma vs T\u00e2nia",
+        "Reign": "30 days"
+    },
+    {
+        "ID": 67,
+        "Champion Name": "XXXXXXXXXX",
+        "By Defeating": "XXXXXXXXXX",
+        "Match": "XXXXXXXXXXXXXXXXXXXXXXX",
+        "Reign": null
+    },
+    {
+        "ID": 68,
+        "Champion Name": "Sophie",
+        "By Defeating": "In\u00eas Leal",
+        "Match": "Sophie vs In\u00eas Leal vs Rita Azevedo",
+        "Reign": "28 days"
+    },
+    {
+        "ID": 69,
+        "Champion Name": "Cl\u00e1udia Bradstone",
+        "By Defeating": "Sophie",
+        "Match": "Cl\u00e1udia Bradstone vs Sophie",
+        "Reign": "<1 day"
+    },
+    {
+        "ID": 70,
+        "Champion Name": "XXXXXXXXXX",
+        "By Defeating": "XXXXXXXXXX",
+        "Match": "XXXXXXXXXXXXXXXXXXXXXXX",
+        "Reign": null
+    },
+    {
+        "ID": 71,
+        "Champion Name": "Cl\u00e1udia Bradstone",
+        "By Defeating": "Vera",
+        "Match": "Cl\u00e1udia Bradstone vs Vera",
+        "Reign": "61 days"
+    },
+    {
+        "ID": 72,
+        "Champion Name": "XXXXXXXXXX",
+        "By Defeating": "XXXXXXXXXX",
+        "Match": "XXXXXXXXXXXXXXXXXXXXXXX",
+        "Reign": null
+    },
+    {
+        "ID": 73,
+        "Champion Name": "Cl\u00e1udia Bradstone",
+        "By Defeating": "Raquel",
+        "Match": "Cl\u00e1udia Bradstone vs Raquel",
+        "Reign": "304 days"
+    },
+    {
+        "ID": 74,
+        "Champion Name": "Jay Pay",
+        "By Defeating": "Cl\u00e1udia Bradstone",
+        "Match": "Jay Pay vs Cl\u00e1udia Bradstone",
+        "Reign": "31 days"
+    },
+    {
+        "ID": 75,
+        "Champion Name": "Cl\u00e1udia Bradstone",
+        "By Defeating": "Jay Pay",
+        "Match": "Cl\u00e1udia Bradstone vs Jay Pay",
+        "Reign": "SUMM2"
+    }
+]

@@ -1,0 +1,22 @@
+[
+    {
+        "match_type": "Normal Tag",
+        "contestants": "Gon\u00e7alo & Pedro Miguel vs David & Ricardo Machado",
+        "result": "Gon\u00e7alo & Pedro Miguel win."
+    },
+    {
+        "match_type": "Single",
+        "contestants": "Ana Rita vs Pedro Teixeira",
+        "result": "Ana Rita wins."
+    },
+    {
+        "match_type": "6-Man Tag",
+        "contestants": "Bruno, Miguel & Jo\u00e3o Pedro vs Diogo, Filipe & Ricardo Soares",
+        "result": "Bruno, Miguel & Jo\u00e3o Pedro win."
+    },
+    {
+        "match_type": "Beauty Contests",
+        "contestants": "In\u00eas Lima vs Catarina Oliveira vs Raquel vs In\u00eas Leal",
+        "result": "Raquel wins."
+    }
+]

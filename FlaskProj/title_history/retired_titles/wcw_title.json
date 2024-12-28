@@ -1,0 +1,58 @@
+[
+    {
+        "ID": 1,
+        "Champion Name": "Vera",
+        "By Defeating": "F\u00e1bio",
+        "Match": "Vera vs F\u00e1bio (Mike Silva)",
+        "Reign": null
+    },
+    {
+        "ID": 2,
+        "Champion Name": "Tiago Rodrigues",
+        "By Defeating": "Jos\u00e9 Diogo",
+        "Match": "Tiago Rodrigues & Vera vs Jos\u00e9 Diogo ",
+        "Reign": null
+    },
+    {
+        "ID": 3,
+        "Champion Name": "XXXXXXXX",
+        "By Defeating": "XXXXXXXX",
+        "Match": "XXXXXXXXXXXX",
+        "Reign": null
+    },
+    {
+        "ID": 4,
+        "Champion Name": "Jo\u00e3o Diogo",
+        "By Defeating": "Joca",
+        "Match": "Jo\u00e3o Diogo vs Joca",
+        "Reign": null
+    },
+    {
+        "ID": 5,
+        "Champion Name": "XXXXXXXX",
+        "By Defeating": "XXXXXXXX",
+        "Match": "XXXXXXXXXXXX",
+        "Reign": null
+    },
+    {
+        "ID": 6,
+        "Champion Name": "Emanuel",
+        "By Defeating": "F\u00e1bio Arantes",
+        "Match": "Emanuel vs F\u00e1bio Arantes",
+        "Reign": null
+    },
+    {
+        "ID": 7,
+        "Champion Name": "F\u00e1bio Arantes",
+        "By Defeating": "Emanuel",
+        "Match": "F\u00e1bio Arantes vs Emanuel vs Joca",
+        "Reign": null
+    },
+    {
+        "ID": 8,
+        "Champion Name": "David",
+        "By Defeating": "Filipe",
+        "Match": "David vs Filipe vs F\u00e1bio Arantes",
+        "Reign": null
+    }
+]

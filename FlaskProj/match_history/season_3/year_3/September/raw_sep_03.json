@@ -1,0 +1,22 @@
+[
+    {
+        "match_type": "Single - United States Championship",
+        "contestants": "Diogo vs Bruno w/ Mike Silva",
+        "result": "Bruno wins. (NEW CHAMPION)"
+    },
+    {
+        "match_type": "Normal Tag",
+        "contestants": "In\u00eas Lima & Raquel vs Julia & Sara Gon\u00e7alves",
+        "result": "In\u00eas Lima & Raquel win."
+    },
+    {
+        "match_type": "Triple Threat",
+        "contestants": "Filipe vs Gon\u00e7alo vs David",
+        "result": "Gon\u00e7alo wins."
+    },
+    {
+        "match_type": "MAIN EVENT - Iron Man Match",
+        "contestants": "Luis Lowden vs Ant\u00f3nio",
+        "result": "Luis Lowden wins."
+    }
+]

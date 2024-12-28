@@ -1,0 +1,22 @@
+[
+    {
+        "match_type": "Steel Cage Single",
+        "contestants": "David vs Diogo",
+        "result": "David wins."
+    },
+    {
+        "match_type": "Normal Tag",
+        "contestants": "Gon\u00e7alo & In\u00eas Lima vs Luis Lowden & Ant\u00f3nio",
+        "result": "Luis Lowden & Ant\u00f3nio win."
+    },
+    {
+        "match_type": "Single",
+        "contestants": "Raquel vs Sara Gon\u00e7alves w/ Catarina Silva",
+        "result": "Raquel wins."
+    },
+    {
+        "match_type": "MAIN EVENT - Hardcore Handicap 1v2",
+        "contestants": "Filipe vs Bruno & Pedro Teixeira",
+        "result": "Pedro Teixeira & Bruno win."
+    }
+]

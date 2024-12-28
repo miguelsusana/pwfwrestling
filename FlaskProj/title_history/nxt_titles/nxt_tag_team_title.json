@@ -1,0 +1,583 @@
+[
+    {
+        "ID": 1,
+        "Champion Name": "Mike Silva & The Miz (Awesomeness Gods)",
+        "By Defeating": "Vera & Ashley (Punk Pros)",
+        "Match": "Mike Silva & The Miz vs Vera & Ashley vs Joca & Matt Hardy",
+        "Reign": "..."
+    },
+    {
+        "ID": null,
+        "Champion Name": null,
+        "By Defeating": null,
+        "Match": null,
+        "Reign": null
+    },
+    {
+        "ID": "NXT",
+        "Champion Name": "NEW",
+        "By Defeating": "ERA",
+        "Match": null,
+        "Reign": null
+    },
+    {
+        "ID": null,
+        "Champion Name": null,
+        "By Defeating": null,
+        "Match": null,
+        "Reign": null
+    },
+    {
+        "ID": 2,
+        "Champion Name": "Sara Gon\u00e7alves & In\u00eas Gon\u00e7alves",
+        "By Defeating": "In\u00eas Lima & Catarina Silva",
+        "Match": "Sara Gon\u00e7alves & In\u00eas Gon\u00e7alves vs In\u00eas Lima & Catarina Silva",
+        "Reign": "..."
+    },
+    {
+        "ID": 3,
+        "Champion Name": "XXXXXXXXXXXXX",
+        "By Defeating": "XXXXXXXXXXX",
+        "Match": "XXXXXXXXXXXXXXXXX",
+        "Reign": null
+    },
+    {
+        "ID": 4,
+        "Champion Name": "Diogo & Filipe",
+        "By Defeating": "Pedro Teixeira & Bernardo Carvalho",
+        "Match": "Diogo & Filipe vs Pedro Teixeira & Bernardo Carvalho",
+        "Reign": "61 days"
+    },
+    {
+        "ID": 5,
+        "Champion Name": "Jo\u00e3o Santos & Rui Leal",
+        "By Defeating": "Diogo & Filipe",
+        "Match": "Jo\u00e3o Santos & Rui Leal vs Diogo & Filipe",
+        "Reign": "91 days"
+    },
+    {
+        "ID": 6,
+        "Champion Name": "Pedro Cunha & M\u00e1rio Nunes",
+        "By Defeating": "Jo\u00e3o Santos & Rui Leal",
+        "Match": "Pedro Cunha & M\u00e1rio Nunes vs Jo\u00e3o Santos & Rui Leal",
+        "Reign": "120 days"
+    },
+    {
+        "ID": 7,
+        "Champion Name": "Jorge Vilarinho & Daniel Pereira",
+        "By Defeating": "Pedro Cunha & M\u00e1rio Nunes",
+        "Match": "Jorge Vilarinho & Daniel Pereira vs Pedro Cunha & M\u00e1rio Nunes",
+        "Reign": "244 days"
+    },
+    {
+        "ID": 8,
+        "Champion Name": "F\u00e1bio Arantes & Filipe Leesee",
+        "By Defeating": "Jorge Vilarinho & Daniel Pereira",
+        "Match": "F\u00e1bio Arantes & Filipe Leesee vs Jorge Vilarinho & Daniel Pereira",
+        "Reign": "59 days"
+    },
+    {
+        "ID": 9,
+        "Champion Name": "Alex & Marcelo",
+        "By Defeating": "F\u00e1bio Arantes & Filipe Leesee",
+        "Match": "Alex & Marcelo vs F\u00e1bio Arantes & Filipe Leesee",
+        "Reign": "107 days"
+    },
+    {
+        "ID": 10,
+        "Champion Name": "Bruno Andr\u00e9 & Paulo Pinto",
+        "By Defeating": "Alex & Marcelo",
+        "Match": "Bruno Andr\u00e9 & Paulo Pinto vs Alex & Marcelo",
+        "Reign": "396 days"
+    },
+    {
+        "ID": 11,
+        "Champion Name": "Diogo Matos & Andr\u00e9 Coutinho",
+        "By Defeating": "Bruno Andr\u00e9 & Paulo Pinto",
+        "Match": "Diogo Matos & Andr\u00e9 Coutinho vs Bruno Andr\u00e9 & Paulo Pinto",
+        "Reign": "92 days"
+    },
+    {
+        "ID": 12,
+        "Champion Name": "Pedro Cunha & M\u00e1rio Nunes",
+        "By Defeating": "Diogo Matos & Andr\u00e9 Coutinho",
+        "Match": "Pedro Cunha & M\u00e1rio Nunes vs Diogo Matos & Andr\u00e9 Coutinho",
+        "Reign": "122 days"
+    },
+    {
+        "ID": 13,
+        "Champion Name": "Davez & Pedro Fonseca",
+        "By Defeating": "Pedro Cunha & M\u00e1rio Nunes",
+        "Match": "Davez & Pedro Fonseca vs Pedro Cunha & M\u00e1rio Nunes",
+        "Reign": "93 days"
+    },
+    {
+        "ID": 14,
+        "Champion Name": "Pedro Cunha & M\u00e1rio Nunes",
+        "By Defeating": "Davez & Pedro Fonseca",
+        "Match": "Pedro Cunha & M\u00e1rio Nunes vs Davez & Pedro Fonseca",
+        "Reign": "77 days"
+    },
+    {
+        "ID": 15,
+        "Champion Name": "XXXXXXXXXXXXX",
+        "By Defeating": "XXXXXXXXXXX",
+        "Match": "XXXXXXXXXXXXXXXXX",
+        "Reign": null
+    },
+    {
+        "ID": 16,
+        "Champion Name": "Davez & Pedro Fonseca",
+        "By Defeating": "Jo\u00e3o Cruz & Vasco",
+        "Match": "Davez & Pedro Fonseca vs Rubby Silva & F\u00e1bio Albuquerque vs Jo\u00e3o Cruz & Vasco vs Dani Lopes & Diogo Machado ",
+        "Reign": "76 days"
+    },
+    {
+        "ID": 17,
+        "Champion Name": "Rubby Silva & Fabio Albuquerque",
+        "By Defeating": "Davez & Pedro Fonseca",
+        "Match": "Rubby Silva & Fabio Albuquerque vs Davez & Pedro Fonseca",
+        "Reign": "63 days"
+    },
+    {
+        "ID": 18,
+        "Champion Name": "Dani Lopes & Diogo Machado",
+        "By Defeating": "Rubby Silva & Fabio Albuquerque",
+        "Match": "Dani Lopes & Diogo Machado vs Rubby Silva & Fabio Albuquerque",
+        "Reign": "121 days"
+    },
+    {
+        "ID": 19,
+        "Champion Name": "Joel & Pedro Reis",
+        "By Defeating": "Dani Lopes & Diogo Machado",
+        "Match": "Joel & Pedro Reis vs Dani Lopes & Diogo Machado",
+        "Reign": "30 days"
+    },
+    {
+        "ID": 20,
+        "Champion Name": "Dani Lopes & Diogo Machado",
+        "By Defeating": "Joel & Pedro Reis",
+        "Match": "Dani Lopes & Diogo Machado vs Joel & Pedro Reis",
+        "Reign": "214 days"
+    },
+    {
+        "ID": 21,
+        "Champion Name": "Tiago Aleixo & Ivo Machado",
+        "By Defeating": "Dani Lopes & Diogo Machado",
+        "Match": "Tiago Aleixo & Ivo Machado vs Dani Lopes & Diogo Machado",
+        "Reign": "64 days"
+    },
+    {
+        "ID": 22,
+        "Champion Name": "Davez & Pedro Fonseca",
+        "By Defeating": "Tiago Aleixo & Ivo Machado",
+        "Match": "Davez & Pedro Fonseca vs Tiago Aleixo & Ivo Machado",
+        "Reign": "304 days"
+    },
+    {
+        "ID": 23,
+        "Champion Name": "Eduardo Sousa & Bertolucci",
+        "By Defeating": "Davez & Pedro Fonseca",
+        "Match": "Eduardo Sousa & Bertolucci vs Davez & Pedro Fonseca",
+        "Reign": "58 days"
+    },
+    {
+        "ID": 24,
+        "Champion Name": "XXXXXXXXXXXXX",
+        "By Defeating": "XXXXXXXXXXX",
+        "Match": "XXXXXXXXXXXXXXXXX",
+        "Reign": null
+    },
+    {
+        "ID": 25,
+        "Champion Name": "Tiago Aleixo & Ivo Machado",
+        "By Defeating": "Jos\u00e9 Xarez & Bruno Alves",
+        "Match": "Tiago Aleixo & Ivo Machado vs Jos\u00e9 Xarez & Bruno Alves",
+        "Reign": "158 days"
+    },
+    {
+        "ID": 26,
+        "Champion Name": "XXXXXXXXXXXXX",
+        "By Defeating": "XXXXXXXXXXX",
+        "Match": "XXXXXXXXXXXXXXXXX",
+        "Reign": null
+    },
+    {
+        "ID": 27,
+        "Champion Name": "Tulio Sales & Jo\u00e3o Miyamoto",
+        "By Defeating": "Tiago Aleixo & Ivo Machado",
+        "Match": "Tulio Sales & Jo\u00e3o Miyamoto vs Tiago Aleixo & Ivo Machado",
+        "Reign": "152 days"
+    },
+    {
+        "ID": 28,
+        "Champion Name": "F\u00e9lix & Nuno Shinigami",
+        "By Defeating": "Tulio Sales & Jo\u00e3o Miyamoto",
+        "Match": "F\u00e9lix & Nuno Shinigami vs Tulio Sales & Jo\u00e3o Miyamoto",
+        "Reign": "306 days"
+    },
+    {
+        "ID": 29,
+        "Champion Name": "Tiago Aleixo & Ivo Machado",
+        "By Defeating": "F\u00e9lix & Nuno Shinigami",
+        "Match": "Tiago Aleixo & Ivo Machado vs F\u00e9lix & Nuno Shinigami",
+        "Reign": "61 days"
+    },
+    {
+        "ID": 30,
+        "Champion Name": "XXXXXXXXXXXXX",
+        "By Defeating": "XXXXXXXXXXX",
+        "Match": "XXXXXXXXXXXXXXXXX",
+        "Reign": null
+    },
+    {
+        "ID": 31,
+        "Champion Name": "Jos\u00e9 Teles & Ruben Carvalho",
+        "By Defeating": "Manuel Cabages & Paulo Tavares",
+        "Match": "Jos\u00e9 Teles & Ruben Carvalho vs Manuel Cabages & Paulo Tavares",
+        "Reign": "142 days"
+    },
+    {
+        "ID": 32,
+        "Champion Name": "Manuel Cabages & Paulo Tavares",
+        "By Defeating": "Jos\u00e9 Teles & Ruben Carvalho",
+        "Match": "Manuel Cabages & Paulo Tavares vs Jos\u00e9 Teles & Ruben Carvalho",
+        "Reign": "192 days"
+    },
+    {
+        "ID": 33,
+        "Champion Name": "Jos\u00e9 Teles & Ruben Carvalho",
+        "By Defeating": "Manuel Cabages & Paulo Tavares",
+        "Match": "Jos\u00e9 Teles & Ruben Carvalho vs Manuel Cabages & Paulo Tavares",
+        "Reign": "67 days"
+    },
+    {
+        "ID": 34,
+        "Champion Name": "Hugo Azevedo & Andr\u00e9 Soares",
+        "By Defeating": "Jos\u00e9 Teles & Ruben Carvalho",
+        "Match": "Hugo Azevedo & Andr\u00e9 Soares vs Jos\u00e9 Teles & Ruben Carvalho",
+        "Reign": "274 days"
+    },
+    {
+        "ID": 35,
+        "Champion Name": "Oliver & Marco Ant\u00f3nio",
+        "By Defeating": "Hugo Azevedo & Andr\u00e9 Soares",
+        "Match": "Oliver & Marco Ant\u00f3nio vs Hugo Azevedo & Andr\u00e9 Soares",
+        "Reign": "76 days"
+    },
+    {
+        "ID": 36,
+        "Champion Name": "Jo\u00e3o Cavaco & Jondesu",
+        "By Defeating": "Oliver & Marco Ant\u00f3nio",
+        "Match": "Jo\u00e3o Cavaco & Jondesu vs Oliver & Marco Ant\u00f3nio",
+        "Reign": "78 days"
+    },
+    {
+        "ID": 37,
+        "Champion Name": "Jo\u00e3o Lopes & Diogo Oliveira",
+        "By Defeating": "Jo\u00e3o Cavaco & Jondesu",
+        "Match": "Jo\u00e3o Lopes & Diogo Oliveira vs Jo\u00e3o Cavaco & Jondesu",
+        "Reign": "136 days"
+    },
+    {
+        "ID": 38,
+        "Champion Name": "Gon\u00e7alo Rodrigues & Jo\u00e3o Costa",
+        "By Defeating": "Jo\u00e3o Lopes & Diogo Oliveira",
+        "Match": "Gon\u00e7alo Rodrigues & Jo\u00e3o Costa vs Jo\u00e3o Lopes & Diogo Oliveira",
+        "Reign": "244 days"
+    },
+    {
+        "ID": 39,
+        "Champion Name": "Israel Oliveira vs Paulo Naressi",
+        "By Defeating": "Gon\u00e7alo Rodrigues & Jo\u00e3o Costa",
+        "Match": "Israel Oliveira vs Paulo Naressi vs Gon\u00e7alo Rodrigues & Jo\u00e3o Costa",
+        "Reign": "364 days"
+    },
+    {
+        "ID": 40,
+        "Champion Name": "J\u00falio Sequeira & Miguel Valente",
+        "By Defeating": "Israel Oliveira vs Paulo Naressi",
+        "Match": "J\u00falio Sequeira & Miguel Valente vs Israel Oliveira vs Paulo Naressi",
+        "Reign": "138 days"
+    },
+    {
+        "ID": 41,
+        "Champion Name": "Ivo Caba\u00e7o & Luis Herculano",
+        "By Defeating": "J\u00falio Sequeira & Miguel Valente",
+        "Match": "Ivo Caba\u00e7o & Luis Herculano vs J\u00falio Sequeira & Miguel Valente",
+        "Reign": "335 days"
+    },
+    {
+        "ID": 42,
+        "Champion Name": "Daniel Serrado & Rui Lopes",
+        "By Defeating": "Ivo Caba\u00e7o & Luis Herculano",
+        "Match": "Daniel Serrado & Rui Lopes vs Ivo Caba\u00e7o & Luis Herculano",
+        "Reign": "517 days"
+    },
+    {
+        "ID": 43,
+        "Champion Name": "Francisco Barral & Paulo Andrade",
+        "By Defeating": "Daniel Serrado & Rui Lopes",
+        "Match": "Francisco Barral & Paulo Andrade vs Daniel Serrado & Rui Lopes",
+        "Reign": "169 days"
+    },
+    {
+        "ID": 44,
+        "Champion Name": "Jo\u00e3o Barbosa & Robson",
+        "By Defeating": "Francisco Barral & Paulo Andrade",
+        "Match": "Jo\u00e3o Barbosa & Robson vs Francisco Barral & Paulo Andrade",
+        "Reign": "137 days"
+    },
+    {
+        "ID": 45,
+        "Champion Name": "Diogo Figueiredo & Luis Manuel",
+        "By Defeating": "Jo\u00e3o Barbosa & Robson",
+        "Match": "Diogo Figueiredo & Luis Manuel vs Jo\u00e3o Barbosa & Robson",
+        "Reign": "153 days"
+    },
+    {
+        "ID": 46,
+        "Champion Name": "Nate Maddox & Kurt Simmons",
+        "By Defeating": "Diogo Figueiredo & Luis Manuel",
+        "Match": "Nate Maddox & Kurt Simmons vs Diogo Figueiredo & Luis Manuel",
+        "Reign": "3 days"
+    },
+    {
+        "ID": 47,
+        "Champion Name": "Francisco Perdig\u00e3o & Tuga",
+        "By Defeating": "Nate Maddox & Kurt Simmons",
+        "Match": "Francisco Perdig\u00e3o & Tuga vs Nate Maddox & Kurt Simmons",
+        "Reign": "104 days"
+    },
+    {
+        "ID": 48,
+        "Champion Name": "Isaque Rocha & Jo\u00e3o Maia",
+        "By Defeating": "Francisco Perdig\u00e3o & Tuga",
+        "Match": "Isaque Rocha & Jo\u00e3o Maia vs Francisco Perdig\u00e3o & Tuga",
+        "Reign": "215 days"
+    },
+    {
+        "ID": 49,
+        "Champion Name": "Jos\u00e9 Lameirinhas & Rui Sousa",
+        "By Defeating": "Isaque Rocha & Jo\u00e3o Maia",
+        "Match": "Jos\u00e9 Lameirinhas & Rui Sousa vs Isaque Rocha & Jo\u00e3o Maia",
+        "Reign": "91 days"
+    },
+    {
+        "ID": 50,
+        "Champion Name": "Ravioli & Brave",
+        "By Defeating": "Jos\u00e9 Lameirinhas & Rui Sousa",
+        "Match": "Ravioli & Brave vs Jos\u00e9 Lameirinhas & Rui Sousa",
+        "Reign": "699 days"
+    },
+    {
+        "ID": 51,
+        "Champion Name": "Jos\u00e9 Lameirinhas & C\u00e9sar Bourdain",
+        "By Defeating": "Ravioli & Brave",
+        "Match": "Jos\u00e9 Lameirinhas & C\u00e9sar Bourdain vs Ravioli & Brave",
+        "Reign": "18 days"
+    },
+    {
+        "ID": 52,
+        "Champion Name": "Queldreya & Rodrigo Santos",
+        "By Defeating": "Jos\u00e9 Lameirinhas & C\u00e9sar Bourdain",
+        "Match": "Queldreya & Rodrigo Santos vs Jos\u00e9 Lameirinhas & C\u00e9sar Bourdain",
+        "Reign": "167 days"
+    },
+    {
+        "ID": 53,
+        "Champion Name": "C\u00e9sar Bourdain & Rodrigo Santos",
+        "By Defeating": null,
+        "Match": "QUELDREYA was called-up to the main roster; C\u00e9sar Bourdain takes his place as NXT Tag Team Champion",
+        "Reign": "68 days"
+    },
+    {
+        "ID": 54,
+        "Champion Name": "Luis Mira & Dami\u00e3o",
+        "By Defeating": "C\u00e9sar Bourdain & Rodrigo Santos",
+        "Match": "Luis Mira & Dami\u00e3o vs C\u00e9sar Bourdain & Rodrigo Santos",
+        "Reign": "213 days"
+    },
+    {
+        "ID": 55,
+        "Champion Name": "Freeze & Zadarkus",
+        "By Defeating": "Luis Mira & Dami\u00e3o",
+        "Match": "Freeze & Zadarkus vs Luis Mira & Dami\u00e3o",
+        "Reign": "153 days"
+    },
+    {
+        "ID": 56,
+        "Champion Name": "Michael Stu & Stefan Stu",
+        "By Defeating": "Freeze & Zadarkus",
+        "Match": "Michael Stu & Stefan Stu vs Freeze & Zadarkus",
+        "Reign": "TK NOV 2"
+    },
+    {
+        "ID": null,
+        "Champion Name": null,
+        "By Defeating": null,
+        "Match": null,
+        "Reign": null
+    },
+    {
+        "ID": null,
+        "Champion Name": null,
+        "By Defeating": null,
+        "Match": null,
+        "Reign": null
+    },
+    {
+        "ID": null,
+        "Champion Name": null,
+        "By Defeating": null,
+        "Match": null,
+        "Reign": null
+    },
+    {
+        "ID": null,
+        "Champion Name": null,
+        "By Defeating": null,
+        "Match": null,
+        "Reign": null
+    },
+    {
+        "ID": null,
+        "Champion Name": null,
+        "By Defeating": null,
+        "Match": null,
+        "Reign": null
+    },
+    {
+        "ID": null,
+        "Champion Name": null,
+        "By Defeating": null,
+        "Match": null,
+        "Reign": null
+    },
+    {
+        "ID": null,
+        "Champion Name": null,
+        "By Defeating": null,
+        "Match": null,
+        "Reign": null
+    },
+    {
+        "ID": null,
+        "Champion Name": null,
+        "By Defeating": null,
+        "Match": null,
+        "Reign": null
+    },
+    {
+        "ID": null,
+        "Champion Name": null,
+        "By Defeating": null,
+        "Match": null,
+        "Reign": null
+    },
+    {
+        "ID": null,
+        "Champion Name": null,
+        "By Defeating": null,
+        "Match": null,
+        "Reign": null
+    },
+    {
+        "ID": null,
+        "Champion Name": null,
+        "By Defeating": null,
+        "Match": null,
+        "Reign": null
+    },
+    {
+        "ID": null,
+        "Champion Name": null,
+        "By Defeating": null,
+        "Match": null,
+        "Reign": null
+    },
+    {
+        "ID": null,
+        "Champion Name": null,
+        "By Defeating": null,
+        "Match": null,
+        "Reign": null
+    },
+    {
+        "ID": null,
+        "Champion Name": null,
+        "By Defeating": null,
+        "Match": null,
+        "Reign": null
+    },
+    {
+        "ID": null,
+        "Champion Name": null,
+        "By Defeating": null,
+        "Match": null,
+        "Reign": null
+    },
+    {
+        "ID": null,
+        "Champion Name": null,
+        "By Defeating": null,
+        "Match": null,
+        "Reign": null
+    },
+    {
+        "ID": null,
+        "Champion Name": null,
+        "By Defeating": null,
+        "Match": null,
+        "Reign": null
+    },
+    {
+        "ID": null,
+        "Champion Name": null,
+        "By Defeating": null,
+        "Match": null,
+        "Reign": null
+    },
+    {
+        "ID": null,
+        "Champion Name": null,
+        "By Defeating": null,
+        "Match": null,
+        "Reign": null
+    },
+    {
+        "ID": null,
+        "Champion Name": null,
+        "By Defeating": null,
+        "Match": null,
+        "Reign": null
+    },
+    {
+        "ID": null,
+        "Champion Name": null,
+        "By Defeating": null,
+        "Match": null,
+        "Reign": null
+    },
+    {
+        "ID": null,
+        "Champion Name": null,
+        "By Defeating": null,
+        "Match": null,
+        "Reign": null
+    },
+    {
+        "ID": null,
+        "Champion Name": null,
+        "By Defeating": null,
+        "Match": null,
+        "Reign": null
+    },
+    {
+        "ID": null,
+        "Champion Name": null,
+        "By Defeating": null,
+        "Match": null,
+        "Reign": null
+    }
+]
