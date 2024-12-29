@@ -7,7 +7,7 @@ from helper import (
     get_retired_titles,
     get_wrestlers_names_id
 )
-from scripts.load_title_history import load_title_history
+from scripts.rostermanagement import get_filtered_roster
 
 app = Flask(__name__)
 CORS(app)
@@ -27,6 +27,12 @@ def retired_titles():
 @app.route('/api/roster-id-names', methods=['GET'])
 def roster_by_id_names():
     return get_wrestlers_names_id()
+
+@app.route('/api/filtered-roster', methods=['GET'])
+def filtered_roster():
+    return jsonify(get_filtered_roster())
+
+"-------------------------------------------------------"
 
 @app.route("/")
 def homepage():

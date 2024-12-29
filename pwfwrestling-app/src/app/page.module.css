@@ -462,11 +462,86 @@ h1.champspage_subtitle {
 
 .navigation_buttons button:disabled {
   background-color: #9b9b9b;
-  /* Grey out disabled buttons */
   cursor: not-allowed;
 }
 
-.filter-container {
+.filter_container {
   display: flex;
   justify-content: center;
+  margin-bottom: 64px;
+}
+
+.pink td,
+.pink th {
+  background-color: rgb(35, 35, 35);
+  border: 3px solid pink;
+  min-width: 150px;
+  width: fit-content;
+  height: auto;
+  text-align: center;
+  font-size: 20px;
+}
+
+.pink button {
+  background-color: palevioletred;
+  color: black;
+  border-radius: 10px;
+  border: 1px solid pink;
+  width: 100px;
+  height: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.pink button:hover {
+  background-color: rgb(115, 59, 78);
+  transform: scale(1.05);
+}
+
+.mb_12 {
+  margin-bottom: 12px;
+}
+
+.filter_buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.filter_buttons button {
+  background-color: red;
+  width: 140px;
+  height: 30px;
+  border: red;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.filter_buttons button:hover {
+  background-color: darkred;
+  transform: scale(1.05);
+}
+
+.form_group {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.form_group label {
+  font-size: 22px;
+}
+
+.form_group input {
+  height: 30px;
+  width: 250px;
+}
+
+.form_group select {
+  height: 30px;
+  width: 250px;
+  font-size: 20px;
 }
