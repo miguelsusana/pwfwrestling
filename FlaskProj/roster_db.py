@@ -96,9 +96,6 @@ def get_wrestler_id_names():
             query = "SELECT id, name, brand from roster"
             cursor.execute(query)
             wrestler_list = cursor.fetchall()
-
-            """ for id_name in wrestler_list:
-                wrestler_ids.append(id_name) """
             wrestler_ids = [{"id": entry[0], "name": entry[1], "brand" : entry[2]}for entry in wrestler_list]
             return wrestler_ids
     except mysql.connector.Error as err:
@@ -107,3 +104,131 @@ def get_wrestler_id_names():
     finally:
         connection.close()
         print("Database connection closed.")
+
+def get_all_titles_db():
+    connection = get_connection()
+    try:  
+        with connection.cursor() as cursor:
+            query = "SELECT current_name, brand, img FROM titles"
+            cursor.execute(query)
+            result = [{"title": entry[0], "image": entry[1]} for entry in cursor.fetchall()]
+            return result
+    except mysql.connector.Error as err:
+        print(f"Database error: {err}")
+        return []
+    finally:
+        connection.close()
+        print("Database connection closed.")
+
+def get_title_url_db(belt): 
+    connection = get_connection()
+    try:  
+        with connection.cursor() as cursor:
+            query = "SELECT t.current_name, t.brand, t.img, r.name FROM titles as t JOIN title_holders as th ON t.id = th.title_id JOIN roster as r ON th.wrestler_id = r.id where t.img = %s"
+            belt_img = belt + "_design.png"
+            cursor.execute(query, (belt_img,))
+            result = [{"titleImage" : entry[2], "titleName" : entry[0], "brand" : entry[1], "championName" : entry[3]} for entry in cursor.fetchall()]
+            if len(result) > 1:
+                result[0]["championName"] = result[0]["championName"] + " & " + result[1]["championName"]
+            return result[0]
+    except mysql.connector.Error as err:
+        print(f"Database error: {err}")
+        return []
+    finally:
+        connection.close()
+        print("Database connection closed.")
+
+def get_timesheld_from_database(belt):
+    connection  = get_connection()
+    try:
+        with connection.cursor() as cursor:
+            query = """SELECT r.name, count(r.name) as times_held 
+                    FROM title_history as th 
+                    JOIN roster as r ON th.champion_id = r.id 
+                    JOIN titles as t ON th.title_id = t.id
+                    WHERE t.img = %s
+                    GROUP BY r.name 
+                    ORDER BY times_held DESC 
+                    LIMIT 3;
+                    """
+            belt_img = belt + "_design.png"
+            cursor.execute(query, (belt_img,))
+            result = cursor.fetchall()
+            return result
+    except mysql.connector.Error as err:
+        print(f"Database error: {err}")
+        return []
+    finally:
+        connection.close()
+        print("Database connection closed.")       
+
+
+def get_longestreign_from_database(belt):
+    connection  = get_connection()
+    try:
+        with connection.cursor() as cursor:
+            query = """SELECT r.name, th.reign_duration
+                    FROM title_history as th 
+                    JOIN roster as r ON th.champion_id = r.id 
+                    JOIN titles as t ON th.title_id = t.id
+                    WHERE t.img = %s
+                    ORDER BY th.reign_duration DESC 
+                    LIMIT 3;
+                    """
+            belt_img = belt + "_design.png"
+            cursor.execute(query, (belt_img,))
+            result = cursor.fetchall()
+            return result
+    except mysql.connector.Error as err:
+        print(f"Database error: {err}")
+        return []
+    finally:
+        connection.close()
+        print("Database connection closed.")      
+
+def get_combined_days_from_database(belt):
+    connection  = get_connection()
+    try:
+        with connection.cursor() as cursor:
+            query = """SELECT r.name, SUM(th.reign_duration) as combined_days
+                    FROM title_history as th 
+                    JOIN roster as r ON th.champion_id = r.id 
+                    JOIN titles as t ON th.title_id = t.id
+                    WHERE t.img = %s
+                    GROUP BY r.name
+                    ORDER BY combined_days DESC 
+                    LIMIT 3;
+                    """
+            belt_img = belt + "_design.png"
+            cursor.execute(query, (belt_img,))
+            result = cursor.fetchall()
+            return result
+    except mysql.connector.Error as err:
+        print(f"Database error: {err}")
+        return []
+    finally:
+        connection.close()
+        print("Database connection closed.") 
+
+def get_title_history_from_database(belt):
+    connection  = get_connection()
+    try:
+        with connection.cursor() as cursor:
+            query = """SELECT th.reign_order, r.name, m.match_description, th.reign_duration
+                    FROM title_history as th 
+                    LEFT JOIN roster as r ON th.champion_id = r.id 
+                    JOIN titles as t ON th.title_id = t.id
+                    LEFT JOIN matches as m ON th.match_id = m.id
+                    WHERE t.img = %s
+                    ORDER BY th.reign_order ASC
+                    """
+            belt_img = belt + "_design.png"
+            cursor.execute(query, (belt_img,))
+            result = cursor.fetchall()
+            return result
+    except mysql.connector.Error as err:
+        print(f"Database error: {err}")
+        return []
+    finally:
+        connection.close()
+        print("Database connection closed.") 

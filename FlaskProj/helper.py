@@ -1,4 +1,16 @@
-from roster_db import get_roster_list, get_champions, Roster, get_retired_titles, get_wrestler_id_names
+from roster_db import (
+    get_roster_list, 
+    get_champions, 
+    Roster, 
+    get_retired_titles, 
+    get_wrestler_id_names, 
+    get_all_titles_db, 
+    get_title_url_db,
+    get_timesheld_from_database,
+    get_longestreign_from_database,
+    get_combined_days_from_database,
+    get_title_history_from_database
+    )
 from flask import render_template
 
 def roster_page_template():
@@ -72,3 +84,25 @@ def get_retired_championships():
 
 def get_wrestlers_names_id():
     return get_wrestler_id_names()
+
+def get_all_titles():
+    return get_all_titles_db()
+
+def get_title_url(belt):
+    return get_title_url_db(belt)
+
+def get_timesheld(belt):
+    result = get_timesheld_from_database(belt)
+    return [{"name" : entry[0], "value": entry[1]} for entry in result]
+
+def get_longestreigns(belt):
+    result = get_longestreign_from_database(belt)
+    return [{"name": entry[0], "value": entry[1]} for entry in result]
+
+def get_combined_days(belt):
+    result = get_combined_days_from_database(belt)
+    return [{"name": entry[0], "value": entry[1]} for entry in result]
+
+def get_title_history(belt):
+    title_history_lists = get_title_history_from_database(belt)
+    return [{"reign_order" : entry[0], "name" : entry[1], "match_description" : entry[2], "reign_duration" : entry[3]} for entry in title_history_lists]

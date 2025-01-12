@@ -84,15 +84,14 @@ CREATE TABLE IF NOT EXISTS match_titles (
 
 CREATE TABLE IF NOT EXISTS title_history (
     id INT NOT NULL AUTO_INCREMENT,
-    title_id INT NOT NULL,                      
-    champion_id INT NOT NULL,                   
-    defeated_id INT NOT NULL,               
-    match_id INT NOT NULL,                    
+    title_id INT NOT NULL, 
+    reign_order INT NOT NULL,                     
+    champion_id INT,                                  
+    match_id INT,                    
     reign_duration INT DEFAULT NULL,                 
     PRIMARY KEY (id),
     FOREIGN KEY (title_id) REFERENCES titles(id) ON DELETE CASCADE,
     FOREIGN KEY (champion_id) REFERENCES roster(id) ON DELETE CASCADE,
-    FOREIGN KEY (defeated_id) REFERENCES roster(id) ON DELETE CASCADE,
     FOREIGN KEY (match_id) REFERENCES matches(id) ON DELETE CASCADE
 );
 

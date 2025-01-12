@@ -5,9 +5,14 @@ from helper import (
     get_champions_table, 
     get_roster_table,
     get_retired_titles,
-    get_wrestlers_names_id
+    get_wrestlers_names_id,
+    get_all_titles,
+    get_title_url,
+    get_timesheld,
+    get_longestreigns,
+    get_combined_days,
+    get_title_history
 )
-from scripts.rostermanagement import get_filtered_roster
 
 app = Flask(__name__)
 CORS(app)
@@ -24,13 +29,23 @@ def champions():
 def retired_titles():
     return get_retired_titles()
 
+@app.route('/api/all_titles', methods=['GET'])
+def all_titles():
+    return get_all_titles()
+
 @app.route('/api/roster-id-names', methods=['GET'])
 def roster_by_id_names():
     return get_wrestlers_names_id()
 
-@app.route('/api/filtered-roster', methods=['GET'])
-def filtered_roster():
-    return jsonify(get_filtered_roster())
+
+@app.route('/api/belt/<belt>', methods=['GET'])
+def title_url(belt):
+    title_info = {"title_info" : get_title_url(belt), "champ_stats" : [get_timesheld(belt), get_longestreigns(belt), get_combined_days(belt)]}
+    return title_info
+
+@app.route('/api/belt/<belt>/history', methods=['GET'])
+def title_history(belt):
+    return get_title_history(belt)
 
 "-------------------------------------------------------"
 
