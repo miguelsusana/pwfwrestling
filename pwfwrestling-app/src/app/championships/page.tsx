@@ -1,10 +1,10 @@
 import styles from "../page.module.css";
-import MainHeader from "@/components/MainHeader";
-import Navbar from "@/components/Navbar";
-import MainLayout from "@/components/MainLayout";
-import Footer from "@/components/Footer";
-import ChampionshipCardsList from "@/components/ChampionshipCardsList";
-import SidescrollBox from "@/components/SidescrollBox";
+import MainHeader from "@/components/MainComponents/MainHeader";
+import Navbar from "@/components/MainComponents/Navbar";
+import MainLayout from "@/components/MainComponents/MainLayout";
+import Footer from "@/components/MainComponents/Footer";
+import ChampionshipCardsList from "@/components/ChampionshipPage/ChampionshipCardsList";
+import SidescrollBox from "@/components/ChampionshipPage/SidescrollBox";
 
 
 export default function Championships() {

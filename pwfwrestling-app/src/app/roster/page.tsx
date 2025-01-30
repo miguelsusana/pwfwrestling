@@ -1,9 +1,9 @@
 import styles from "../page.module.css";
-import MainHeader from "@/components/MainHeader";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
-import MainLayout from "@/components/MainLayout";
-import RosterTable from "@/components/RosterTable";
+import MainHeader from "@/components/MainComponents/MainHeader";
+import Navbar from "@/components/MainComponents/Navbar";
+import Footer from "@/components/MainComponents/Footer";
+import MainLayout from "@/components/MainComponents/MainLayout";
+import RosterTable from "@/components/RosterPage/RosterTable";
 
 export default function Home() {
 

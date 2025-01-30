@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import ChampionshipCard from "./ChampionshipCard";
-import styles from "../app/page.module.css";
+import styles from "./ChampionshipCardsList.module.css";
 
 interface ChampionsEntry {
     title: string;

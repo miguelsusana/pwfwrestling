@@ -1,6 +1,6 @@
 "use client"
 import { useEffect, useState } from "react";
-import styles from "../app/page.module.css";
+import styles from "./RosterChampionsTable.module.css";
 
 interface ChampionsEntry {
     title: string,

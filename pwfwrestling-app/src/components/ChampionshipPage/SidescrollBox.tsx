@@ -1,6 +1,6 @@
 "use client"
 import { useState, useEffect } from "react";
-import styles from "../app/page.module.css";
+import styles from "./SidescrollBox.module.css";
 
 interface RetiredChampionships {
     image: string,

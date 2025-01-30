@@ -1,8 +1,8 @@
 "use client"
-import MainHeader from "@/components/MainHeader";
-import MainLayout from "@/components/MainLayout";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+import MainHeader from "@/components/MainComponents/MainHeader";
+import MainLayout from "@/components/MainComponents/MainLayout";
+import Navbar from "@/components/MainComponents/Navbar";
+import Footer from "@/components/MainComponents/Footer";
 import styles from "../../page.module.css";
 import { useState, useEffect } from "react";
 

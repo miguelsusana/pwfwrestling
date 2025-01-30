@@ -1,4 +1,4 @@
-import styles from "../app/page.module.css";
+import styles from "./TitleHistoryFullTable.module.css";
 
 type HistoryStats = {
     name: string,

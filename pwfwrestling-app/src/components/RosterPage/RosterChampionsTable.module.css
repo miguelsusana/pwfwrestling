@@ -1,0 +1,107 @@
+.table_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+}
+
+.table_container .gridtable {
+    flex: 1;
+    table-layout: fixed;
+}
+
+.gridtable {
+    border-collapse: collapse;
+    width: auto;
+    margin-bottom: 30px;
+}
+
+.gridtable th,
+.gridtable td {
+    padding: 8px;
+    text-align: left;
+}
+
+.gridtable th {
+    font-weight: bold;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.gridtable td {
+    background-color: rgb(0, 0, 0);
+}
+
+.sd_header {
+    background-color: rgb(64, 64, 252);
+    width: 300px;
+    color: black;
+}
+
+.raw_header {
+    background-color: red;
+    width: 300px;
+    color: black;
+}
+
+.nxt_header {
+    background-color: rgb(255, 204, 0);
+    width: 300px;
+    color: black;
+}
+
+/*SMACKDOWN ROSTER CHAMPIONSHIP TABLE*/
+.sd_roster_titles tr td:first-child {
+    font-weight: bold;
+    background-color: black;
+    box-shadow: 0 0 5px 3px rgba(7, 58, 224, 0.5);
+}
+
+.sd_roster_titles tr td:nth-child(2):hover {
+    background-color: rgb(75, 136, 228);
+}
+
+.sd_roster_titles tr td:nth-child(2) {
+    background-color: black;
+    box-shadow: 0 0 5px 3px rgba(7, 58, 224, 0.5);
+}
+
+.champions_title {
+    width: 60%;
+    padding: 8px;
+    text-align: left;
+}
+
+/*RAW ROSTER CHAMPIONSHIP TABLE*/
+.raw_roster_titles tr td:first-child {
+    font-weight: bold;
+    background-color: black;
+    box-shadow: 0 0 5px 3px rgba(224, 7, 7, 0.5);
+
+}
+
+.raw_roster_titles tr td:nth-child(2):hover {
+    background-color: rgb(228, 75, 75);
+}
+
+.raw_roster_titles tr td:nth-child(2) {
+    background-color: black;
+    box-shadow: 0 0 5px 3px rgba(224, 7, 7, 0.5);
+}
+
+/*NXT ROSTER CHAMPIONSHIP TABLE*/
+.nxt_roster_titles tr td:first-child {
+    font-weight: bold;
+    background-color: black;
+    box-shadow: 0 0 5px 3px rgba(224, 191, 7, 0.5);
+}
+
+.nxt_roster_titles tr td:nth-child(2):hover {
+    background-color: rgb(221, 196, 58);
+}
+
+.nxt_roster_titles tr td:nth-child(2) {
+    background-color: black;
+    box-shadow: 0 0 5px 3px rgba(224, 191, 7, 0.5);
+}

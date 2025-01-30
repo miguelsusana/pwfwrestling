@@ -1,8 +1,8 @@
-import styles from "../app/page.module.css";
-import Navbar from "./Navbar";
-import Footer from "./Footer";
-import MainHeader from "./MainHeader";
-import MainLayout from "./MainLayout";
+import styles from "./TitleHistoryPage.module.css";
+import Navbar from "../MainComponents/Navbar";
+import Footer from "../MainComponents/Footer";
+import MainHeader from "../MainComponents/MainHeader";
+import MainLayout from "../MainComponents/MainLayout";
 import TitleHistoryMiniTables from "./TitleHistoryMiniTables";
 
 type TitleInfo = {

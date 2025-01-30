@@ -1,8 +1,8 @@
 "use client"
 import { useState, useEffect } from "react";
 import { useParams } from "next/navigation";
-import TitleHistoryPage from "@/components/TitleHistoryPage";
-import { BeltProps } from "@/components/TitleHistoryPage";
+import TitleHistoryPage from "@/components/TitleHistoryPage/TitleHistoryPage";
+import { BeltProps } from "@/components/TitleHistoryPage/TitleHistoryPage";
 
 export default function BeltPage() {
 

@@ -1,8 +1,8 @@
 import styles from "./page.module.css";
-import Navbar from "@/components/Navbar";
-import MainHeader from "@/components/MainHeader";
-import Footer from "@/components/Footer";
-import MainLayout from "@/components/MainLayout";
+import Navbar from "@/components/MainComponents/Navbar";
+import MainHeader from "@/components/MainComponents/MainHeader";
+import Footer from "@/components/MainComponents/Footer";
+import MainLayout from "@/components/MainComponents/MainLayout";
 
 export default function Home() {
   return (
@@ -12,12 +12,12 @@ export default function Home() {
 
       <MainLayout>
         <h2>Welcome to PWFWrestling</h2>
-          <p>
-              Explore the latest rosters, championship updates, and upcoming events. 
-              Your journey into the world of PWF starts here!
-          </p>
+        <p>
+          Explore the latest rosters, championship updates, and upcoming events.
+          Your journey into the world of PWF starts here!
+        </p>
       </MainLayout>
-  
+
       <Footer />
     </div>
   );

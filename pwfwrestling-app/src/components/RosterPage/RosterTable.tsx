@@ -1,7 +1,7 @@
 "use client"
 import { useEffect, useState } from "react";
-import styles from "../app/page.module.css";
-import MainLayout from "./MainLayout";
+import styles from "./RosterTable.module.css";
+import MainLayout from "../MainComponents/MainLayout";
 import RosterChampionsTable from "./RosterChampionsTable";
 
 interface RosterEntry {

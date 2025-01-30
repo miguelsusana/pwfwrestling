@@ -1,8 +1,8 @@
 import styles from "../page.module.css";
-import MainLayout from "@/components/MainLayout";
-import Navbar from "@/components/Navbar";
-import MainHeader from "@/components/MainHeader";
-import Footer from "@/components/Footer";
+import MainLayout from "@/components/MainComponents/MainLayout";
+import Navbar from "@/components/MainComponents/Navbar";
+import MainHeader from "@/components/MainComponents/MainHeader";
+import Footer from "@/components/MainComponents/Footer";
 
 export default function Admin() {
 
