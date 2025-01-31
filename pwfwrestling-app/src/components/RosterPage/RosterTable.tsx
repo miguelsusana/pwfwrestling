@@ -1,6 +1,7 @@
 "use client"
 import { useEffect, useState } from "react";
-import styles from "./RosterTable.module.css";
+import compStyle from "./Roster.module.css";
+import styles from "../../app/page.module.css";
 import MainLayout from "../MainComponents/MainLayout";
 import RosterChampionsTable from "./RosterChampionsTable";
 
@@ -29,22 +30,22 @@ export default function RosterTable() {
     return (
         <div>
             <MainLayout>
-                <div className={styles.rosterContainer}>
+                <div className={compStyle.rosterContainer}>
                     <div>
                         <table className={styles.gridtable}>
                             <thead>
                                 <tr>
-                                    <th className={styles.sd_header}>SMACKDOWN</th>
-                                    <th className={styles.raw_header}>RAW</th>
-                                    <th className={styles.nxt_header}>NXT</th>
+                                    <th className={compStyle.sd_header}>SMACKDOWN</th>
+                                    <th className={compStyle.raw_header}>RAW</th>
+                                    <th className={compStyle.nxt_header}>NXT</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 {roster.map((entry, index) => (
                                     <tr key={index}>
-                                        <td className={styles.smackdown}>{entry.SmackDown || ""}</td>
-                                        <td className={styles.raw}>{entry.RAW || ""}</td>
-                                        <td className={styles.nxt}>{entry.NXT || ""}</td>
+                                        <td className={compStyle.smackdown}>{entry.SmackDown || ""}</td>
+                                        <td className={compStyle.raw}>{entry.RAW || ""}</td>
+                                        <td className={compStyle.nxt}>{entry.NXT || ""}</td>
                                     </tr>
                                 ))}
                             </tbody>

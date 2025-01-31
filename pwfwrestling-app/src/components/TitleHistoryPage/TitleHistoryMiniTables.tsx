@@ -1,4 +1,4 @@
-import styles from "./TitleHistoryMiniTables.module.css";
+import styles from "./TitleHistory.module.css";
 
 type ChampionStatsProps = {
     name: string,
@@ -13,7 +13,7 @@ export type HeaderProps = {
 export default function TitleHistoryMiniTables(headerProps: HeaderProps) {
 
     return (
-        <table className={styles.grid_table}>
+        <table className={styles.generic_table}>
             <thead>
                 <tr>
                     <th>Rank</th>

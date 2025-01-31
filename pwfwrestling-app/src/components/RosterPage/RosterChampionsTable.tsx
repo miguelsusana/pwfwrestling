@@ -1,6 +1,7 @@
 "use client"
 import { useEffect, useState } from "react";
-import styles from "./RosterChampionsTable.module.css";
+import compStyles from "./Roster.module.css";
+import styles from "../../app/page.module.css";
 
 interface ChampionsEntry {
     title: string,
@@ -28,14 +29,14 @@ export default function RosterChampionsTable() {
     }
 
     return (
-        <div className={styles.table_container}>
+        <div className={compStyles.table_container}>
             <table className={styles.gridtable}>
                 <thead>
                     <tr>
-                        <th colSpan={2} className={styles.sd_header}>SMACKDOWN CHAMPIONSHIPS</th>
+                        <th colSpan={2} className={compStyles.sd_header}>SMACKDOWN CHAMPIONSHIPS</th>
                     </tr>
                 </thead>
-                <tbody className={styles.sd_roster_titles}>
+                <tbody className={compStyles.sd_roster_titles}>
                     {champions
                         .filter(champion =>
                             ["WWE Championship",
@@ -57,7 +58,7 @@ export default function RosterChampionsTable() {
                         })
                         .map((champion, index) => (
                             <tr key={index}>
-                                <td className={styles.champions_title}>{champion.title}</td>
+                                <td className={compStyles.champions_title}>{champion.title}</td>
                                 <td>
                                     {Array.isArray(champion.name)
                                         ? champion.name.join(" & ")
@@ -72,10 +73,10 @@ export default function RosterChampionsTable() {
             <table className={styles.gridtable}>
                 <thead>
                     <tr>
-                        <th colSpan={2} className={styles.raw_header}>RAW CHAMPIONSHIPS</th>
+                        <th colSpan={2} className={compStyles.raw_header}>RAW CHAMPIONSHIPS</th>
                     </tr>
                 </thead>
-                <tbody className={styles.raw_roster_titles}>
+                <tbody className={compStyles.raw_roster_titles}>
                     {champions
                         .filter(champion =>
                             ["WWE World Heavyweight Championship",
@@ -97,7 +98,7 @@ export default function RosterChampionsTable() {
                         })
                         .map((champion, index) => (
                             <tr key={index}>
-                                <td className={styles.champions_title}>{champion.title}</td>
+                                <td className={compStyles.champions_title}>{champion.title}</td>
                                 <td>
                                     {Array.isArray(champion.name)
                                         ? champion.name.join(" & ")
@@ -112,10 +113,10 @@ export default function RosterChampionsTable() {
             <table className={styles.gridtable}>
                 <thead>
                     <tr>
-                        <th colSpan={2} className={styles.nxt_header}>NXT CHAMPIONSHIPS</th>
+                        <th colSpan={2} className={compStyles.nxt_header}>NXT CHAMPIONSHIPS</th>
                     </tr>
                 </thead>
-                <tbody className={styles.nxt_roster_titles}>
+                <tbody className={compStyles.nxt_roster_titles}>
                     {champions
                         .filter(champion =>
                             ["NXT Championship",
@@ -135,7 +136,7 @@ export default function RosterChampionsTable() {
                         })
                         .map((champion, index) => (
                             <tr key={index}>
-                                <td className={styles.champions_title}>{champion.title}</td>
+                                <td className={compStyles.champions_title}>{champion.title}</td>
                                 <td>
                                     {Array.isArray(champion.name)
                                         ? champion.name.join(" & ")
