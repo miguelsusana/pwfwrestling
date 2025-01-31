@@ -13,8 +13,6 @@ export default function Admin() {
             <MainLayout>
                 <div className={styles.navigation_buttons}>
                     <a href="/admin/titles_list"><button>Titles List</button></a>
-                    <a href="/admin/matches_list"><button>Matches List</button></a>
-                    <a href="/admin/events_list"><button>Events List</button></a>
                 </div>
 
                 <div className={styles.navigation_buttons}>

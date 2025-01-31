@@ -73,3 +73,8 @@
     text-align: center;
     padding: 10px;
 }
+
+.justifycenter {
+    display: flex;
+    justify-content: center;
+}

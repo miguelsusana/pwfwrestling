@@ -232,3 +232,20 @@ def get_title_history_from_database(belt):
     finally:
         connection.close()
         print("Database connection closed.") 
+
+def get_titles_list_id_db():
+    connection  = get_connection()
+    try:
+        with connection.cursor() as cursor:
+            query = """SELECT id, current_name 
+                    FROM titles
+                    """
+            cursor.execute(query)
+            result = [{"id": entry[0], "title": entry[1]} for entry in cursor.fetchall()]
+            return result
+    except mysql.connector.Error as err:
+        print(f"Database error: {err}")
+        return []
+    finally:
+        connection.close()
+        print("Database connection closed.") 

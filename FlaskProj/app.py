@@ -11,7 +11,8 @@ from helper import (
     get_timesheld,
     get_longestreigns,
     get_combined_days,
-    get_title_history
+    get_title_history,
+    get_titles_list_id
 )
 
 app = Flask(__name__)
@@ -32,6 +33,10 @@ def retired_titles():
 @app.route('/api/all_titles', methods=['GET'])
 def all_titles():
     return get_all_titles()
+
+@app.route('/api/titles_by_id', methods=['GET'])
+def titles_by_id():
+    return get_titles_list_id()
 
 @app.route('/api/roster-id-names', methods=['GET'])
 def roster_by_id_names():

@@ -9,7 +9,8 @@ from roster_db import (
     get_timesheld_from_database,
     get_longestreign_from_database,
     get_combined_days_from_database,
-    get_title_history_from_database
+    get_title_history_from_database,
+    get_titles_list_id_db
     )
 from flask import render_template
 
@@ -106,3 +107,6 @@ def get_combined_days(belt):
 def get_title_history(belt):
     title_history_lists = get_title_history_from_database(belt)
     return [{"reign_order" : entry[0], "name" : entry[1], "match_description" : entry[2], "reign_duration" : entry[3]} for entry in title_history_lists]
+
+def get_titles_list_id():
+    return get_titles_list_id_db();
