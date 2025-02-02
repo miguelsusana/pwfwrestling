@@ -1,32 +1,17 @@
-"use client"
-import { useEffect, useState } from "react";
 import compStyles from "./Roster.module.css";
 import styles from "../../app/page.module.css";
 
-interface ChampionsEntry {
+export type ChampionsEntry = {
     title: string,
     name: string | string[],
     image: string;
 }
 
-export default function RosterChampionsTable() {
+type RosterChampionsTableProps = {
+    championEntries: ChampionsEntry[]
+}
 
-    const [champions, setChampion] = useState<ChampionsEntry[]>([])
-    if (champions) {
-        useEffect(() => {
-            const fetchChampions = async () => {
-                const response = await fetch("http://localhost:8000/api/champions");
-                if (!response.ok) {
-                    throw new Error("Failed to fetch roster data");
-                }
-                const data = await response.json();
-                setChampion(data);
-                console.log(champions);
-            }
-            fetchChampions();
-        }, []
-        );
-    }
+export default function RosterChampionsTable(rosterChampionsTableProps: RosterChampionsTableProps) {
 
     return (
         <div className={compStyles.table_container}>
@@ -37,7 +22,7 @@ export default function RosterChampionsTable() {
                     </tr>
                 </thead>
                 <tbody className={compStyles.sd_roster_titles}>
-                    {champions
+                    {rosterChampionsTableProps.championEntries
                         .filter(champion =>
                             ["WWE Championship",
                                 "Intercontinental Championship",
@@ -77,7 +62,7 @@ export default function RosterChampionsTable() {
                     </tr>
                 </thead>
                 <tbody className={compStyles.raw_roster_titles}>
-                    {champions
+                    {rosterChampionsTableProps.championEntries
                         .filter(champion =>
                             ["WWE World Heavyweight Championship",
                                 "United States Championship",
@@ -117,7 +102,7 @@ export default function RosterChampionsTable() {
                     </tr>
                 </thead>
                 <tbody className={compStyles.nxt_roster_titles}>
-                    {champions
+                    {rosterChampionsTableProps.championEntries
                         .filter(champion =>
                             ["NXT Championship",
                                 "NXT North American Championship",

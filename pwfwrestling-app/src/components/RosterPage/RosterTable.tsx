@@ -1,31 +1,20 @@
-"use client"
-import { useEffect, useState } from "react";
 import compStyle from "./Roster.module.css";
 import styles from "../../app/page.module.css";
 import MainLayout from "../MainComponents/MainLayout";
-import RosterChampionsTable from "./RosterChampionsTable";
+import RosterChampionsTable, { ChampionsEntry } from "./RosterChampionsTable";
 
-interface RosterEntry {
+export type RosterEntry = {
     SmackDown: string;
     RAW: string;
     NXT: string;
 }
 
-export default function RosterTable() {
+type RosterTableProps = {
+    rosterEntries: RosterEntry[],
+    championEntries: ChampionsEntry[]
+}
 
-    const [roster, setRoster] = useState<RosterEntry[]>([]);
-
-    useEffect(() => {
-        const fetchRoster = async () => {
-            const response = await fetch("http://localhost:8000/api/roster");
-            if (!response.ok) {
-                throw new Error("Failed to fetch roster data");
-            }
-            const data: RosterEntry[] = await response.json();
-            setRoster(data);
-        };
-        fetchRoster();
-    }, []);
+export default function RosterTable(rosterTableProps: RosterTableProps) {
 
     return (
         <div>
@@ -41,7 +30,7 @@ export default function RosterTable() {
                                 </tr>
                             </thead>
                             <tbody>
-                                {roster.map((entry, index) => (
+                                {rosterTableProps.rosterEntries.map((entry, index) => (
                                     <tr key={index}>
                                         <td className={compStyle.smackdown}>{entry.SmackDown || ""}</td>
                                         <td className={compStyle.raw}>{entry.RAW || ""}</td>
@@ -52,7 +41,7 @@ export default function RosterTable() {
                         </table>
                     </div>
                     <div>
-                        <RosterChampionsTable />
+                        <RosterChampionsTable championEntries={rosterTableProps.championEntries} />
                     </div>
                 </div>
             </MainLayout>
