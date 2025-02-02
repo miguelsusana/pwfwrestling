@@ -13,12 +13,12 @@ def get_connection():
         database=config['mysql']['database']
 )
 
-class Roster(Enum):
+class Brand(Enum):
     SMACKDOWN = "SmackDown"
     RAW = "RAW"
     NXT = "NXT"
 
-def get_roster_list(brand: Roster):
+def get_roster_list(brand: Brand):
     try:
         conn = get_connection()
         with conn.cursor() as cursor:
@@ -89,7 +89,7 @@ def get_retired_titles():
         connection.close()
         print("Database connection closed.")
 
-def get_wrestler_id_names():
+def get_wrestlers_info():
     connection = get_connection()
     try:
         with connection.cursor() as cursor:
@@ -105,7 +105,7 @@ def get_wrestler_id_names():
         connection.close()
         print("Database connection closed.")
 
-def get_all_titles_db():
+def get_all_titles():
     connection = get_connection()
     try:  
         with connection.cursor() as cursor:
@@ -120,7 +120,7 @@ def get_all_titles_db():
         connection.close()
         print("Database connection closed.")
 
-def get_title_url_db(belt): 
+def get_title_url(belt): 
     connection = get_connection()
     try:  
         with connection.cursor() as cursor:
@@ -233,7 +233,7 @@ def get_title_history_from_database(belt):
         connection.close()
         print("Database connection closed.") 
 
-def get_titles_list_id_db():
+def get_all_titles_by_id():
     connection  = get_connection()
     try:
         with connection.cursor() as cursor:
