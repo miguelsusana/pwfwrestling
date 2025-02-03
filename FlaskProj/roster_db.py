@@ -40,6 +40,23 @@ def get_roster_list(brand: Brand):
     finally:
         conn.close()
 
+def get_all_wrestlers():
+    try:
+        conn = get_connection()
+        with conn.cursor() as cursor:
+            query = """
+                SELECT id, name
+                FROM roster
+            """
+            cursor.execute(query)
+            result = cursor.fetchall()
+            roster = [{"wrestler_id":entry[0], "wrestler_name":entry[1]} for entry in result]
+        return roster
+    except mysql.connector.Error as err:
+        print(f"Error: {err}")
+        return []
+    finally:
+        conn.close()
 
 def get_champions():
     connection = get_connection()
@@ -66,6 +83,21 @@ def get_champions():
             result = [{"title": entry[0], "name": entry[1], "image" : entry[2]} for entry in cursor.fetchall()]
             print(f"Query result: {result}")
         return result
+    except mysql.connector.Error as err:
+        print(f"Database error: {err}")
+        return []
+    finally:
+        connection.close()
+        print("Database connection closed.")
+
+def get_active_titles():
+    connection = get_connection()
+    try:  
+        with connection.cursor() as cursor:
+            query = "SELECT id, current_name FROM titles WHERE brand is NOT NULL"
+            cursor.execute(query)
+            result = [{"title_id": entry[0], "title_name": entry[1]} for entry in cursor.fetchall()]
+            return result
     except mysql.connector.Error as err:
         print(f"Database error: {err}")
         return []
@@ -242,6 +274,23 @@ def get_all_titles_by_id():
                     """
             cursor.execute(query)
             result = [{"id": entry[0], "title": entry[1]} for entry in cursor.fetchall()]
+            return result
+    except mysql.connector.Error as err:
+        print(f"Database error: {err}")
+        return []
+    finally:
+        connection.close()
+        print("Database connection closed.") 
+
+def get_all_events():
+    connection  = get_connection()
+    try:
+        with connection.cursor() as cursor:
+            query = """SELECT * 
+                    FROM events
+                    """
+            cursor.execute(query)
+            result = [{"id": entry[0], "event_name": entry[1], "event_month": entry[2], "event_year": entry[3], "event_season": entry[4], "event_week": entry[5]} for entry in cursor.fetchall()]
             return result
     except mysql.connector.Error as err:
         print(f"Database error: {err}")

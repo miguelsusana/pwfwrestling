@@ -13,7 +13,10 @@ from roster_db import (
     get_wrestlers_info,
     get_all_titles,
     get_title_url,
-    get_all_titles_by_id
+    get_all_titles_by_id,
+    get_all_events,
+    get_active_titles,
+    get_all_wrestlers
 )
 
 app = Flask(__name__)
@@ -23,9 +26,17 @@ CORS(app)
 def roster():
     return jsonify(get_roster_table())
 
+@app.route('/api/full_roster', methods=['GET'])
+def full_roster():
+    return get_all_wrestlers()
+
 @app.route('/api/champions', methods=['GET'])
 def champions():
     return jsonify(get_champions_table())
+
+@app.route('/api/active_titles', methods=['GET'])
+def active_titles():
+    return get_active_titles()
 
 @app.route('/api/retired_titles', methods=['GET'])
 def retired_titles():
@@ -52,6 +63,10 @@ def title_url(belt):
 @app.route('/api/belt/<belt>/history', methods=['GET'])
 def title_history(belt):
     return get_title_history(belt)
+
+@app.route('/api/get_events', methods=['GET'])
+def events():
+    return get_all_events()
 
 if __name__ == '__main__':
     app.run(debug=True, port=8000)
