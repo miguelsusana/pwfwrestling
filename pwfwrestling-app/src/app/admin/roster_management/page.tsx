@@ -79,36 +79,36 @@ export default function RosterManagement() {
 
                     </form>
                 </div>
-
-                <table className={styles.gridtable}>
-                    <thead className={styles.pink}>
-                        <tr>
-                            <th>Wrestler ID</th>
-                            <th>Name</th>
-                            <th>Brand</th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                        </tr>
-                    </thead>
-                    <tbody className={styles.pink}>
-                        {filteredRoster.map((superstar, index) => (
-                            <tr key={index}>
-                                <td>{superstar.id}</td>
-                                <td>{superstar.name}</td>
-                                <td>{superstar.brand}</td>
-                                <td>
-                                    <form action={`roster_management/${superstar.id}`} method="PUT">
-                                        <button type="submit">EDIT</button>
-                                    </form>
-                                </td>
-                                <td><button>REMOVE</button></td>
-                                <td><a href={`roster_management/${superstar.id}`}><button>DETAILS</button></a></td>
+                <div className={styles.align_center}>
+                    <table className={styles.gridtable}>
+                        <thead className={styles.pink}>
+                            <tr>
+                                <th>Wrestler ID</th>
+                                <th>Name</th>
+                                <th>Brand</th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
                             </tr>
-                        ))}
-                    </tbody>
-
-                </table>
+                        </thead>
+                        <tbody className={styles.pink}>
+                            {filteredRoster.map((superstar, index) => (
+                                <tr key={index}>
+                                    <td>{superstar.id}</td>
+                                    <td>{superstar.name}</td>
+                                    <td>{superstar.brand}</td>
+                                    <td>
+                                        <form action={`roster_management/${superstar.id}`} method="PUT">
+                                            <button type="submit">EDIT</button>
+                                        </form>
+                                    </td>
+                                    <td><button>REMOVE</button></td>
+                                    <td><a href={`roster_management/${superstar.id}`}><button>DETAILS</button></a></td>
+                                </tr>
+                            ))}
+                        </tbody>
+                    </table>
+                </div>
             </MainLayout>
             <Footer />
         </div>
