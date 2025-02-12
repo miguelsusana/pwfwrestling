@@ -5,6 +5,8 @@ import Navbar from "@/components/MainComponents/Navbar";
 import Footer from "@/components/MainComponents/Footer";
 import MainLayout from "@/components/MainComponents/MainLayout";
 import { useState, useEffect } from "react";
+import { Autocomplete, TextField } from "@mui/material";
+import { fetchEvents, fetchFullRoster, fetchTitlesList } from "@/api";
 
 type EventData = {
     event_season: number,
@@ -26,8 +28,10 @@ type RosterData = {
 }
 
 type MatchParticipantData = {
-    match_participant: string;
+    match_participant: RosterData;
     team_number: number | undefined;
+    is_competitor: boolean;
+    accompanied_by: RosterData | undefined;
 }
 
 export default function MatchManagement() {
@@ -35,32 +39,16 @@ export default function MatchManagement() {
     const [events, setEvents] = useState<EventData[]>([]);
     const [championships, setChampionships] = useState<ActiveChampionship[]>([]);
     const [isChampionship, setIsChampionship] = useState(false);
-    const [isCompetitor, setIsCompetitor] = useState(false);
-    const [roster, setRoster] = useState<RosterData[]>([])
-    const [filteredRoster, setFilteredRoster] = useState<RosterData[]>([])
-    const [matchParticipants, setMatchParticipants] = useState<MatchParticipantData[]>([])
+    const [isCompetitor, setIsCompetitor] = useState(true);
+    const [roster, setRoster] = useState<RosterData[]>([]);
+    const [matchParticipants, setMatchParticipants] = useState<MatchParticipantData[]>([]);
     const [teamNumber, setTeamNumber] = useState<number | undefined>();
-    const [participants, setParticipants] = useState("");
+    const [selectedWrestler, setSelectedWrestler] = useState<RosterData | undefined>();
 
     useEffect(() => {
-        const fetchEvents = async () => {
-            const response = await fetch('http://127.0.0.1:8000/api/get_events');
-            const data = await response.json();
-            setEvents(data);
-        }
-        const fetchTitlesList = async () => {
-            const response = await fetch("http://127.0.0.1:8000/api/active_titles");
-            const data = await response.json();
-            setChampionships(data);
-        }
-        const fetchFullRoster = async () => {
-            const response = await fetch("http://127.0.0.1:8000/api/full_roster");
-            const data = await response.json();
-            setRoster(data);
-        }
-        fetchEvents();
-        fetchTitlesList();
-        fetchFullRoster();
+        fetchEvents().then((data) => setEvents(data));
+        fetchFullRoster().then((data) => setRoster(data));
+        fetchTitlesList().then((data) => setChampionships(data));
     }, [])
 
     const handleMatchChange = (event: any) => {
@@ -68,18 +56,8 @@ export default function MatchManagement() {
     };
 
     const handleCompetitorStatusChange = (event: any) => {
-        setIsCompetitor(event.target.value === '1');
-    }
-
-    const handleWrestlerInputChange = (event: any) => {
-        const inputValue = event.target.value
-        setParticipants(inputValue)
-        if (inputValue.trim() === "") {
-            setFilteredRoster([]);
-        } else {
-            const filtered = roster.filter(wrestler => wrestler.wrestler_name.toLowerCase().startsWith(inputValue.toLowerCase()))
-            setFilteredRoster(filtered);
-        }
+        console.log("basbabs: ", event.target.value);
+        setIsCompetitor(event.target.value === 1);
     }
 
     const seasons = [...new Set(events.map(event => event.event_season))];
@@ -89,8 +67,14 @@ export default function MatchManagement() {
     const names = [...new Set(events.map(event => event.event_name))];
 
     const addToParticipantList = () => {
-        if (participants && (teamNumber !== undefined && teamNumber > 0)) {
-            setMatchParticipants([...matchParticipants, { match_participant: participants, team_number: teamNumber }])
+        if (selectedWrestler && (teamNumber !== undefined && teamNumber > 0)) {
+            setMatchParticipants([...matchParticipants,
+            {
+                match_participant: selectedWrestler,
+                team_number: teamNumber,
+                is_competitor: isCompetitor,
+                accompanied_by: undefined
+            }])
         }
     }
 
@@ -173,15 +157,12 @@ export default function MatchManagement() {
                             </div>)}
 
                         <div className={styles.form_group}>
-                            <label htmlFor="name">Match Participants:</label>
-                            <input type="text" id="match_participant" name="match_participant" onChange={handleWrestlerInputChange} />
-                            {filteredRoster.length > 0 && (
-                                <ul className={styles.sugg}>
-                                    {filteredRoster.map((wrestler, index) => (
-                                        <li className={styles.sugg2} key={index}>{wrestler.wrestler_name}</li>
-                                    ))}
-                                </ul>)}
-
+                            <Autocomplete
+                                options={roster.map((wrestler, idx) => { return { label: wrestler.wrestler_name, id: idx } })}
+                                sx={{ width: 300 }}
+                                onChange={(event, wrestler) => wrestler && setSelectedWrestler(roster[wrestler.id])}
+                                renderInput={(params) => <TextField {...params} label="Bebo" />}
+                            />
                             <label htmlFor="name">Team Number</label>
                             <input type="number" id='team_number' name="team_number" onChange={(input) => setTeamNumber(input.target.valueAsNumber)} />
                             <label>Is Competitor</label>
@@ -198,8 +179,10 @@ export default function MatchManagement() {
                         </div>
                         {matchParticipants.map((p, index) => (
                             <div key={index}>
-                                <div>{p.match_participant}</div>
+                                <div>{p.match_participant.wrestler_name}</div>
                                 <div>{p.team_number}</div>
+                                <div>{p.is_competitor ? 'YES' : 'NO'}</div>
+                                {p.accompanied_by && (<div>{p.accompanied_by.wrestler_name}</div>)}
                             </div >
                         ))}
 
