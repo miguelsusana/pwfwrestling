@@ -5,6 +5,7 @@ import Navbar from "@/components/MainComponents/Navbar";
 import Footer from "@/components/MainComponents/Footer";
 import styles from "../../page.module.css";
 import { useState, useEffect } from "react";
+import { fetchRoster } from "@/api";
 
 interface RosterList {
     id: number;
@@ -18,13 +19,10 @@ export default function RosterManagement() {
     const [rosterList, setRosterList] = useState<RosterList[]>([]);
     const [filteredRoster, setFilteredRoster] = useState<RosterList[]>([]);
     useEffect(() => {
-        const fetchRoster = async () => {
-            const response = await fetch("http://localhost:8000/api/roster-id-names")
-            const data = await response.json();
+        fetchRoster().then((data) => {
             setRosterList(data);
             setFilteredRoster(data);
-        }
-        fetchRoster();
+        })
     }, [])
 
     function filter(formData: any) {

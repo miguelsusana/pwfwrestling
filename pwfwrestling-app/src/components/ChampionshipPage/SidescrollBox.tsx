@@ -1,6 +1,7 @@
 "use client"
 import { useState, useEffect } from "react";
-import styles from "./SidescrollBox.module.css";
+import styles from "./championship_page.module.css";
+import { fetchRetiredTitles } from "@/api";
 
 interface RetiredChampionships {
     image: string,
@@ -12,15 +13,7 @@ export default function SidescrollBox() {
     const [listPosition, setListPosition] = useState(0);
 
     useEffect(() => {
-        const fetchRetiredTitles = async () => {
-            const response = await fetch("http://localhost:8000/api/retired_titles");
-            if (!response.ok) {
-                throw new Error("Failed to fetch championship data");
-            }
-            const data = await response.json();
-            setRetiredTitles(data);
-        }
-        fetchRetiredTitles();
+        fetchRetiredTitles().then((data) => setRetiredTitles(data));
     }, [])
 
     return (

@@ -7,6 +7,7 @@ import TitleHistoryFullTable from "@/components/TitleHistoryPage/TitleHistoryFul
 import styles from "../../../page.module.css";
 import { useParams } from "next/navigation"
 import { useState, useEffect } from "react"
+import { fetchTitlesHistory } from "@/api"
 
 type HistoryProps = {
     reign_order: number,
@@ -19,12 +20,7 @@ export default function TitleHistoryChampsList() {
     const params = useParams();
     const [titleHistory, setTitleHistory] = useState<HistoryProps[]>([]);
     useEffect(() => {
-        const fetchTitles = async () => {
-            const response = await fetch(`http://localhost:8000/api/belt/${params.belt}/history`);
-            const data = await response.json();
-            setTitleHistory(data);
-        }
-        fetchTitles();
+        fetchTitlesHistory(params.belt).then((data) => setTitleHistory(data));
     }, [])
 
     return (

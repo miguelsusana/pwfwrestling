@@ -1,4 +1,4 @@
-import styles from "./ChampionshipCard.module.css";
+import styles from "./championship_page.module.css";
 
 interface ChampionshipCardProps {
     championName: string,

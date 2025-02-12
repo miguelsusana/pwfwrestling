@@ -8,30 +8,15 @@ import RosterTable from "@/components/RosterPage/RosterTable";
 import { RosterEntry } from "@/components/RosterPage/RosterTable";
 import { useEffect, useState } from "react";
 import { ChampionsEntry } from "@/components/RosterPage/RosterChampionsTable";
+import { fetchChampions, fetchRosterByBrand } from "@/api";
 
 export default function Roster() {
   const [roster, setRoster] = useState<RosterEntry[]>([]);
   const [champions, setChampions] = useState<ChampionsEntry[]>([]);
 
   useEffect(() => {
-    const fetchRoster = async () => {
-      const response = await fetch("http://localhost:8000/api/roster");
-      if (!response.ok) {
-        throw new Error("Failed to fetch roster data");
-      }
-      const data: RosterEntry[] = await response.json();
-      setRoster(data);
-    };
-    const fetchChampions = async () => {
-      const response = await fetch("http://localhost:8000/api/champions");
-      if (!response.ok) {
-        throw new Error("Failed to fetch champions data");
-      }
-      const data = await response.json();
-      setChampions(data);
-    };
-    fetchRoster();
-    fetchChampions();
+    fetchRosterByBrand().then((data) => setRoster(data));
+    fetchChampions().then((data) => setChampions(data));
   }, []);
 
   return (

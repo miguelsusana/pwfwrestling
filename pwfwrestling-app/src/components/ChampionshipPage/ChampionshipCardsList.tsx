@@ -1,7 +1,8 @@
 "use client";
 import { useEffect, useState } from "react";
 import ChampionshipCard from "./ChampionshipCard";
-import styles from "./ChampionshipCardsList.module.css";
+import styles from "./championship_page.module.css";
+import { fetchChampions } from "@/api";
 
 interface ChampionsEntry {
     title: string;
@@ -11,32 +12,10 @@ interface ChampionsEntry {
 
 export default function ChampionshipCardsList() {
     const [champions, setChampion] = useState<ChampionsEntry[]>([]);
-    const [loading, setLoading] = useState<boolean>(true);
-    const [error, setError] = useState<string | null>(null);
 
     useEffect(() => {
-        const fetchChampions = async () => {
-            try {
-                const response = await fetch("http://localhost:8000/api/champions");
-
-                if (!response.ok) {
-                    throw new Error("Failed to fetch champions data");
-                }
-                const data = await response.json();
-                setChampion(data);
-            } catch (error) {
-                setError("Failed to load champions data");
-                console.error(error);
-            } finally {
-                setLoading(false);
-            }
-        };
-
-        fetchChampions();
+        fetchChampions().then((data) => setChampion(data));
     }, []);
-
-    if (loading) return <div>Loading...</div>;
-    if (error) return <div>{error}</div>;
 
     // Define the custom order for the championships
     const worldTitles = [

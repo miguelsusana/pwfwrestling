@@ -6,6 +6,7 @@ import MainHeader from "@/components/MainComponents/MainHeader";
 import MainLayout from "@/components/MainComponents/MainLayout";
 import Navbar from "@/components/MainComponents/Navbar";
 import Footer from "@/components/MainComponents/Footer";
+import { fetchTitlesListByID } from "@/api";
 
 type TitlesProps = {
     id: number,
@@ -16,12 +17,7 @@ export default function TitlesList() {
 
     const [titlesList, setTitlesList] = useState<TitlesProps[]>([]);
     useEffect(() => {
-        const fetchTitlesList = async () => {
-            const response = await fetch("http://127.0.0.1:8000/api/titles_by_id");
-            const data = await response.json();
-            setTitlesList(data);
-        }
-        fetchTitlesList();
+        fetchTitlesListByID().then((data) => setTitlesList(data));
     }, []);
 
     return (

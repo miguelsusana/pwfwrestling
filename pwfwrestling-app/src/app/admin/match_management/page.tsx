@@ -44,6 +44,7 @@ export default function MatchManagement() {
     const [matchParticipants, setMatchParticipants] = useState<MatchParticipantData[]>([]);
     const [teamNumber, setTeamNumber] = useState<number | undefined>();
     const [selectedWrestler, setSelectedWrestler] = useState<RosterData | undefined>();
+    const [selectedManager, setSelectedManager] = useState<RosterData | undefined>();
 
     useEffect(() => {
         fetchEvents().then((data) => setEvents(data));
@@ -57,7 +58,7 @@ export default function MatchManagement() {
 
     const handleCompetitorStatusChange = (event: any) => {
         console.log("basbabs: ", event.target.value);
-        setIsCompetitor(event.target.value === 1);
+        setIsCompetitor(event.target.value === '1');
     }
 
     const seasons = [...new Set(events.map(event => event.event_season))];
@@ -73,7 +74,7 @@ export default function MatchManagement() {
                 match_participant: selectedWrestler,
                 team_number: teamNumber,
                 is_competitor: isCompetitor,
-                accompanied_by: undefined
+                accompanied_by: selectedManager
             }])
         }
     }
@@ -159,9 +160,9 @@ export default function MatchManagement() {
                         <div className={styles.form_group}>
                             <Autocomplete
                                 options={roster.map((wrestler, idx) => { return { label: wrestler.wrestler_name, id: idx } })}
-                                sx={{ width: 300 }}
+                                className={styles.Autocomplete}
                                 onChange={(event, wrestler) => wrestler && setSelectedWrestler(roster[wrestler.id])}
-                                renderInput={(params) => <TextField {...params} label="Bebo" />}
+                                renderInput={(params) => <TextField {...params} label="Select Participant" />}
                             />
                             <label htmlFor="name">Team Number</label>
                             <input type="number" id='team_number' name="team_number" onChange={(input) => setTeamNumber(input.target.valueAsNumber)} />
@@ -172,8 +173,12 @@ export default function MatchManagement() {
                             </select>
                             {isCompetitor && (
                                 <div>
-                                    <label htmlFor="name">Accompanied By</label>
-                                    <input type="text" id='accompanied_by' name="accompanied_by" />
+                                    <Autocomplete
+                                        options={roster.map((wrestler, idx) => { return { label: wrestler.wrestler_name, id: idx } })}
+                                        className={styles.Autocomplete}
+                                        onChange={(event, wrestler) => wrestler && setSelectedManager(roster[wrestler.id])}
+                                        renderInput={(params) => <TextField {...params} label="Accompanied By: " />}
+                                    />
                                 </div>)}
                             <button type="button" onClick={addToParticipantList}>Add Superstar</button>
                         </div>
