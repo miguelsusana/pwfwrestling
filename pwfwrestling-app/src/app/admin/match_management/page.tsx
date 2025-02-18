@@ -5,7 +5,7 @@ import Navbar from "@/components/MainComponents/Navbar";
 import Footer from "@/components/MainComponents/Footer";
 import MainLayout from "@/components/MainComponents/MainLayout";
 import { useState, useEffect } from "react";
-import { Autocomplete, TextField } from "@mui/material";
+import { Autocomplete, Button, TextField } from "@mui/material";
 import { fetchEvents, fetchFullRoster, fetchTitlesList } from "@/api";
 
 type EventData = {
@@ -23,15 +23,16 @@ type ActiveChampionship = {
 }
 
 type RosterData = {
-    wrestler_name: string,
-    wrestler_id: number;
+    name: string,
+    id: number;
+    brand: string;
 }
 
 type MatchParticipantData = {
     match_participant: RosterData;
     team_number: number | undefined;
     is_competitor: boolean;
-    accompanied_by: RosterData | undefined;
+    accompanied_by: RosterData[] | undefined;
 }
 
 export default function MatchManagement() {
@@ -45,6 +46,7 @@ export default function MatchManagement() {
     const [teamNumber, setTeamNumber] = useState<number | undefined>();
     const [selectedWrestler, setSelectedWrestler] = useState<RosterData | undefined>();
     const [selectedManager, setSelectedManager] = useState<RosterData | undefined>();
+    const [managersList, setManagersList] = useState<RosterData[]>([]);
 
     useEffect(() => {
         fetchEvents().then((data) => setEvents(data));
@@ -57,7 +59,6 @@ export default function MatchManagement() {
     };
 
     const handleCompetitorStatusChange = (event: any) => {
-        console.log("basbabs: ", event.target.value);
         setIsCompetitor(event.target.value === '1');
     }
 
@@ -74,8 +75,15 @@ export default function MatchManagement() {
                 match_participant: selectedWrestler,
                 team_number: teamNumber,
                 is_competitor: isCompetitor,
-                accompanied_by: selectedManager
+                accompanied_by: managersList
             }])
+            setManagersList([]);
+        }
+    }
+
+    const addToManagerList = () => {
+        if (selectedManager) {
+            setManagersList([...managersList, selectedManager])
         }
     }
 
@@ -159,7 +167,7 @@ export default function MatchManagement() {
 
                         <div className={styles.form_group}>
                             <Autocomplete
-                                options={roster.map((wrestler, idx) => { return { label: wrestler.wrestler_name, id: idx } })}
+                                options={roster.map((wrestler, idx) => { return { label: wrestler.name, id: idx } })}
                                 className={styles.Autocomplete}
                                 onChange={(event, wrestler) => wrestler && setSelectedWrestler(roster[wrestler.id])}
                                 renderInput={(params) => <TextField {...params} label="Select Participant" />}
@@ -174,20 +182,23 @@ export default function MatchManagement() {
                             {isCompetitor && (
                                 <div>
                                     <Autocomplete
-                                        options={roster.map((wrestler, idx) => { return { label: wrestler.wrestler_name, id: idx } })}
+                                        options={roster.map((wrestler, idx) => { return { label: wrestler.name, id: idx } })}
                                         className={styles.Autocomplete}
                                         onChange={(event, wrestler) => wrestler && setSelectedManager(roster[wrestler.id])}
                                         renderInput={(params) => <TextField {...params} label="Accompanied By: " />}
                                     />
+                                    <button type="button" onClick={addToManagerList} style={{ border: '2px solid red', backgroundColor: 'yellow', color: 'black' }}>Add Manager</button>
                                 </div>)}
                             <button type="button" onClick={addToParticipantList}>Add Superstar</button>
                         </div>
                         {matchParticipants.map((p, index) => (
                             <div key={index}>
-                                <div>{p.match_participant.wrestler_name}</div>
+                                <div>{p.match_participant.name}</div>
                                 <div>{p.team_number}</div>
                                 <div>{p.is_competitor ? 'YES' : 'NO'}</div>
-                                {p.accompanied_by && (<div>{p.accompanied_by.wrestler_name}</div>)}
+                                {p.accompanied_by && p.accompanied_by.map((manager) => (
+                                    <div key={manager.id}>{manager.name}</div>
+                                ))}
                             </div >
                         ))}
 

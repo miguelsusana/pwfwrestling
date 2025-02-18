@@ -10,13 +10,12 @@ from helper import (
 )
 from roster_db import (
     get_retired_titles,
-    get_wrestlers_info,
+    get_all_wrestlers,
     get_all_titles,
     get_title_url,
     get_all_titles_by_id,
     get_all_events,
-    get_active_titles,
-    get_all_wrestlers
+    get_active_titles
 )
 
 app = Flask(__name__)
@@ -25,10 +24,6 @@ CORS(app)
 @app.route('/api/roster', methods=['GET'])
 def roster():
     return jsonify(get_roster_table())
-
-@app.route('/api/full_roster', methods=['GET'])
-def full_roster():
-    return get_all_wrestlers()
 
 @app.route('/api/champions', methods=['GET'])
 def champions():
@@ -50,9 +45,9 @@ def all_titles():
 def titles_by_id():
     return get_all_titles_by_id()
 
-@app.route('/api/roster-id-names', methods=['GET'])
+@app.route('/api/full-roster', methods=['GET'])
 def roster_by_id_names():
-    return get_wrestlers_info()
+    return get_all_wrestlers()
 
 
 @app.route('/api/belt/<belt>', methods=['GET'])

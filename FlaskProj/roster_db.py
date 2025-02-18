@@ -40,24 +40,6 @@ def get_roster_list(brand: Brand):
     finally:
         conn.close()
 
-def get_all_wrestlers():
-    try:
-        conn = get_connection()
-        with conn.cursor() as cursor:
-            query = """
-                SELECT id, name
-                FROM roster
-            """
-            cursor.execute(query)
-            result = cursor.fetchall()
-            roster = [{"wrestler_id":entry[0], "wrestler_name":entry[1]} for entry in result]
-        return roster
-    except mysql.connector.Error as err:
-        print(f"Error: {err}")
-        return []
-    finally:
-        conn.close()
-
 def get_champions():
     connection = get_connection()
     try:
@@ -121,7 +103,7 @@ def get_retired_titles():
         connection.close()
         print("Database connection closed.")
 
-def get_wrestlers_info():
+def get_all_wrestlers():
     connection = get_connection()
     try:
         with connection.cursor() as cursor:
