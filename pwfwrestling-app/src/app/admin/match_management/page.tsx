@@ -5,8 +5,8 @@ import Navbar from "@/components/MainComponents/Navbar";
 import Footer from "@/components/MainComponents/Footer";
 import MainLayout from "@/components/MainComponents/MainLayout";
 import { useState, useEffect } from "react";
-import { Autocomplete, Button, TextField } from "@mui/material";
 import { fetchEvents, fetchFullRoster, fetchTitlesList } from "@/api";
+import { Teams } from "@/components/ManagementComponents/Teams";
 
 type EventData = {
     event_season: number,
@@ -22,7 +22,7 @@ type ActiveChampionship = {
     title_name: string;
 }
 
-type RosterData = {
+export type RosterData = {
     name: string,
     id: number;
     brand: string;
@@ -45,7 +45,6 @@ export default function MatchManagement() {
     const [matchParticipants, setMatchParticipants] = useState<MatchParticipantData[]>([]);
     const [teamNumber, setTeamNumber] = useState<number | undefined>();
     const [selectedWrestler, setSelectedWrestler] = useState<RosterData | undefined>();
-    const [selectedManager, setSelectedManager] = useState<RosterData | undefined>();
     const [managersList, setManagersList] = useState<RosterData[]>([]);
 
     useEffect(() => {
@@ -58,9 +57,6 @@ export default function MatchManagement() {
         setIsChampionship(event.target.value === '1');
     };
 
-    const handleCompetitorStatusChange = (event: any) => {
-        setIsCompetitor(event.target.value === '1');
-    }
 
     const seasons = [...new Set(events.map(event => event.event_season))];
     const years = [...new Set(events.map(event => event.event_year))];
@@ -78,12 +74,6 @@ export default function MatchManagement() {
                 accompanied_by: managersList
             }])
             setManagersList([]);
-        }
-    }
-
-    const addToManagerList = () => {
-        if (selectedManager) {
-            setManagersList([...managersList, selectedManager])
         }
     }
 
@@ -165,39 +155,24 @@ export default function MatchManagement() {
                                 </select>
                             </div>)}
 
+                        <div>
+                            <div>
+                                <Teams teamNumber={1} roster={roster} managersList={managersList} selectedWrestler={selectedWrestler} setManagersList={setManagersList} setSelectedWrestler={setSelectedWrestler} />
+                            </div>
+                            <div>
+                                <Teams teamNumber={2} roster={roster} managersList={managersList} selectedWrestler={selectedWrestler} setManagersList={setManagersList} setSelectedWrestler={setSelectedWrestler} />
+                            </div>
+                        </div>
                         <div className={styles.form_group}>
-                            <Autocomplete
-                                options={roster.map((wrestler, idx) => { return { label: wrestler.name, id: idx } })}
-                                className={styles.Autocomplete}
-                                onChange={(event, wrestler) => wrestler && setSelectedWrestler(roster[wrestler.id])}
-                                renderInput={(params) => <TextField {...params} label="Select Participant" />}
-                            />
-                            <label htmlFor="name">Team Number</label>
-                            <input type="number" id='team_number' name="team_number" onChange={(input) => setTeamNumber(input.target.valueAsNumber)} />
-                            <label>Is Competitor</label>
-                            <select id="is_competitor" onChange={handleCompetitorStatusChange}>
-                                <option value={1}>YES</option>
-                                <option value={0}>NO</option>
-                            </select>
-                            {isCompetitor && (
-                                <div>
-                                    <Autocomplete
-                                        options={roster.map((wrestler, idx) => { return { label: wrestler.name, id: idx } })}
-                                        className={styles.Autocomplete}
-                                        onChange={(event, wrestler) => wrestler && setSelectedManager(roster[wrestler.id])}
-                                        renderInput={(params) => <TextField {...params} label="Accompanied By: " />}
-                                    />
-                                    <button type="button" onClick={addToManagerList} style={{ border: '2px solid red', backgroundColor: 'yellow', color: 'black' }}>Add Manager</button>
-                                </div>)}
                             <button type="button" onClick={addToParticipantList}>Add Superstar</button>
                         </div>
                         {matchParticipants.map((p, index) => (
                             <div key={index}>
-                                <div>{p.match_participant.name}</div>
-                                <div>{p.team_number}</div>
-                                <div>{p.is_competitor ? 'YES' : 'NO'}</div>
+                                <div>Wrestler: {p.match_participant.name}</div>
+                                <div>Team {p.team_number}</div>
+                                <div>Active? {p.is_competitor ? 'YES' : 'NO'}</div>
                                 {p.accompanied_by && p.accompanied_by.map((manager) => (
-                                    <div key={manager.id}>{manager.name}</div>
+                                    <div key={manager.id}>Accompanied By: {manager.name}</div>
                                 ))}
                             </div >
                         ))}
