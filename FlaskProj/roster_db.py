@@ -56,6 +56,8 @@ def get_champions():
                     titles ON title_holders.title_id = titles.id
                 INNER JOIN 
                     roster ON title_holders.wrestler_id = roster.id
+                WHERE
+                    titles.brand IS NOT NULL
                 ORDER BY 
                     titles.brand, titles.title_type, titles.current_name
             """
@@ -272,7 +274,7 @@ def get_all_events():
                     FROM events
                     """
             cursor.execute(query)
-            result = [{"id": entry[0], "event_name": entry[1], "event_month": entry[2], "event_year": entry[3], "event_season": entry[4], "event_week": entry[5]} for entry in cursor.fetchall()]
+            result = [{"id": entry[0], "name": entry[1], "month": entry[2], "year": entry[3], "season": entry[4], "instance_number": entry[5]} for entry in cursor.fetchall()]
             return result
     except mysql.connector.Error as err:
         print(f"Database error: {err}")
@@ -280,3 +282,60 @@ def get_all_events():
     finally:
         connection.close()
         print("Database connection closed.") 
+
+def create_event_in_database(data):
+    connection  = get_connection()
+    try:
+        with connection.cursor() as cursor:
+            query = """INSERT INTO events (name, month, year, season, instance_number)
+                    VALUES (%s, %s, %s, %s, %s)
+                    """
+            cursor.execute(query, (data["name"], data["month"], data["year"], data["season"], data["instance_number"]))
+            connection.commit()
+            if cursor.rowcount == 1:
+                return {
+                    "success": True,
+                    "message": "Event created successfully!",
+                    "event_id": cursor.lastrowid
+                }
+            else:
+                return {
+                    "success": False,
+                    "message": "Event was not created."
+                }
+    except mysql.connector.Error as err:
+        connection.rollback()
+        print(f"Database error: {err}")
+        return {
+            "success": False,
+            "error": str(err)
+        }
+    finally:
+        connection.close()
+        print("Database connection closed.")
+
+def delete_event_from_database(event_id):
+    connection = get_connection()
+    try:
+        with connection.cursor() as cursor:
+            query = "DELETE FROM events WHERE id = %s"
+            cursor.execute(query, (event_id,))
+            connection.commit()
+
+            if cursor.rowcount == 1:
+                return {
+                    "success": True,
+                    "event_id": event_id
+                }
+            return {"success": False, "error": "Event not found or could not be deleted."}
+        
+    except mysql.connector.Error as err:
+        connection.rollback()
+        print(f"Database error: {err}")
+        return {
+            "success": False,
+            "error": str(err)
+        }
+    finally:
+        connection.close()
+        print("Database connection closed.")

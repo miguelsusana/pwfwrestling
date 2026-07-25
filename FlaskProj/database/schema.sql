@@ -32,6 +32,7 @@ CREATE TABLE IF NOT EXISTS events (
     month ENUM('January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December') NOT NULL,
     year INT NOT NULL,
     season INT NOT NULL,
+    instance_number INT NOT NULL,
     PRIMARY KEY (id)
 );
 
