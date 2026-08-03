@@ -339,3 +339,40 @@ def delete_event_from_database(event_id):
     finally:
         connection.close()
         print("Database connection closed.")
+
+def edit_event_in_database(event_id, data):
+    all_fields = ["name", "month", "year", "season", "instance_number"]
+    intended_fields = []
+    field_values = []
+
+    if not data:
+        return {"success": False, "error": "No changes provided."}
+    
+    for field, value in data.items():
+        if field in all_fields:
+            intended_fields.append(f"{field} = %s")
+            field_values.append(value)
+
+    connection = get_connection()
+    try:
+        with connection.cursor() as cursor:
+            query = f"UPDATE events SET {', '.join(intended_fields)} WHERE id = %s"
+            cursor.execute(query, field_values + [event_id])
+            connection.commit()
+            if cursor.rowcount == 1:
+                return {
+                    "success": True,
+                    "event_id": event_id
+                }
+            return {"success": False, "error": "Event not found or could not be updated."}
+        
+    except mysql.connector.Error as err:
+        connection.rollback()
+        print(f"Database error: {err}")
+        return {
+            "success": False,
+            "error": str(err)
+        }
+    finally:
+        connection.close()
+        print("Database connection closed.")

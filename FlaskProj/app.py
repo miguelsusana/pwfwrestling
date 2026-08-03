@@ -17,7 +17,8 @@ from roster_db import (
     get_all_events,
     get_active_titles,
     create_event_in_database,
-    delete_event_from_database
+    delete_event_from_database,
+    edit_event_in_database
 )
 
 app = Flask(__name__)
@@ -96,6 +97,17 @@ def delete_event(event_id):
     if result.get("success"):
         return jsonify(result), 200
     return jsonify(result), 404
+
+@app.route('/api/events/<int:event_id>', methods=['PUT'])
+def edit_event(event_id):
+    data = request.get_json()
+    if not data:
+            return jsonify({"success": False, "error": "Required body not provided"}), 400
+    
+    result = edit_event_in_database(event_id, data)
+    if result.get("success"):
+            return jsonify(result), 200
+    return jsonify(result), 400
 
 if __name__ == '__main__':
     app.run(debug=True, port=8000)
