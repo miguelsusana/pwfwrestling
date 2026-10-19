@@ -1,5 +1,6 @@
 from roster_db import (
     get_roster_list, 
+    get_roster_list_new,
     get_champions, 
     Brand, 
     get_timesheld_from_database,
@@ -9,6 +10,7 @@ from roster_db import (
     )
 
 def get_roster_table():
+    #TO DELETE LATER
     final_roster_list = []
 
     smackdown_roster = get_roster_list(Brand.SMACKDOWN)
@@ -38,6 +40,12 @@ def get_roster_table():
 
     return final_roster_list
 
+def get_roster_info():
+    rows = get_roster_list_new()
+    return [
+        {"id": row[0], "name": row[1], "brand": row[2]} for row in rows
+    ]
+    
 def get_champions_table():
 
     champions_dict = get_champions()

@@ -6,7 +6,8 @@ from helper import (
     get_timesheld,
     get_longestreigns,
     get_combined_days,
-    get_title_history
+    get_title_history,
+    get_roster_info
 )
 from roster_db import (
     get_retired_titles,
@@ -22,6 +23,7 @@ from roster_db import (
 )
 
 app = Flask(__name__)
+app.json.sort_keys = False
 CORS(app)
 
 @app.route('/')
@@ -29,8 +31,13 @@ def index():
     return 'BACK-END MAIN PAGE'
 
 @app.route('/api/roster', methods=['GET'])
+#to be deleted soon
 def roster():
     return jsonify(get_roster_table())
+
+@app.route('/api/roster-new', methods=['GET'])
+def roster_new():
+    return jsonify(get_roster_info())
 
 @app.route('/api/champions', methods=['GET'])
 def champions():

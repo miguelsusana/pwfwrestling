@@ -2,3 +2,4 @@
 __pycache__/
 FlaskProj/config.ini
 FlaskProj/request.http
+FlaskProj/config.test.ini

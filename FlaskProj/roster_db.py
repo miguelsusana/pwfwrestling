@@ -1,9 +1,18 @@
 from enum import Enum
+import os
 import mysql.connector
 import configparser
 
+
+def get_config_path():
+    env_path = os.getenv("PWFWRESTLING_CONFIG")
+    if env_path:
+        return env_path
+    return 'config.ini'
+
+
 config = configparser.ConfigParser()
-config.read('config.ini')
+config.read(get_config_path())
 
 def get_connection():
         return mysql.connector.connect(
@@ -18,7 +27,27 @@ class Brand(Enum):
     RAW = "RAW"
     NXT = "NXT"
 
+def get_roster_list_new():
+    "NEW ROSTER LIST FUNCTION TO REPLACE THE OLD ONE"
+    try:
+        conn = get_connection()
+        with conn.cursor() as cursor:
+            query = """
+                SELECT id, name, brand
+                FROM roster
+                WHERE status = 'ACTIVE'
+                ORDER BY id, name, brand
+            """
+            cursor.execute(query)
+            return cursor.fetchall()
+    except mysql.connector.Error as err:
+            print(f"Error: {err}")
+            return []
+    finally:
+            conn.close()
+
 def get_roster_list(brand: Brand):
+    """OLD: To be deleted once front-end is updated to use the new roster endpoint"""
     try:
         conn = get_connection()
         with conn.cursor() as cursor:
