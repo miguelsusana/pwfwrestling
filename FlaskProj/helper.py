@@ -1,49 +1,16 @@
 from roster_db import (
-    get_roster_list, 
-    get_roster_list_new,
+    get_roster_list,
     get_champions, 
-    Brand, 
     get_timesheld_from_database,
     get_longestreign_from_database,
     get_combined_days_from_database,
     get_title_history_from_database,
     )
 
-def get_roster_table():
-    #TO DELETE LATER
-    final_roster_list = []
-
-    smackdown_roster = get_roster_list(Brand.SMACKDOWN)
-    raw_roster = get_roster_list(Brand.RAW)
-    nxt_roster = get_roster_list(Brand.NXT)
-
-    full_roster = {
-        "SmackDown": smackdown_roster,
-        "RAW" : raw_roster,
-        "NXT" : nxt_roster
-    }
-
-    longest_roster = 0
-    for roster in full_roster.values():
-        if len(roster) >= longest_roster:
-            longest_roster = len(roster)
-
-    for i in range(0, longest_roster):
-        roster_dict = {}
-        for (key, value) in full_roster.items():
-            if len(value) <= i:
-                roster_dict[key] = ""
-            else:
-                roster_dict[key] = value[i]
-
-        final_roster_list.append(roster_dict)
-
-    return final_roster_list
-
-def get_roster_info():
-    rows = get_roster_list_new()
+def get_roster():
+    rows = get_roster_list()
     return [
-        {"id": row[0], "name": row[1], "brand": row[2]} for row in rows
+        {"id": row[0], "name": row[1], "brand": row[2], "gender": row[3]} for row in rows
     ]
     
 def get_champions_table():

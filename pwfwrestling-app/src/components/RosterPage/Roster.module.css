@@ -14,6 +14,11 @@
     width: 100%;
 }
 
+.divisionHeader {
+    border: 2px solid;
+    text-align: center;
+}
+
 .sd_header {
     background-color: rgb(64, 64, 252);
     width: 300px;

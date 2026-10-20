@@ -46,8 +46,7 @@ export default function TitleHistoryPage(beltProps: BeltProps) {
                         <p className={compStyle.championship_holder_name}>{`${beltProps.title_info.championName}`}</p>
                     </div>
                     <div>
-                        <p className={compStyle.championship_holder}>Time Held</p>
-                        <p className={compStyle.championship_holder_name}>??? days</p>
+                        <a href={`/championships/${beltPage}/history`}><button>VIEW HISTORY</button></a>
                     </div>
                 </div>
 
@@ -56,8 +55,6 @@ export default function TitleHistoryPage(beltProps: BeltProps) {
                     <TitleHistoryMiniTables headerName="Longest Reign" championStats={beltProps.champ_stats[1]} />
                     <TitleHistoryMiniTables headerName="Combined Days" championStats={beltProps.champ_stats[2]} />
                 </div>
-
-                <a href={`/championships/${beltPage}/history`}><button>VIEW HISTORY</button></a>
 
             </MainLayout>
 

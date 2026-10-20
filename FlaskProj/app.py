@@ -2,12 +2,11 @@ from flask import Flask, jsonify, request
 from flask_cors import CORS
 from helper import (
     get_champions_table, 
-    get_roster_table,
     get_timesheld,
     get_longestreigns,
     get_combined_days,
     get_title_history,
-    get_roster_info
+    get_roster
 )
 from roster_db import (
     get_retired_titles,
@@ -31,13 +30,8 @@ def index():
     return 'BACK-END MAIN PAGE'
 
 @app.route('/api/roster', methods=['GET'])
-#to be deleted soon
-def roster():
-    return jsonify(get_roster_table())
-
-@app.route('/api/roster-new', methods=['GET'])
 def roster_new():
-    return jsonify(get_roster_info())
+    return jsonify(get_roster())
 
 @app.route('/api/champions', methods=['GET'])
 def champions():

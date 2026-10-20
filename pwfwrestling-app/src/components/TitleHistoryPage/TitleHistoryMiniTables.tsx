@@ -12,6 +12,11 @@ export type HeaderProps = {
 
 export default function TitleHistoryMiniTables(headerProps: HeaderProps) {
 
+    const formatValue = (value: number) =>
+        headerProps.headerName === "Times Held"
+            ? `${value}x`
+            : `${value} days`;
+
     return (
         <table className={styles.generic_table}>
             <thead>
@@ -25,17 +30,17 @@ export default function TitleHistoryMiniTables(headerProps: HeaderProps) {
                 <tr>
                     <td>1</td>
                     <td>{headerProps.championStats[0].name}</td>
-                    <td>{headerProps.championStats[0].value}</td>
+                    <td>{formatValue(headerProps.championStats[0].value)}</td>
                 </tr>
                 <tr>
                     <td>2</td>
                     <td>{headerProps.championStats[1].name}</td>
-                    <td>{headerProps.championStats[1].value}</td>
+                    <td>{formatValue(headerProps.championStats[1].value)}</td>
                 </tr>
                 <tr>
                     <td>3</td>
                     <td>{headerProps.championStats[2].name}</td>
-                    <td>{headerProps.championStats[2].value}</td>
+                    <td>{formatValue(headerProps.championStats[2].value)}</td>
                 </tr>
             </tbody>
         </table>

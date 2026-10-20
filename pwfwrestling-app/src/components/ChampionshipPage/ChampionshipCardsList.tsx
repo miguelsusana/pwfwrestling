@@ -31,8 +31,6 @@ export default function ChampionshipCardsList() {
         "United States Championship",
         "Women's Intercontinental Championship",
         "Women's United States Championship",
-        "WWE Speed Championship",
-        "WWE Women's Speed Championship",
     ];
 
     const tagTeamTitles = [

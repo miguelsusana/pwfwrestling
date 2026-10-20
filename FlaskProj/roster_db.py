@@ -1,4 +1,3 @@
-from enum import Enum
 import os
 import mysql.connector
 import configparser
@@ -22,21 +21,16 @@ def get_connection():
         database=config['mysql']['database']
 )
 
-class Brand(Enum):
-    SMACKDOWN = "SmackDown"
-    RAW = "RAW"
-    NXT = "NXT"
-
-def get_roster_list_new():
+def get_roster_list():
     "NEW ROSTER LIST FUNCTION TO REPLACE THE OLD ONE"
     try:
         conn = get_connection()
         with conn.cursor() as cursor:
             query = """
-                SELECT id, name, brand
+                SELECT id, name, brand, gender
                 FROM roster
                 WHERE status = 'ACTIVE'
-                ORDER BY id, name, brand
+                ORDER BY id, name, brand, gender
             """
             cursor.execute(query)
             return cursor.fetchall()
@@ -45,29 +39,6 @@ def get_roster_list_new():
             return []
     finally:
             conn.close()
-
-def get_roster_list(brand: Brand):
-    """OLD: To be deleted once front-end is updated to use the new roster endpoint"""
-    try:
-        conn = get_connection()
-        with conn.cursor() as cursor:
-            query = """
-                SELECT name
-                FROM roster
-                WHERE brand = %s AND status = 'ACTIVE'
-                ORDER BY gender
-            """
-            cursor.execute(query, (brand.value,))
-            result = cursor.fetchall()
-            if not result:
-                print(f"No results found for brand {brand.value}")
-            roster = [x[0] for x in result]
-        return roster
-    except mysql.connector.Error as err:
-        print(f"Error: {err}")
-        return []
-    finally:
-        conn.close()
 
 def get_champions():
     connection = get_connection()
