@@ -1,79 +1,76 @@
-"use client"
+"use client";
+
 import styles from "../../page.module.css";
 import MainHeader from "@/components/MainComponents/MainHeader";
 import Navbar from "@/components/MainComponents/Navbar";
 import Footer from "@/components/MainComponents/Footer";
 import MainLayout from "@/components/MainComponents/MainLayout";
-import { useState, useEffect } from "react";
-import { fetchEvents, fetchFullRoster, fetchTitlesList } from "@/api";
-import { Teams } from "@/components/ManagementComponents/Teams";
+import { useEffect, useState, type FormEvent } from "react";
+import { createMatch, fetchEvents, fetchTitlesList } from "@/api";
 
 type EventData = {
-    event_season: number,
-    event_year: number,
-    event_month: string,
-    event_name: string,
-    event_week: number,
     id: number;
-}
+    name: string;
+    month: string;
+    year: number;
+    season: number;
+    instance_number: number;
+};
 
-type ActiveChampionship = {
+type TitleData = {
     title_id: number;
     title_name: string;
-}
-
-export type RosterData = {
-    name: string,
-    id: number;
-    brand: string;
-}
-
-type MatchParticipantData = {
-    match_participant: RosterData;
-    team_number: number | undefined;
-    is_competitor: boolean;
-    accompanied_by: RosterData[] | undefined;
-}
+};
 
 export default function MatchManagement() {
-
     const [events, setEvents] = useState<EventData[]>([]);
-    const [championships, setChampionships] = useState<ActiveChampionship[]>([]);
+    const [titles, setTitles] = useState<TitleData[]>([]);
     const [isChampionship, setIsChampionship] = useState(false);
-    const [isCompetitor, setIsCompetitor] = useState(true);
-    const [roster, setRoster] = useState<RosterData[]>([]);
-    const [matchParticipants, setMatchParticipants] = useState<MatchParticipantData[]>([]);
-    const [teamNumber, setTeamNumber] = useState<number | undefined>();
-    const [selectedWrestler, setSelectedWrestler] = useState<RosterData | undefined>();
-    const [managersList, setManagersList] = useState<RosterData[]>([]);
+    const [saving, setSaving] = useState(false);
+    const [message, setMessage] = useState("");
 
     useEffect(() => {
-        fetchEvents().then((data) => setEvents(data));
-        fetchFullRoster().then((data) => setRoster(data));
-        fetchTitlesList().then((data) => setChampionships(data));
-    }, [])
+        Promise.all([fetchEvents(), fetchTitlesList()])
+            .then(([eventData, titleData]) => {
+                setEvents(eventData);
+                setTitles(titleData);
+            })
+            .catch((error: unknown) => {
+                setMessage(error instanceof Error ? error.message : "Could not load form data.");
+            });
+    }, []);
 
-    const handleMatchChange = (event: any) => {
-        setIsChampionship(event.target.value === '1');
-    };
+    async function submitMatch(event: FormEvent<HTMLFormElement>) {
+        event.preventDefault();
+        setSaving(true);
+        setMessage("");
 
+        const form = event.currentTarget;
+        const formData = new FormData(form);
+        const championshipMatch = formData.get("championship_match") === "yes";
+        const titleValue = formData.get("title_id");
 
-    const seasons = [...new Set(events.map(event => event.event_season))];
-    const years = [...new Set(events.map(event => event.event_year))];
-    const months = [...new Set(events.map(event => event.event_month))];
-    const weeks = [...new Set(events.map(event => event.event_week))];
-    const names = [...new Set(events.map(event => event.event_name))];
+        try {
+            const result = await createMatch({
+                event_id: Number(formData.get("event_id")),
+                match_type: String(formData.get("match_type") ?? "").trim(),
+                special_stipulation:
+                    String(formData.get("special_stipulation") ?? "").trim() || null,
+                championship_match: championshipMatch,
+                title_id: championshipMatch && titleValue ? Number(titleValue) : null,
+                match_description: String(formData.get("match_description") ?? "").trim(),
+                is_main_event: formData.get("is_main_event") === "on",
+                is_pre_show: formData.get("is_pre_show") === "on",
+                participants: [],
+            });
 
-    const addToParticipantList = () => {
-        if (selectedWrestler && (teamNumber !== undefined && teamNumber > 0)) {
-            setMatchParticipants([...matchParticipants,
-            {
-                match_participant: selectedWrestler,
-                team_number: teamNumber,
-                is_competitor: isCompetitor,
-                accompanied_by: managersList
-            }])
-            setManagersList([]);
+            setMessage(`Match ${result.match_id} created.`);
+            form.reset();
+            setIsChampionship(false);
+        } catch (error) {
+            setMessage(error instanceof Error ? error.message : "Could not create match.");
+        } finally {
+            setSaving(false);
         }
     }
 
@@ -83,111 +80,84 @@ export default function MatchManagement() {
             <Navbar />
             <MainLayout>
                 <div className={styles.filter_container}>
-                    <form>
+                    <h2 className={styles.add_wrestler_title}>Add Match</h2>
+
+                    <form onSubmit={submitMatch}>
                         <div className={styles.form_group}>
-                            <label htmlFor="event_season">Season:</label>
-                            <select name="event_season" id="event_season">
-                                <option value=""></option>
-                                {seasons.map((season, index) => (
-                                    <option key={index} value={season}>Season {season}</option>
+                            <label htmlFor="event_id">Event:</label>
+                            <select id="event_id" name="event_id" required defaultValue="">
+                                <option value="" disabled>Select an event</option>
+                                {events.map((event) => (
+                                    <option key={event.id} value={event.id}>
+                                        {event.name} — Season {event.season}, {event.month} {event.year}, Week {event.instance_number}
+                                    </option>
                                 ))}
                             </select>
                         </div>
+
                         <div className={styles.form_group}>
-                            <label htmlFor="event_year">Year:</label>
-                            <select name="event_year" id="event_year">
-                                <option value=""></option>
-                                {years.map((year, index) => (
-                                    <option key={index} value={year}>{year}</option>
-                                ))}
-                            </select>
+                            <label htmlFor="match_type">Match type:</label>
+                            <input id="match_type" name="match_type" required maxLength={255} />
                         </div>
+
                         <div className={styles.form_group}>
-                            <label htmlFor="event_month">Month:</label>
-                            <select name="event_month" id="event_month">
-                                <option value=""></option>
-                                {months.map((month, index) => (
-                                    <option key={index} value={month}>{month}</option>
-                                ))}
-                            </select>
+                            <label htmlFor="special_stipulation">Special stipulation:</label>
+                            <input id="special_stipulation" name="special_stipulation" maxLength={255} />
                         </div>
+
                         <div className={styles.form_group}>
-                            <label htmlFor="event_week">Week:</label>
-                            <select name="event_week" id="event_week">
-                                <option value=""></option>
-                                {weeks.map((week, index) => (
-                                    <option key={index} value={week}>{week}</option>
-                                ))}
-                            </select>
+                            <label htmlFor="match_description">Display description:</label>
+                            <input id="match_description" name="match_description" required />
                         </div>
+
                         <div className={styles.form_group}>
-                            <label htmlFor="event_name">Event Name:</label>
-                            <select name="event_name" id="event_name">
-                                <option value=""></option>
-                                {names.map((name, index) => (
-                                    <option key={index} value={name}>{name}</option>
-                                ))}
-                            </select>
-                        </div>
-                        <div className={styles.form_group}>
-                            <label htmlFor="name">Match Type:</label>
-                            <input type="text" id="match_type" name="match_type" />
-                        </div>
-                        <div className={styles.form_group}>
-                            <label htmlFor="name">Special Stipulation:</label>
-                            <input type="text" id="special_stipulation" name="special_stipulation" />
-                        </div>
-                        <div className={styles.form_group}>
-                            <label htmlFor="name">Championship Match:</label>
-                            <select onChange={handleMatchChange}>
-                                <option value={0}>NO</option>
-                                <option value={1}>YES</option>
+                            <label htmlFor="championship_match">Championship match?</label>
+                            <select
+                                id="championship_match"
+                                name="championship_match"
+                                value={isChampionship ? "yes" : "no"}
+                                onChange={(event) => setIsChampionship(event.target.value === "yes")}
+                            >
+                                <option value="no">No</option>
+                                <option value="yes">Yes</option>
                             </select>
                         </div>
 
                         {isChampionship && (
                             <div className={styles.form_group}>
-                                <label htmlFor="championship_dropdown">Championship:</label>
-                                <select id="championship_dropdown">
-                                    {championships.map((title, index) => (
-                                        <option key={index} value={title.title_id}>{title.title_name}</option>
+                                <label htmlFor="title_id">Title:</label>
+                                <select id="title_id" name="title_id" required defaultValue="">
+                                    <option value="" disabled>Select a title</option>
+                                    {titles.map((title) => (
+                                        <option key={title.title_id} value={title.title_id}>
+                                            {title.title_name}
+                                        </option>
                                     ))}
                                 </select>
-                            </div>)}
+                            </div>
+                        )}
 
-                        <div>
-                            <div>
-                                <Teams teamNumber={1} roster={roster} managersList={managersList} selectedWrestler={selectedWrestler} setManagersList={setManagersList} setSelectedWrestler={setSelectedWrestler} />
-                            </div>
-                            <div>
-                                <Teams teamNumber={2} roster={roster} managersList={managersList} selectedWrestler={selectedWrestler} setManagersList={setManagersList} setSelectedWrestler={setSelectedWrestler} />
-                            </div>
-                        </div>
                         <div className={styles.form_group}>
-                            <button type="button" onClick={addToParticipantList}>Add Superstar</button>
+                            <label htmlFor="is_main_event">Main event?</label>
+                            <input id="is_main_event" name="is_main_event" type="checkbox" />
                         </div>
-                        {matchParticipants.map((p, index) => (
-                            <div key={index}>
-                                <div>Wrestler: {p.match_participant.name}</div>
-                                <div>Team {p.team_number}</div>
-                                <div>Active? {p.is_competitor ? 'YES' : 'NO'}</div>
-                                {p.accompanied_by && p.accompanied_by.map((manager) => (
-                                    <div key={manager.id}>Accompanied By: {manager.name}</div>
-                                ))}
-                            </div >
-                        ))}
+
+                        <div className={styles.form_group}>
+                            <label htmlFor="is_pre_show">Pre-show?</label>
+                            <input id="is_pre_show" name="is_pre_show" type="checkbox" />
+                        </div>
 
                         <div className={styles.filter_buttons}>
-                            <button type="submit">Add Match</button>
-                            <a href='/admin/match_management'>
-                                <button type="button">Clear</button>
-                            </a>
+                            <button type="submit" disabled={saving}>
+                                {saving ? "CREATING..." : "ADD MATCH"}
+                            </button>
                         </div>
-
                     </form>
+
+                    {message && <p role="status">{message}</p>}
                 </div>
             </MainLayout>
             <Footer />
         </div>
-    )
+    );
 }

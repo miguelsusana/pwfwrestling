@@ -10,6 +10,7 @@ from helper import (
 )
 from roster_db import (
     add_wrestler_to_database,
+    create_match_in_database,
     delete_wrestler_from_database,
     get_retired_titles,
     get_all_wrestlers,
@@ -23,6 +24,10 @@ from roster_db import (
     delete_event_from_database,
     edit_event_in_database,
     update_wrestler_in_database
+)
+from validators import (
+    validate_match_payload,
+    validate_wrestler_payload
 )
 
 app = Flask(__name__)
@@ -46,79 +51,29 @@ def get_wrestler(wrestler_id):
 
 @app.route('/api/roster/<int:wrestler_id>', methods=["PUT"])
 def update_wrestler(wrestler_id):
-    data = request.get_json()
-    if not isinstance(data, dict):
-        return jsonify({"error": "A JSON request body is required."}), 400
-
-    name = data.get("name")
-    status = data.get("status")
-    gender = data.get("gender")
-    brand = data.get("brand")
-    extra = data.get("extra")
-
-    if not isinstance(name, str) or not name.strip():
-        return jsonify({"error": "Name is required."}), 400
-    if len(name.strip()) > 255:
-        return jsonify({"error": "Name must be 255 characters or fewer."}), 400
-    if not isinstance(status, str) or status not in {
-        "Active", "Inactive", "Free Agent", "Deceased", "Manager"
-    }:
-        return jsonify({"error": "Invalid status."}), 400
-    if not isinstance(gender, str) or gender not in {"Men", "Women"}:
-        return jsonify({"error": "Invalid gender."}), 400
-    if brand == "":
-        brand = None
-    if brand is not None and (
-        not isinstance(brand, str) or brand not in {"RAW", "SmackDown", "NXT"}
-    ):
-        return jsonify({"error": "Invalid brand."}), 400
-    if extra is not None:
-        if not isinstance(extra, str):
-            return jsonify({"error": "'Extra' must be text or null."}), 400
-        extra = extra.strip() or None
-        if extra is not None and len(extra) > 255:
-            return jsonify({"error": "'Extra' must be 255 characters or less."}), 400
-
-    updated_data = {
-        "name": name.strip(),
-        "status": status,
-        "gender": gender,
-        "brand": brand,
-        "extra": extra
-    }
+    updated_data, error = validate_wrestler_payload(request.get_json(silent=True))
+    if error:
+        return jsonify({"error": error}), 400
 
     result = update_wrestler_in_database(wrestler_id, updated_data)
     if result.get("success"):
         return jsonify({"id": wrestler_id, **updated_data}), 200
+    
     if result.get("not_found"):
         return jsonify({"error": "Wrestler not found."}), 404
+    
     return jsonify({"error": "Could not update wrestler."}), 500
 
 @app.route("/api/roster", methods=["POST"])
 def add_wrestler():
-    data = request.get_json()
-    if not isinstance(data, dict):
-        return jsonify({"error": "A JSON request body is required."}), 400
-    name = data.get("name")
-    status = data.get("status")
-    gender = data.get("gender")
-    brand = data.get("brand") or None
-
-    if not isinstance(name, str) or not name.strip():
-        return jsonify({"error": "Name is required."}), 400
-    if status not in {"Active", "Inactive", "Free Agent", "Deceased", "Manager"}:
-        return jsonify({"error": "Invalid status."}), 400
-    if gender not in  {"Men", "Women"}:
-        return jsonify({"error": "Invalid gender."}), 400
-    if brand not in {None, "RAW", "SmackDown", "NXT"}:
-        return jsonify({"error": "Invalid brand."}), 400
-
-    data["name"] = name.strip()
-    data["brand"] = brand
-    result = add_wrestler_to_database(data)
+    wrestler_data, error = validate_wrestler_payload(request.get_json(silent=True))
+    if error:
+        return jsonify({"error": error}), 400
+   
+    result = add_wrestler_to_database(wrestler_data)
 
     if not result.get("success"):
-        return jsonify({"error" : "Could not add a wrestler."})
+        return jsonify({"error" : "Could not add a wrestler."}), 500
     return jsonify(result["wrestler"]), 201
 
 @app.route("/api/roster/<int:wrestler_id>", methods=["DELETE"])
@@ -127,8 +82,24 @@ def delete_wrestler(wrestler_id):
     if result.get("success"):
         return jsonify(result), 200
     if result.get("not_found"):
-        return jsonify({"error": "Wrestler not found."})
-    return jsonify({"error": "Could not delete wrestler."})
+        return jsonify({"error": "Wrestler not found."}), 404
+    return jsonify({"error": "Could not delete wrestler."}), 500
+
+@app.route("/api/matches", methods=["POST"])
+def create_match():
+    data, error = validate_match_payload(request.get_json(silent=True))
+    if error:
+        return jsonify({"error": error}), 400
+
+    result = create_match_in_database(data)
+    if result.get("success"):
+        return jsonify(result), 201
+    
+    if result.get("not_found"):
+        resource = result["not_found"]
+        return jsonify({"error": f"{resource.capitalize()} not found."}), 404
+    
+    return jsonify({"error": "Could not create match."}), 500
 
 @app.route('/api/champions', methods=['GET'])
 def champions():

@@ -233,6 +233,90 @@ def delete_wrestler_from_database(wrestler_id):
     finally:
         connection.close()
 
+def create_match_in_database(data):
+    connection = get_connection()
+    try:
+        with connection.cursor() as cursor:
+            cursor.execute("SELECT 1 FROM events WHERE id = %s", (data["event_id"],))
+            if cursor.fetchone() is None:
+                return {"success": False, "not_found": "event"}
+
+            if data["championship_match"]:
+                cursor.execute("SELECT 1 FROM titles WHERE id = %s", (data["title_id"],))
+                if cursor.fetchone() is None:
+                    return {"success": False, "not_found": "title"}
+
+            for participant in data["participants"]:
+                cursor.execute(
+                    "SELECT 1 FROM roster WHERE id = %s",
+                    (participant["wrestler_id"],),
+                )
+                if cursor.fetchone() is None:
+                    return {
+                        "success": False,
+                        "not_found": "wrestler",
+                        "wrestler_id": participant["wrestler_id"],
+                    }
+            cursor.execute(
+                """
+                INSERT INTO matches (
+                    event_id,
+                    match_type,
+                    special_stipulation,
+                    championship_match,
+                    match_description,
+                    result_type,
+                    notes,
+                    is_main_event,
+                    is_pre_show
+                )
+                VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)
+                """,
+                (
+                    data["event_id"],
+                    data["match_type"],
+                    data.get("special_stipulation"),
+                    data["championship_match"],
+                    data["match_description"],
+                    data.get("result_type"),
+                    data.get("notes"),
+                    data.get("is_main_event", False),
+                    data.get("is_pre_show", False),
+                ),
+            )
+            match_id = cursor.lastrowid
+
+            if data["championship_match"]:
+                cursor.execute(
+                    """INSERT INTO match_titles(match_id, title_id)
+                    VALUES (%s, %s)
+                    """,
+                    (match_id, data["title_id"])
+                )
+
+            for participant in data["participants"]:
+                cursor.execute(
+                    """
+                    INSERT INTO match_participants(match_id, wrestler_id, team_number, role, is_competitor)
+                    VALUES(%s, %s, %s, %s, %s)
+                    """,
+                    (
+                        match_id,
+                        participant["wrestler_id"],
+                        participant["team_number"],
+                        participant["role"],
+                        participant["role"] == "Competitor"
+                    )
+                )
+            connection.commit()
+            return {"success": True, "match_id": match_id}
+    except mysql.connector.Error as err:
+        connection.rollback()
+        print(f"Database error: {err}")
+        return {"success": False, "error": str(err)}
+    finally:
+        connection.close()
+
 def get_all_titles():
     connection = get_connection()
     try:  

@@ -55,9 +55,10 @@ CREATE TABLE IF NOT EXISTS match_participants (
     id INT NOT NULL AUTO_INCREMENT,
     match_id INT NOT NULL,                      
     wrestler_id INT NOT NULL,                   
-    is_competitor BOOLEAN NOT NULL DEFAULT TRUE, -- FALSE if they are a manager/valet/referee
-    accompanied_by INT DEFAULT NULL,            -- The manager/valet for the wrestler
+    is_competitor BOOLEAN NOT NULL DEFAULT TRUE, --  TO REMOVE
+    accompanied_by INT DEFAULT NULL,            -- TO REMOVE
     team_number INT DEFAULT NULL,
+    role ENUM('Competitor', 'Manager', 'Special Referee') DEFAULT NULL,
     PRIMARY KEY (id),
     FOREIGN KEY (match_id) REFERENCES matches(id) ON DELETE CASCADE, 
     FOREIGN KEY (wrestler_id) REFERENCES roster(id) ON DELETE CASCADE,

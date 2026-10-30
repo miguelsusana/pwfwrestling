@@ -6,6 +6,22 @@ export type Wrestler = {
     extra: string | null;
 };
 
+export type MatchCreatePayload = {
+    event_id: number;
+    match_type: string;
+    special_stipulation: string | null;
+    championship_match: boolean;
+    title_id: number | null;
+    match_description: string;
+    is_main_event: boolean;
+    is_pre_show: boolean;
+    participants: {
+        wrestler_id: number;
+        role: "Competitor" | "Manager" | "Special Referee";
+        team_number: number | null;
+    }[];
+};
+
 export const fetchEvents = async () => {
     const response = await fetch('http://127.0.0.1:8000/api/get_events');
     const data = await response.json();
@@ -97,4 +113,17 @@ export async function updateWrestler(id: string, wrestler: Wrestler): Promise<Wr
         throw new Error(data.error || "Could not update wrestler.")
     }
     return data;
+}
+
+export async function createMatch(match: MatchCreatePayload) {
+    const response = await fetch("http://127.0.0.1:8000/api/matches", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(match)
+    });
+    const data = await response.json();
+    if (!response.ok) {
+        throw new Error(data.error || "Could not create match.");
+    }
+    return data as { success: boolean; match_id: number };
 }
