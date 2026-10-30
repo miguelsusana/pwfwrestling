@@ -40,6 +40,34 @@ def get_roster_list():
     finally:
             conn.close()
 
+def get_wrestler_by_id(wrestler_id):
+    connection = get_connection()
+    try:
+        with connection.cursor() as cursor:
+            cursor.execute(
+                """
+                SELECT id, name, status, gender, brand, extra
+                FROM roster
+                WHERE id = %s
+                """,
+                (wrestler_id,)
+            )
+            row = cursor.fetchone()
+
+            if row is None:
+                return None
+            return {
+                "id": row[0],
+                "name": row[1],
+                "status": row[2],
+                "gender": row[3],
+                "brand": row[4],
+                "extra": row[5]
+            }
+    finally:
+        connection.close()
+
+
 def get_champions():
     connection = get_connection()
     try:
@@ -120,6 +148,90 @@ def get_all_wrestlers():
     finally:
         connection.close()
         print("Database connection closed.")
+
+def add_wrestler_to_database(data):
+    connection = get_connection()
+    try:
+        with connection.cursor() as cursor:
+            cursor.execute(
+                """
+                INSERT INTO roster(name, status, gender, brand, extra)
+                VALUES(%s, %s, %s, %s, %s)
+                """,
+                (
+                data["name"],
+                data["status"],
+                data["gender"],
+                data.get("brand") or None,
+                data.get("extra") or None,
+                )
+            )
+            connection.commit()
+
+            return {
+                "success": True,
+                "wrestler" : {
+                    "id": cursor.lastrowid,
+                    "name": data["name"],
+                    "brand": data.get("brand") or None
+                }
+            }
+    except mysql.connector.Error as err:
+        connection.rollback()
+        print(f"Database error: {err}")
+        return {"success": False, "error": str(err)}
+    finally:
+        connection.close()
+
+def update_wrestler_in_database(wrestler_id, data):
+    connection = get_connection()
+    try:
+        with connection.cursor() as cursor:
+            cursor.execute("SELECT id FROM roster WHERE id = %s", (wrestler_id,))
+            if cursor.fetchone() is None:
+                return {"success": False, "not_found" : True}
+
+            cursor.execute(
+            """
+            UPDATE roster
+            SET name = %s, status = %s, gender = %s, brand = %s, extra = %s
+            WHERE id = %s
+            """,
+            (
+                data["name"],
+                data["status"],
+                data["gender"],
+                data["brand"],
+                data["extra"],
+                wrestler_id
+            ),
+            )
+            connection.commit()
+            return {"success": True, "wrestler_id": wrestler_id}
+            
+    except mysql.connector.Error as err:
+        connection.rollback()
+        print(f"Database error: {err}")
+        return {"success": False, "error": str(err)}
+    finally:
+        connection.close()
+            
+            
+def delete_wrestler_from_database(wrestler_id):
+    connection = get_connection()
+    try:
+        with connection.cursor() as cursor:
+            cursor.execute("DELETE FROM roster WHERE id = %s", (wrestler_id,))
+            if cursor.rowcount == 0:
+                return {"success" : False, "not_found": True}
+            connection.commit()
+            return {"success": True, "wrestler_id" : wrestler_id}
+    except mysql.connector.Error as err:
+        connection.rollback()
+        print(f"Database error: {err}")
+        return {"success": False, "error": str(err)}
+    finally:
+        connection.close()
 
 def get_all_titles():
     connection = get_connection()

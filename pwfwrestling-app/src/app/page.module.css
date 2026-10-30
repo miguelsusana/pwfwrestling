@@ -58,9 +58,13 @@
 }
 
 .filter_container {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 64px;
+  width: min(900px, calc(100% - 32px));
+  margin: 0 auto 48px;
+  padding: 24px;
+  box-sizing: border-box;
+  background: rgb(25, 25, 25);
+  border: 3px solid pink;
+  border-radius: 12px;
 }
 
 .pink td,
@@ -98,10 +102,11 @@
 }
 
 .filter_buttons button {
-  background-color: red;
+  background-color: rgb(220, 112, 147);
+  color: black;
   width: 140px;
   height: 30px;
-  border: red;
+  border: rgb(220, 112, 147);
   border-radius: 20px;
   font-weight: bold;
   cursor: pointer;
@@ -142,4 +147,157 @@
 .Autocomplete {
   width: 300px;
   background-color: rgb(57, 57, 57);
+}
+
+.add_wrestler_container {
+  width: min(900px, calc(100% - 32px));
+  margin: 0 auto 48px;
+  padding: 24px;
+  background: rgb(25, 25, 25);
+  border: 3px solid pink;
+  border-radius: 12px;
+  box-sizing: border-box;
+}
+
+.add_wrestler_title {
+  margin: 0 0 20px;
+  text-align: center;
+}
+
+.add_wrestler_form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+.add_wrestler_form input,
+.add_wrestler_form select {
+  min-height: 38px;
+  padding: 6px 10px;
+  border: 1px solid pink;
+  border-radius: 6px;
+  background: rgb(35, 35, 35);
+  color: white;
+  font-size: 16px;
+}
+
+.add_wrestler_form button {
+  min-height: 38px;
+  padding: 8px 18px;
+  border: 1px solid pink;
+  border-radius: 8px;
+  background: palevioletred;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.add_wrestler_form button:hover {
+  background: rgb(220, 112, 147);
+  transform: scale(1.03);
+}
+
+@media (max-width: 600px) {
+  .add_wrestler_form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+.add_wrestler_container,
+.filter_container,
+.align_center {
+  width: min(1100px, calc(100% - 32px));
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+}
+
+.align_center .gridtable {
+  width: 100%;
+}
+
+.filter_container .form_group {
+  justify-content: center;
+}
+
+.admin_dashboard {
+  width: min(1100px, calc(100% - 32px));
+  margin: 48px auto;
+  padding: 28px;
+  box-sizing: border-box;
+  background: rgb(25, 25, 25);
+  border: 3px solid pink;
+  border-radius: 12px;
+}
+
+.admin_title,
+.admin_subtitle {
+  text-align: center;
+}
+
+.admin_title {
+  margin: 0 0 8px;
+  color: pink;
+}
+
+.admin_subtitle {
+  margin: 0 0 28px;
+  color: #ddd;
+}
+
+.admin_grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.admin_card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 22px;
+  color: white;
+  text-decoration: none;
+  background: rgb(35, 35, 35);
+  border: 2px solid pink;
+  border-radius: 10px;
+  transition: transform 150ms ease, background-color 150ms ease;
+}
+
+.admin_card:hover {
+  transform: translateY(-3px);
+  background: rgb(50, 35, 42);
+}
+
+.admin_card h2,
+.admin_card p {
+  margin: 0;
+}
+
+.admin_card h2 {
+  color: pink;
+}
+
+.admin_card p {
+  color: #ddd;
+}
+
+.admin_card span {
+  margin-top: 8px;
+  padding: 8px 14px;
+  color: black;
+  font-weight: bold;
+  background: palevioletred;
+  border: 1px solid pink;
+  border-radius: 8px;
+}
+
+@media (max-width: 650px) {
+  .admin_grid {
+    grid-template-columns: 1fr;
+  }
 }
