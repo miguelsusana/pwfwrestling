@@ -297,15 +297,14 @@ def create_match_in_database(data):
             for participant in data["participants"]:
                 cursor.execute(
                     """
-                    INSERT INTO match_participants(match_id, wrestler_id, team_number, role, is_competitor)
-                    VALUES(%s, %s, %s, %s, %s)
+                    INSERT INTO match_participants(match_id, wrestler_id, team_number, role)
+                    VALUES(%s, %s, %s, %s)
                     """,
                     (
                         match_id,
                         participant["wrestler_id"],
                         participant["team_number"],
                         participant["role"],
-                        participant["role"] == "Competitor"
                     )
                 )
             connection.commit()

@@ -5,8 +5,10 @@ import MainHeader from "@/components/MainComponents/MainHeader";
 import Navbar from "@/components/MainComponents/Navbar";
 import Footer from "@/components/MainComponents/Footer";
 import MainLayout from "@/components/MainComponents/MainLayout";
-import { useEffect, useState, type FormEvent } from "react";
-import { createMatch, fetchEvents, fetchTitlesList } from "@/api";
+import { AddMatchParticipants } from "@/components/ManagementComponents/AddMatchParticipants";
+import { useEffect, useState, type FormEvent, useCallback } from "react";
+import { createMatch, fetchEvents, fetchTitlesList, fetchFullRoster, type MatchCreatePayload } from "@/api";
+
 
 type EventData = {
     id: number;
@@ -28,12 +30,35 @@ export default function MatchManagement() {
     const [isChampionship, setIsChampionship] = useState(false);
     const [saving, setSaving] = useState(false);
     const [message, setMessage] = useState("");
+    const [roster, setRoster] = useState<{ id: number; name: string }[]>([]);
+    const [participants, setParticipants] =
+        useState<MatchCreatePayload["participants"]>([]);
+    const [matchType, setMatchType] = useState("");
+    const [specialStipulation, setSpecialStipulation] = useState("");
+    const [selectedTitleId, setSelectedTitleId] = useState<number | null>(null);
+    const [isMainEvent, setIsMainEvent] = useState(false);
+
+    const selectedTitle = titles.find(
+        (title) => title.title_id === selectedTitleId,
+    )?.title_name;
+
+    const matchPreviewHeader = [
+        matchType.trim(),
+        selectedTitle || specialStipulation.trim(),
+    ]
+        .filter(Boolean)
+        .join(" - ");
+
+    const handleParticipantsChange = useCallback((nextParticipants: MatchCreatePayload["participants"]) => {
+        setParticipants(nextParticipants);
+    }, []);
 
     useEffect(() => {
-        Promise.all([fetchEvents(), fetchTitlesList()])
-            .then(([eventData, titleData]) => {
+        Promise.all([fetchEvents(), fetchTitlesList(), fetchFullRoster()])
+            .then(([eventData, titleData, rosterData]) => {
                 setEvents(eventData);
                 setTitles(titleData);
+                setRoster(rosterData);
             })
             .catch((error: unknown) => {
                 setMessage(error instanceof Error ? error.message : "Could not load form data.");
@@ -61,7 +86,7 @@ export default function MatchManagement() {
                 match_description: String(formData.get("match_description") ?? "").trim(),
                 is_main_event: formData.get("is_main_event") === "on",
                 is_pre_show: formData.get("is_pre_show") === "on",
-                participants: [],
+                participants,
             });
 
             setMessage(`Match ${result.match_id} created.`);
@@ -97,12 +122,24 @@ export default function MatchManagement() {
 
                         <div className={styles.form_group}>
                             <label htmlFor="match_type">Match type:</label>
-                            <input id="match_type" name="match_type" required maxLength={255} />
+                            <input
+                                id="match_type"
+                                name="match_type"
+                                required
+                                maxLength={255}
+                                value={matchType}
+                                onChange={(event) => setMatchType(event.target.value)}
+                            />
                         </div>
 
                         <div className={styles.form_group}>
                             <label htmlFor="special_stipulation">Special stipulation:</label>
-                            <input id="special_stipulation" name="special_stipulation" maxLength={255} />
+                            <input
+                                id="special_stipulation"
+                                name="special_stipulation"
+                                maxLength={255}
+                                value={specialStipulation}
+                                onChange={(event) => setSpecialStipulation(event.target.value)} />
                         </div>
 
                         <div className={styles.form_group}>
@@ -116,7 +153,14 @@ export default function MatchManagement() {
                                 id="championship_match"
                                 name="championship_match"
                                 value={isChampionship ? "yes" : "no"}
-                                onChange={(event) => setIsChampionship(event.target.value === "yes")}
+                                onChange={(event) => {
+                                    const isTitleMatch = event.target.value === "yes";
+                                    setIsChampionship(isTitleMatch);
+
+                                    if (!isTitleMatch) {
+                                        setSelectedTitleId(null);
+                                    }
+                                }}
                             >
                                 <option value="no">No</option>
                                 <option value="yes">Yes</option>
@@ -126,7 +170,13 @@ export default function MatchManagement() {
                         {isChampionship && (
                             <div className={styles.form_group}>
                                 <label htmlFor="title_id">Title:</label>
-                                <select id="title_id" name="title_id" required defaultValue="">
+                                <select
+                                    id="title_id"
+                                    name="title_id"
+                                    required
+                                    value={selectedTitleId ?? ""}
+                                    onChange={(event) => setSelectedTitleId(event.target.value ? Number(event.target.value) : null)}
+                                >
                                     <option value="" disabled>Select a title</option>
                                     {titles.map((title) => (
                                         <option key={title.title_id} value={title.title_id}>
@@ -139,14 +189,25 @@ export default function MatchManagement() {
 
                         <div className={styles.form_group}>
                             <label htmlFor="is_main_event">Main event?</label>
-                            <input id="is_main_event" name="is_main_event" type="checkbox" />
+                            <input
+                                id="is_main_event"
+                                name="is_main_event"
+                                type="checkbox"
+                                checked={isMainEvent}
+                                onChange={(event) => setIsMainEvent(event.target.checked)}
+                            />
                         </div>
 
                         <div className={styles.form_group}>
                             <label htmlFor="is_pre_show">Pre-show?</label>
                             <input id="is_pre_show" name="is_pre_show" type="checkbox" />
                         </div>
-
+                        <AddMatchParticipants
+                            roster={roster}
+                            onParticipantsChange={handleParticipantsChange}
+                            matchPreviewHeader={matchPreviewHeader}
+                            isMainEvent={isMainEvent}
+                        />
                         <div className={styles.filter_buttons}>
                             <button type="submit" disabled={saving}>
                                 {saving ? "CREATING..." : "ADD MATCH"}
