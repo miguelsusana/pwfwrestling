@@ -11,7 +11,8 @@ export type MatchCreatePayload = {
     match_type: string;
     special_stipulation: string | null;
     championship_match: boolean;
-    title_id: number | null;
+    title_ids: number[];
+    is_unification: boolean;
     match_description: string;
     is_main_event: boolean;
     is_pre_show: boolean;

@@ -46,7 +46,8 @@ CREATE TABLE IF NOT EXISTS matches (
     result_type ENUM('Victory', 'DQ Victory', 'No Contest', 'Draw', 'Other') DEFAULT NULL,
     notes TEXT DEFAULT NULL,                     -- Optional notes field for storyline details
     is_main_event BOOLEAN DEFAULT FALSE,
-    is_pre_show BOOLEAN DEFAULT FALSE, 
+    is_pre_show BOOLEAN DEFAULT FALSE,
+    is_unification BOOLEAN NOT NULL DEFAULT FALSE,
     PRIMARY KEY (id),
     FOREIGN KEY (event_id) REFERENCES events(id) ON DELETE CASCADE  -- Links match to an event
 );
@@ -85,12 +86,23 @@ CREATE TABLE IF NOT EXISTS title_history (
     id INT NOT NULL AUTO_INCREMENT,
     title_id INT NOT NULL, 
     reign_order INT NOT NULL,                     
-    champion_id INT,                                  
+    champion_id INT,       -- to remove                           
     match_id INT,                    
-    reign_duration INT DEFAULT NULL,                 
+    reign_duration INT DEFAULT NULL,
+    is_vacant BOOLEAN NOT NULL DEFAULT FALSE,  -- assim que adicionar isto na DB, manualmente colocar TRUE nos vacant reigns.            
     PRIMARY KEY (id),
     FOREIGN KEY (title_id) REFERENCES titles(id) ON DELETE CASCADE,
     FOREIGN KEY (champion_id) REFERENCES roster(id) ON DELETE CASCADE,
     FOREIGN KEY (match_id) REFERENCES matches(id) ON DELETE CASCADE
+);
+
+CREATE TABLE IF NOT EXISTS title_reign_holders ( -- criar na DB
+    id INT NOT NULL AUTO_INCREMENT,
+    reign_id INT NOT NULL,
+    wrestler_id INT NOT NULL,
+    PRIMARY KEY (title_history_id, wrestler_id),
+    FOREIGN KEY (title_history_id) REFERENCES title_history(id) ON DELETE CASCADE,
+    FOREIGN KEY (wrestler_id) REFERENCES roster(id) ON DELETE CASCADE
+
 );
 

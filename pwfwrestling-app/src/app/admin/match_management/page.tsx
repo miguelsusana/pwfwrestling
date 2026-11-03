@@ -1,6 +1,7 @@
 "use client";
 
 import styles from "../../page.module.css";
+import managementStyles from "@/components/ManagementComponents/management.module.css";
 import MainHeader from "@/components/MainComponents/MainHeader";
 import Navbar from "@/components/MainComponents/Navbar";
 import Footer from "@/components/MainComponents/Footer";
@@ -35,16 +36,44 @@ export default function MatchManagement() {
         useState<MatchCreatePayload["participants"]>([]);
     const [matchType, setMatchType] = useState("");
     const [specialStipulation, setSpecialStipulation] = useState("");
-    const [selectedTitleId, setSelectedTitleId] = useState<number | null>(null);
+    const [selectedTitleIds, setSelectedTitleIds] = useState<number[]>([]);
+    const [isUnification, setIsUnification] = useState(false);
     const [isMainEvent, setIsMainEvent] = useState(false);
+    const [matchDescription, setMatchDescription] = useState("");
 
-    const selectedTitle = titles.find(
-        (title) => title.title_id === selectedTitleId,
-    )?.title_name;
+    const selectedTitleNames = selectedTitleIds
+        .map((id) => titles.find((title) => title.title_id === id)?.title_name)
+        .filter((name): name is string => Boolean(name));
+
+    const handlePreviewChange = useCallback((description: string) => {
+        setMatchDescription(description);
+    }, []);
+
+    const hasTwoCompetingTeams =
+        new Set(
+            participants
+                .filter((participant) => participant.role === "Competitor")
+                .map((participant) => participant.team_number),
+        ).size >= 2;
+    const [participantEditorKey, setParticipantEditorKey] = useState(0);
+
+    // MATCH PREVIEW
+
+    const titleLabel =
+        selectedTitleNames.length > 1
+            ? `${selectedTitleNames
+                .map((name) => name.replace(/\s+Championship$/i, ""))
+                .slice(0, -1)
+                .join(", ")} & ${selectedTitleNames[
+                    selectedTitleNames.length - 1
+                ].replace(/\s+Championship$/i, "")} Championship`
+            : selectedTitleNames[0] ?? "";
 
     const matchPreviewHeader = [
         matchType.trim(),
-        selectedTitle || specialStipulation.trim(),
+        titleLabel
+            ? `${isUnification ? "Unification Match: " : ""}${titleLabel}`
+            : specialStipulation.trim(),
     ]
         .filter(Boolean)
         .join(" - ");
@@ -67,14 +96,18 @@ export default function MatchManagement() {
 
     async function submitMatch(event: FormEvent<HTMLFormElement>) {
         event.preventDefault();
-        setSaving(true);
         setMessage("");
 
         const form = event.currentTarget;
         const formData = new FormData(form);
         const championshipMatch = formData.get("championship_match") === "yes";
-        const titleValue = formData.get("title_id");
 
+        if (championshipMatch && selectedTitleIds.length === 0) {
+            setMessage("Select at least one title for a championship match.");
+            return;
+        }
+
+        setSaving(true);
         try {
             const result = await createMatch({
                 event_id: Number(formData.get("event_id")),
@@ -82,8 +115,9 @@ export default function MatchManagement() {
                 special_stipulation:
                     String(formData.get("special_stipulation") ?? "").trim() || null,
                 championship_match: championshipMatch,
-                title_id: championshipMatch && titleValue ? Number(titleValue) : null,
-                match_description: String(formData.get("match_description") ?? "").trim(),
+                title_ids: championshipMatch ? selectedTitleIds : [],
+                is_unification: championshipMatch && isUnification,
+                match_description: matchDescription.trim(),
                 is_main_event: formData.get("is_main_event") === "on",
                 is_pre_show: formData.get("is_pre_show") === "on",
                 participants,
@@ -92,6 +126,13 @@ export default function MatchManagement() {
             setMessage(`Match ${result.match_id} created.`);
             form.reset();
             setIsChampionship(false);
+            setSelectedTitleIds([]);
+            setIsUnification(false);
+            setMatchType("");
+            setSpecialStipulation("");
+            setIsMainEvent(false);
+            setParticipants([]);
+            setParticipantEditorKey((key) => key + 1);
         } catch (error) {
             setMessage(error instanceof Error ? error.message : "Could not create match.");
         } finally {
@@ -107,7 +148,7 @@ export default function MatchManagement() {
                 <div className={styles.filter_container}>
                     <h2 className={styles.add_wrestler_title}>Add Match</h2>
 
-                    <form onSubmit={submitMatch}>
+                    <form className={styles.match_form} onSubmit={submitMatch}>
                         <div className={styles.form_group}>
                             <label htmlFor="event_id">Event:</label>
                             <select id="event_id" name="event_id" required defaultValue="">
@@ -143,11 +184,6 @@ export default function MatchManagement() {
                         </div>
 
                         <div className={styles.form_group}>
-                            <label htmlFor="match_description">Display description:</label>
-                            <input id="match_description" name="match_description" required />
-                        </div>
-
-                        <div className={styles.form_group}>
                             <label htmlFor="championship_match">Championship match?</label>
                             <select
                                 id="championship_match"
@@ -158,7 +194,8 @@ export default function MatchManagement() {
                                     setIsChampionship(isTitleMatch);
 
                                     if (!isTitleMatch) {
-                                        setSelectedTitleId(null);
+                                        setSelectedTitleIds([]);
+                                        setIsUnification(false);
                                     }
                                 }}
                             >
@@ -168,26 +205,52 @@ export default function MatchManagement() {
                         </div>
 
                         {isChampionship && (
-                            <div className={styles.form_group}>
-                                <label htmlFor="title_id">Title:</label>
-                                <select
-                                    id="title_id"
-                                    name="title_id"
-                                    required
-                                    value={selectedTitleId ?? ""}
-                                    onChange={(event) => setSelectedTitleId(event.target.value ? Number(event.target.value) : null)}
-                                >
-                                    <option value="" disabled>Select a title</option>
-                                    {titles.map((title) => (
-                                        <option key={title.title_id} value={title.title_id}>
-                                            {title.title_name}
-                                        </option>
-                                    ))}
-                                </select>
-                            </div>
+                            <>
+                                <div className={`${styles.form_group} ${managementStyles.title_picker}`}>
+                                    <fieldset className={managementStyles.title_fieldset}>
+                                        <legend>Titles:</legend>
+                                        <div className={managementStyles.title_options}>
+                                            {titles.map((title) => (
+                                                <label
+                                                    className={managementStyles.title_option}
+                                                    key={title.title_id}
+                                                >
+                                                    <input
+                                                        type="checkbox"
+                                                        checked={selectedTitleIds.includes(title.title_id)}
+                                                        onChange={(event) => {
+                                                            const nextTitleIds = event.target.checked
+                                                                ? [...selectedTitleIds, title.title_id]
+                                                                : selectedTitleIds.filter((id) => id !== title.title_id);
+
+                                                            setSelectedTitleIds(nextTitleIds);
+
+                                                            if (nextTitleIds.length < 2) {
+                                                                setIsUnification(false);
+                                                            }
+                                                        }}
+                                                    />
+                                                    <span>{title.title_name}</span>
+                                                </label>
+                                            ))}
+                                        </div>
+                                    </fieldset>
+                                </div>
+                                {selectedTitleIds.length > 1 && (
+                                    <div className={`${styles.form_group} ${styles.boolean_form_group}`}>
+                                        <label htmlFor="is_unification">Unification match?</label>
+                                        <input
+                                            id="is_unification"
+                                            type="checkbox"
+                                            checked={isUnification}
+                                            onChange={(event) => setIsUnification(event.target.checked)}
+                                        />
+                                    </div>
+                                )}
+                            </>
                         )}
 
-                        <div className={styles.form_group}>
+                        <div className={`${styles.form_group} ${styles.boolean_form_group}`}>
                             <label htmlFor="is_main_event">Main event?</label>
                             <input
                                 id="is_main_event"
@@ -198,18 +261,20 @@ export default function MatchManagement() {
                             />
                         </div>
 
-                        <div className={styles.form_group}>
+                        <div className={`${styles.form_group} ${styles.boolean_form_group}`}>
                             <label htmlFor="is_pre_show">Pre-show?</label>
                             <input id="is_pre_show" name="is_pre_show" type="checkbox" />
                         </div>
                         <AddMatchParticipants
+                            key={participantEditorKey}
                             roster={roster}
                             onParticipantsChange={handleParticipantsChange}
                             matchPreviewHeader={matchPreviewHeader}
                             isMainEvent={isMainEvent}
+                            onPreviewChange={handlePreviewChange}
                         />
                         <div className={styles.filter_buttons}>
-                            <button type="submit" disabled={saving}>
+                            <button type="submit" disabled={saving || !hasTwoCompetingTeams || isChampionship && selectedTitleIds.length === 0}>
                                 {saving ? "CREATING..." : "ADD MATCH"}
                             </button>
                         </div>

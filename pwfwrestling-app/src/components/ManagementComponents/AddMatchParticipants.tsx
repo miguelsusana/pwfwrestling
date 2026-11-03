@@ -21,6 +21,7 @@ type AddMatchParticipantsProps = {
     onParticipantsChange: (participants: Participant[]) => void;
     matchPreviewHeader: string;
     isMainEvent: boolean;
+    onPreviewChange: (description: string) => void;
 };
 
 function formatNames(names: string[]): string {
@@ -29,7 +30,7 @@ function formatNames(names: string[]): string {
     return `${names.slice(0, -1).join(", ")} & ${names[names.length - 1]}`;
 }
 
-export function AddMatchParticipants({ roster, onParticipantsChange, matchPreviewHeader, isMainEvent }: AddMatchParticipantsProps) {
+export function AddMatchParticipants({ roster, onParticipantsChange, matchPreviewHeader, isMainEvent, onPreviewChange }: AddMatchParticipantsProps) {
 
     const [teams, setTeams] = useState<Team[]>([
         { teamNumber: 1, competitors: [null], managers: [] },
@@ -182,6 +183,25 @@ export function AddMatchParticipants({ roster, onParticipantsChange, matchPrevie
         .map((id) => roster.find((wrestler) => wrestler.id === id)?.name)
         .filter((name): name is string => name !== undefined);
 
+    const matchDetails = [
+        isMainEvent ? "MAIN-EVENT" : "",
+        matchPreviewHeader,
+    ]
+        .filter(Boolean)
+        .join(" - ");
+
+    const matchDescription = [
+        matchDetails,
+        `${matchPreview}${refereeNames.length > 0 ? ` (${formatNames(refereeNames)})` : ""
+        }`,
+    ]
+        .filter(Boolean)
+        .join("\n");
+
+    useEffect(() => {
+        onPreviewChange(matchDescription);
+    }, [matchDescription, onPreviewChange]);
+
     return (
         <section className={styles.participantsEditor}>
             <div className={styles.participantsHeader}>
@@ -189,7 +209,6 @@ export function AddMatchParticipants({ roster, onParticipantsChange, matchPrevie
                     <h2>Participants</h2>
                     <p>Add competitors and managers to each team.</p>
                 </div>
-                <span>{teams.length} teams</span>
             </div>
 
             <div className={styles.teamGrid}>

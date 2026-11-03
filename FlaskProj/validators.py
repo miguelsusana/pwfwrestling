@@ -21,12 +21,28 @@ def validate_match_payload(data):
     if type(championship) is not bool:
         return None, "championship_match must be true or false."
 
-    title_id = data.get("title_id")
-    if championship:
-        if type(title_id) is not int or title_id <= 0:
-            return None, "A title_id is required for a championship match."
-    elif title_id is not None:
-        return None, "title_id must be null for a non-title match."
+    title_ids = data.get("title_ids", [])
+    if not isinstance(title_ids, list):
+        return None, "title_ids must be a list."
+
+    if any(type(title_id) is not int or title_id <= 0 for title_id in title_ids):
+        return None, "Each title_id must be a positive integer."
+
+    if len(title_ids) != len(set(title_ids)):
+        return None, "A title cannot be selected more than once."
+
+    if championship and not title_ids:
+        return None, "Select at least one title for a championship match."
+
+    if not championship and title_ids:
+        return None, "title_ids must be empty for a non-title match."
+
+    is_unification = data.get("is_unification", False)
+    if type(is_unification) is not bool:
+        return None, "is_unification must be true or false."
+
+    if is_unification and (not championship or len(title_ids) < 2):
+        return None, "A unification match needs at least two selected titles."
 
     stipulation = data.get("special_stipulation")
     if stipulation is not None:
@@ -90,18 +106,22 @@ def validate_match_payload(data):
             "team_number": team_number,
         })
 
-    if participants:
-        if len(competitor_teams) < 2:
-            return None, "A match with participants needs at least two competing sides."
-        if team_numbers != competitor_teams:
-            return None, "Every team must have at least one competitor."
+    if not participants:
+        return None, "A match needs competitors on at least two teams."
+
+    if len(competitor_teams) < 2:
+        return None, "A match needs competitors on at least two teams."
+
+    if team_numbers != competitor_teams:
+        return None, "Every team must have at least one competitor."
 
     validated_data = {
         "event_id": event_id,
         "match_type": match_type,
         "special_stipulation": stipulation,
         "championship_match": championship,
-        "title_id": title_id,
+        "title_ids": title_ids,
+        "is_unification": is_unification,
         "match_description": description.strip(),
         "result_type": data.get("result_type"),
         "notes": notes,

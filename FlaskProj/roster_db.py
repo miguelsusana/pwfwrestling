@@ -241,8 +241,8 @@ def create_match_in_database(data):
             if cursor.fetchone() is None:
                 return {"success": False, "not_found": "event"}
 
-            if data["championship_match"]:
-                cursor.execute("SELECT 1 FROM titles WHERE id = %s", (data["title_id"],))
+            for title_id in data["title_ids"]:
+                cursor.execute("SELECT 1 FROM titles WHERE id = %s", (title_id,))
                 if cursor.fetchone() is None:
                     return {"success": False, "not_found": "title"}
 
@@ -268,9 +268,10 @@ def create_match_in_database(data):
                     result_type,
                     notes,
                     is_main_event,
-                    is_pre_show
+                    is_pre_show,
+                    is_unification
                 )
-                VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)
+                VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
                 """,
                 (
                     data["event_id"],
@@ -282,16 +283,19 @@ def create_match_in_database(data):
                     data.get("notes"),
                     data.get("is_main_event", False),
                     data.get("is_pre_show", False),
+                    data.get("is_unification", False)
                 ),
             )
             match_id = cursor.lastrowid
 
             if data["championship_match"]:
-                cursor.execute(
-                    """INSERT INTO match_titles(match_id, title_id)
-                    VALUES (%s, %s)
-                    """,
-                    (match_id, data["title_id"])
+                for title_id in data["title_ids"]:
+                    cursor.execute(
+                        """
+                        INSERT INTO match_titles(match_id, title_id)
+                        VALUES (%s, %s)
+                        """,
+                        (match_id, title_id),
                 )
 
             for participant in data["participants"]:

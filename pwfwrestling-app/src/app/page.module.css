@@ -117,6 +117,15 @@
   transform: scale(1.05);
 }
 
+.filter_buttons button:disabled,
+.filter_buttons button:disabled:hover {
+  background-color: #777;
+  border-color: #777;
+  color: #ddd;
+  cursor: not-allowed;
+  transform: none;
+}
+
 .form_group {
   display: flex;
   gap: 20px;
@@ -300,4 +309,22 @@
   .admin_grid {
     grid-template-columns: 1fr;
   }
+}
+
+.match_form>.boolean_form_group {
+  display: grid;
+  grid-template-columns: 250px 30px;
+  justify-content: center;
+  gap: 20px;
+}
+
+.match_form>.boolean_form_group>label,
+.boolean_form_group label {
+  text-align: left;
+}
+
+.boolean_form_group input[type="checkbox"] {
+  width: 30px;
+  height: 30px;
+  margin: 0;
 }
